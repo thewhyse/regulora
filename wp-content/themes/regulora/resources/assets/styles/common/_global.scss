@@ -1,0 +1,174 @@
+html,
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-size: 24px;
+  line-height: 1.5;
+  position: relative;
+}
+
+h1,
+.h1 {
+  font-size: 80px;
+  line-height: 1.29;
+  margin: 50px 0 60px;
+}
+
+h2,
+.h2 {
+  font-size: 44px;
+  line-height: 1.02;
+  margin-bottom: 50px;
+}
+
+h3,
+.h3 {
+  font-size: 32px;
+  line-height: 1.4;
+  margin-bottom: 35px;
+}
+
+h4,
+.h4 {
+  font-size: 22px;
+  line-height: 0.9;
+  letter-spacing: 1.1px;
+  margin-bottom: 60px;
+}
+
+h5,
+.h5 {
+  font-size: 20px;
+  line-height: 1;
+}
+
+h6,
+.h6 {
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+::marker {
+  color: $secondary;
+}
+
+.wp-block-separator {
+  border-bottom: 0;
+}
+
+/* Custom global styles */
+.mb-18 {
+  margin-bottom: var(--margin-bottom-18) !important;
+}
+
+.mb-45 {
+  margin-bottom: var(--margin-bottom-45) !important;
+}
+
+.mb-65 {
+  margin-bottom: var(--margin-bottom-65) !important;
+}
+
+/* Transitions */
+a,
+.hov-trans {
+  transition: color ease-in-out 0.2s;
+
+  svg * {
+    transition: color, fill, stroke ease-in-out 0.2s;
+  }
+}
+
+sup {
+  top: -1em;
+  font-size: 50%;
+}
+
+@media (min-width: 2200px) {
+  .container {
+    max-width: 1800px !important;
+  }
+}
+
+@include media-breakpoint-up(xxxl) {
+  .container {
+    max-width: calc(100vw - 2 * 190px);
+  }
+}
+
+@include media-breakpoint-between(xl, xxxl) {
+  .container {
+    max-width: calc(100vw - 2 * 170px);
+  }
+}
+
+@include media-breakpoint-down(xxxl) {
+  html,
+  body {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+}
+
+@include media-breakpoint-down(xxxl) {
+  h1,
+  .h1 {
+    font-size: 50px;
+    line-height: 1.1;
+  }
+
+  h2,
+  .h2 {
+    font-size: 26px;
+    line-height: 1.23;
+    margin-bottom: 35px;
+  }
+
+  h3,
+  .h3 {
+    font-size: 23px;
+    line-height: 1.39;
+  }
+
+  h4,
+  .h4 {
+    font-size: 17px;
+    line-height: 1.17;
+  }
+
+  h5,
+  .h5 {
+    font-size: 16px;
+    line-height: 1.625;
+  }
+
+  .has-small-font-size {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+
+  .has-regular-font-size {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .has-bigger-font-size {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .has-large-font-size {
+    font-size: 28px;
+    line-height: 1.71;
+  }
+
+  .is-style-align-left-mobile {
+    text-align: left;
+  }
+
+  p {
+    a {
+      white-space: nowrap;
+    }
+  }
+}

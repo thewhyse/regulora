@@ -1,0 +1,69 @@
+.wp-block-button {
+  a {
+    font-size: 24px;
+    line-height: 23px;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &.has-blue-color.has-white-background-color {
+      &:hover {
+        background: $blue;
+        color: $white !important;
+      }
+    }
+
+    &.has-primary-color.has-white-background-color {
+      &:hover {
+        background: $secondary;
+        color: $white !important;
+      }
+    }
+  }
+
+  &.is-style-short {
+    a {
+      width: 350px;
+    }
+  }
+
+  &.is-style-medium {
+    a {
+      width: 450px;
+    }
+  }
+
+  &.is-style-wide {
+    a {
+      width: 550px;
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .wp-block-button {
+    a {
+      font-size: 20px;
+      line-height: 1.1;
+    }
+
+    &.is-style-short {
+      a {
+        width: 240px;
+      }
+    }
+
+    &.is-style-medium {
+      a {
+        width: 250px;
+      }
+    }
+
+    &.is-style-wide {
+      a {
+        width: 330px;
+      }
+    }
+  }
+}

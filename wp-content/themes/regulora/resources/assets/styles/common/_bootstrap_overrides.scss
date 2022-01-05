@@ -1,0 +1,67 @@
+/** Grid Setup **/
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+    xxxl: 1620px
+);
+
+$container-max-widths: (
+    xxs: 100%,
+    xs: 375px,
+    sm: 544px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+    xxxl: 1620px,
+);
+
+/** Colors Setup **/
+$primary: #285873;//#47c8f5
+$secondary: #83d1ee;
+$blue: #0c7ea2;
+$gray: #acbcc7;
+$black: #424242;
+$white: #fff;
+
+$theme-colors: (
+  primary: $primary,
+  secondary: $secondary,
+  blue: $blue,
+  gray: $gray,
+  black: $black,
+  white: $white,
+);
+
+$body-color: $black;
+
+$link-color: $secondary;
+$link-hover-color: $secondary;
+$link-decoration: none;
+$link-hover-decoration: underline;
+
+/** Block Styles Setup **/
+$enable-rounded: false;
+
+/** Typografy Setup **/
+$font-family-base: 'Rubik', sans-serif;
+$headings-font-family: 'Rubik', sans-serif;
+// $font-size-base: 1.5rem; //18px
+//$h1-font-size: 4.25rem; //68px
+//$h2-font-size: 2.625rem; //42px
+//$h3-font-size: 1.875rem; //30px
+//$h4-font-size: 1.25rem; //20px
+//$line-height-base: 2rem; //32px
+$headings-font-weight: 500;
+$headings-color: $black;
+
+/** Bootstrap navbar fix (https://git.io/fADqW) */
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;
+
+$accordion-icon-active-color: $secondary;
+

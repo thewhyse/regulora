@@ -1,0 +1,110 @@
+.wp-block-group {
+  &.is-style-faq-item {
+    border-radius: 10px;
+    padding: 25px 15px 25px 40px;
+    margin-bottom: var(--margin-bottom-18);
+    max-width: 1352px;
+    margin-left: auto;
+    margin-right: auto;
+
+    h5 {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 24px;
+      margin-bottom: 0;
+      font-weight: 600;
+
+      &::after {
+        content: "";
+        display: flex;
+        width: 15px;
+        height: 25px;
+        background: url($chevron-blue);
+        background-size: contain;
+        transition: all 0.3s;
+      }
+
+      &:hover {
+        &::after {
+          background: url($chevron-primary-hover);
+        }
+      }
+    }
+
+    p {
+      height: 0;
+      overflow: hidden;
+      padding: 0 70px 0 0;
+      transition: opacity 0.3s;
+      margin-bottom: 0;
+      opacity: 0;
+    }
+
+    &.active {
+      h5 {
+        &::after {
+          transform: rotate(90deg);
+          background: url($chevron-primary-hover);
+        }
+      }
+
+      p {
+        height: auto;
+        overflow: hidden;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.editor-styles-wrapper {
+  .wp-block-group {
+    &.is-style-faq-item {
+      p {
+        height: auto !important;
+        overflow: visible !important;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .wp-block-group {
+    &.alignfull:not(.p-0) {
+      padding: var(--spacer-110) 0 !important;
+    }
+
+    &.is-style-faq-item {
+      padding: 22px 25px 22px 25px;
+
+      .wp-block-group__inner-container {
+        padding: 0;
+      }
+
+      h5 {
+        font-size: 20px;
+        line-height: 1.2;
+
+        &::after {
+          background-repeat: no-repeat;
+          width: 26px;
+          height: 32px;
+        }
+
+        &:hover {
+          &::after {
+            background: url($chevron-primary-hover);
+          }
+        }
+      }
+
+      p {
+        padding: 0;
+      }
+    }
+  }
+}

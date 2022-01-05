@@ -1,0 +1,15 @@
+.wp-block-cover {
+  &.has-custom-content-position {
+    .wp-block-cover__inner-container {
+      width: inherit !important;
+    }
+  }
+}
+
+@include media-breakpoint-down(xxxl) {
+  .wp-block-cover {
+    min-height: auto !important;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
