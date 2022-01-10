@@ -119,20 +119,20 @@ sup {
 
   h2,
   .h2 {
-    font-size: 26px;
+    font-size: 30px;
     line-height: 1.23;
     margin-bottom: 35px;
   }
 
   h3,
   .h3 {
-    font-size: 23px;
+    font-size: 22px;
     line-height: 1.39;
   }
 
   h4,
   .h4 {
-    font-size: 17px;
+    font-size: 20px;
     line-height: 1.17;
   }
 
@@ -170,5 +170,32 @@ sup {
     a {
       white-space: nowrap;
     }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  html,
+  body {
+    line-height: 1.8;
+  }
+
+  h2,
+  .h2 {
+    margin-bottom: 20px;
+  }
+
+  .h3,
+  h3 {
+    margin-bottom: 25px;
+    margin-top: 10px;
+  }
+
+  h4,
+  .h4 {
+    margin-bottom: 25px;
+  }
+
+  .has-small-font-size {
+    font-size: 16px;
   }
 }

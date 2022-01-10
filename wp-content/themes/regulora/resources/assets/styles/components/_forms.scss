@@ -20,13 +20,23 @@
 /** Form Defaults */
 input[type=text],
 input[type=email],
-input[type=phone] {
+input[type=phone],
+textarea,
+select {
   width:100%;
   padding: 16px 25px;
   border-radius: 6px;
   border: none;
   background-color: $white;
   box-shadow: 0 10px 48px rgba(0, 0, 0, 0.06);
+
+  &:focus-visible {
+    outline: -webkit-focus-ring-color solid 3px;
+  }
+
+  &.wpcf7-not-valid {
+    outline: red solid 3px;
+  }
 }
 
 input[type=submit] {

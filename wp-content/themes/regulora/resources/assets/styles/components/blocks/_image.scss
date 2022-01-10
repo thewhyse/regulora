@@ -85,14 +85,25 @@
       figcaption {
         padding: 15px 20px 15px 60px;
         min-height: auto;
+        font-size: 16px;
       }
 
       &.wide {
         figcaption {
           width: 360px;
           max-width: 80%;
-          font-size: 16px;
         }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .wp-block-image {
+    &.is-style-icon-with-text {
+      figcaption {
+        line-height: 1.5;
+        font-size: 15px;
       }
     }
   }
