@@ -2,7 +2,7 @@
     <div class="container-fluid container-xl">
       <div class="row align-items-center">
         <div class="name col-12">
-          <p>&npsp;</p>
+          <p> </p>
           <h2 class="alert alert-warning mb-5">
           NO RESULTS FOUND
       </h2>
