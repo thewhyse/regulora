@@ -15083,75 +15083,69 @@ sup {
   color: #285873 !important;
 }
 
-/*
-.has-secondary-color {
-  color: $secondary !important;
-}
-*/
-
-/* line 56, resources/assets/styles/common/_wp-classes.scss */
+/* line 50, resources/assets/styles/common/_wp-classes.scss */
 
 .has-secondary-color {
-  color: red !important;
+  color: #83d1ee !important;
 }
 
-/* line 61, resources/assets/styles/common/_wp-classes.scss */
+/* line 54, resources/assets/styles/common/_wp-classes.scss */
 
 .has-blue-color {
   color: #0c7ea2 !important;
 }
 
-/* line 65, resources/assets/styles/common/_wp-classes.scss */
+/* line 58, resources/assets/styles/common/_wp-classes.scss */
 
 .has-gray-color {
   color: #acbcc7 !important;
 }
 
-/* line 69, resources/assets/styles/common/_wp-classes.scss */
+/* line 62, resources/assets/styles/common/_wp-classes.scss */
 
 .has-black-color {
   color: #424242 !important;
 }
 
-/* line 73, resources/assets/styles/common/_wp-classes.scss */
+/* line 66, resources/assets/styles/common/_wp-classes.scss */
 
 .has-primary-background-color {
   background-color: #285873;
 }
 
-/* line 77, resources/assets/styles/common/_wp-classes.scss */
+/* line 70, resources/assets/styles/common/_wp-classes.scss */
 
 .has-secondary-background-color {
   background-color: #83d1ee;
 }
 
-/* line 81, resources/assets/styles/common/_wp-classes.scss */
+/* line 74, resources/assets/styles/common/_wp-classes.scss */
 
 .has-blue-background-color {
   background-color: #0c7ea2;
 }
 
-/* line 85, resources/assets/styles/common/_wp-classes.scss */
+/* line 78, resources/assets/styles/common/_wp-classes.scss */
 
 .has-gray-background-color {
   background-color: #acbcc7;
 }
 
-/* line 89, resources/assets/styles/common/_wp-classes.scss */
+/* line 82, resources/assets/styles/common/_wp-classes.scss */
 
 .has-black-background-color {
   background-color: #424242;
 }
 
 @media (min-width: 576px) {
-  /* line 94, resources/assets/styles/common/_wp-classes.scss */
+  /* line 87, resources/assets/styles/common/_wp-classes.scss */
 
   .alignleft {
     float: left;
     margin-right: 0.5rem;
   }
 
-  /* line 99, resources/assets/styles/common/_wp-classes.scss */
+  /* line 92, resources/assets/styles/common/_wp-classes.scss */
 
   .alignright {
     float: right;
