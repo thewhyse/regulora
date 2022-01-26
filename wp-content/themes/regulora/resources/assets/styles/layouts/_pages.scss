@@ -229,3 +229,9 @@
     margin-bottom: 20px;
   }
 }
+
+@include media-breakpoint-down(md) {
+  #main-content .wp-block-group:first-of-type {
+    padding: 0 0 20px !important;
+  }
+}
