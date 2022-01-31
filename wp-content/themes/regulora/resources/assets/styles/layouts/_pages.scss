@@ -8,6 +8,22 @@ color: #fff;
   }
 }
 
+#efficacy {
+  .wp-block-group__inner-container {
+    h4 {
+      color: #fff;
+    }
+  }
+  #see-the-report a {
+    color: #285873;
+    background: #83d1ee;
+  }
+}
+
+#treatment {
+
+}
+
 .attorney-top-bio {
   margin-bottom: var(--block-vertical-distance-small);
   position: relative;
