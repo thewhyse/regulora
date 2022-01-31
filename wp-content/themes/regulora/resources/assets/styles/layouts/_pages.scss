@@ -24,6 +24,42 @@ color: #fff;
   }
 }
 
+@include media-breakpoint-down(md) {
+  #efficacy {
+    .wp-block-group__inner-container {
+      h4 {
+        color: #fff;
+      }
+    }
+    #see-the-report a {
+      color: #285873;
+      background: #83d1ee;
+      &:hover {
+        background: #0c7ea2;
+        color: #fff;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  #efficacy {
+    .wp-block-group__inner-container {
+      h4 {
+        color: #fff;
+      }
+    }
+    #see-the-report a {
+      color: #285873;
+      background: #83d1ee;
+      &:hover {
+        background: #0c7ea2;
+        color: #fff;
+      }
+    }
+  }
+}
+
 #treatment {
 
 }
