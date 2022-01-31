@@ -14,9 +14,21 @@ color: #fff;
       color: #fff;
     }
   }
+
   #see-the-report a {
     color: #285873;
     background: #83d1ee;
+
+    &:hover {
+      background: #0c7ea2;
+      color: #fff;
+    }
+  }
+
+  .wp-block-button__link a {
+    color: #285873;
+    background: #83d1ee;
+
     &:hover {
       background: #0c7ea2;
       color: #fff;
