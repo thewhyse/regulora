@@ -5,7 +5,7 @@ Tags:              visibility, dynamic content, conditional content, conditional
 Requires at least: 5.5
 Tested up to:      5.9
 Requires PHP:      5.6
-Stable tag:        2.3.1
+Stable tag:        2.4.0
 License:           GPL-2.0
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -67,14 +67,15 @@ Take Block Visibility to the next level with **[Block Visibility Pro](https://ww
 
 Here’s a look at what's currently included with Pro:
 
-* Visibility Presets allow you to control multiple blocks at once. **NEW 🎉**
-* Show or hide blocks based on their **location** and “attributes” of their location (i.e. post type, taxonomy, archive, etc.)
+* Visibility Presets allow you to control multiple blocks at once.
+* Show or hide blocks based on their **location** and “attributes” of their location (i.e. post type, taxonomy, archive etc.)
 * Advanced **day-of-week** and **time-of-day** controls, which include recursion functionality.
 * Display blocks based on the **referral source** (domain/URL) of a website visitor.
 * Support for all post and user **metadata** (custom fields).
-* **WooCommerce** conditional block logic for shopping cart contents, product details, customer metrics, and more.
-* **Easy Digital Downloads** conditional block logic for shopping cart contents, customer metrics, and more.
-* eCommerce rules for when a customer placed their first/last order, or when specific products were purchased. **NEW 🎉**
+* Display blocks based on HTML **cookies**.
+* **WooCommerce** conditional block logic for shopping cart contents, product details, customer metrics and more.
+* **Easy Digital Downloads** conditional block logic for shopping cart contents, customer metrics and more.
+* eCommerce rules for when a customer placed their first/last order, or when specific products were purchased.
 * Access to premium email support.
 * More conditions coming soon...
 
@@ -214,14 +215,30 @@ If you run into a block that is not working with the Screen Size control, there 
 
 == Changelog ==
 
-= 2.3.1 - 2022-02-27 =
+= 2.4.0 - 2022-04-10 =
+
+**Added**
+
+* Added contextual block opacity settings.
+* Added information icons to all visibility controls with links to Knowledge Base.
+* Added cookie contextual indicator for Cookie control in Block Visibility Pro.
+
+**Changed**
+
+* Removed tip/information modals from Editor. Information icons now direct users to the corresponding Knowledge Base pages.
 
 **Fixed**
 
-- Fixed issue with block-based widgets where widget markup would still be rendered even if the block content was not. ([#26])(https://github.com/ndiego/block-visibility/issues/26))
-- Fixed React Select input styling.
-- Fixed styles that were bleeding into the Editor.
-- Fixed linting errors.
+* Fix indicator color styling in settings.
+
+= 2.3.1 - 2022-02-28 =
+
+**Fixed**
+
+* Fixed issue with block-based widgets where widget markup would still be rendered even if the block content was not. ([#26])(https://github.com/ndiego/block-visibility/issues/26))
+* Fixed React Select input styling.
+* Fixed styles that were bleeding into the Editor.
+* Fixed linting errors.
 
 = 2.3.0 - 2021-12-14 =
 
