@@ -53,13 +53,10 @@ export default {
     } )
   
     // Mobile menu collapse on click
-    // const bsCollapse = new bootstrap.Collapse(mainMenu, {toggle:false});
     const menuLink = mainMenu.querySelectorAll( 'a' );
     const menuButton = document.querySelector( '.navbar-toggler' );
     menuLink.forEach( menuItem => {
       menuItem.addEventListener( 'click', function (e) {
-        //bsCollapse.toggle();
-        // mainMenu.Collapse('hide')
         mainMenu.classList.remove( 'show' );
         menuButton.setAttribute( 'aria-expanded', 'false' );
       } )
