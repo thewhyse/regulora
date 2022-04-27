@@ -53,6 +53,7 @@ export default {
     } )
   
     // Mobile menu collapse on click
+    
     const menuLink = mainMenu.querySelectorAll( 'a' );
     const menuButton = document.querySelector( '.navbar-toggler' );
     menuLink.forEach( menuItem => {
