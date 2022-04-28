@@ -26,6 +26,11 @@ a.skip-main:active {
   z-index: 9999;
 }
 
+#wpadminbar {
+  position: fixed;
+  top: 0;
+}
+
 /* Header container */
 header {
   .navbar {
@@ -348,6 +353,22 @@ header {
 
   .position-left-mobile img {
     object-position: left!important;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .fixed-top-custom {
+    & + .wrap {
+      margin-top: 15px;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .fixed-top-custom {
+    & + .wrap {
+      margin-top: 75px;
+    }
   }
 }
 
