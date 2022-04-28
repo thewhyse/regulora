@@ -56,10 +56,21 @@ export default {
     
     const menuLink = mainMenu.querySelectorAll( 'a' );
     const menuButton = document.querySelector( '.navbar-toggler' );
-    menuLink.forEach( menuItem => {
+    menuLink.forEach( ( menuItem, index ) => {
       menuItem.addEventListener( 'click', function (e) {
         mainMenu.classList.remove( 'show' );
         menuButton.setAttribute( 'aria-expanded', 'false' );
+        let link = menuItem.href;
+        if ( link.indexOf( '#' ) >= 0 && window.innerWidth < 992 ) {
+          e.preventDefault();
+          link = link.split("#")[1];
+          let topPos = document.getElementById( link ).offsetTop - 75;
+          window.scrollTo({
+            top: topPos, // scroll so that the element is at the top of the view
+            behavior: 'smooth' // smooth scroll
+          })
+          history.replaceState(undefined, undefined, "#" + link)
+        }
       } )
     } )
   },
