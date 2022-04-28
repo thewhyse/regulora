@@ -308,7 +308,7 @@ color: #fff;
   }
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(lg) {
   #main-content .wp-block-group:first-of-type {
     padding: 0 0 20px !important;
   }
