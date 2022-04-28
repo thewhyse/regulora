@@ -356,6 +356,14 @@ header {
   }
 }
 
+@include media-breakpoint-down(md) {
+  .admin-bar {
+    header {
+      top: 46px;
+    }
+  }
+}
+
 @include media-breakpoint-down(sm) {
   header {
     .navbar {
