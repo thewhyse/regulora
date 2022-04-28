@@ -64,7 +64,7 @@ export default {
         if ( link.indexOf( '#' ) >= 0 && window.innerWidth < 992 ) {
           e.preventDefault();
           link = link.split("#")[1];
-          let topPos = document.getElementById( link ).offsetTop - 75;
+          let topPos = document.getElementById( link ).offsetTop - 90;
           window.scrollTo({
             top: topPos, // scroll so that the element is at the top of the view
             behavior: 'smooth' // smooth scroll
