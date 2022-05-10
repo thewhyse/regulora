@@ -53,18 +53,104 @@ function screen_size_test( $is_visible, $settings, $controls ) {
 		// Register an alias screen-size styles file. This is needed for wp_add_inline_style.
 		wp_register_style( 'block-visibility-screen-size-styles', false, array(), '1.0.0' );
 		wp_enqueue_style( 'block-visibility-screen-size-styles' );
-
-		$styles = get_screen_size_styles( $settings );
-
-		if ( $styles ) {
-			wp_add_inline_style( 'block-visibility-screen-size-styles', $styles );
-		}
 	}
 
 	// Always return true because the screen size controls are handled with CSS.
 	return true;
 }
 add_filter( 'block_visibility_control_set_is_block_visible', __NAMESPACE__ . '\screen_size_test', 10, 3 );
+
+/**
+ * Add the screen size classes on render.
+ *
+ * @since 2.4.1
+ *
+ * @param array $custom_classes Existing custom classes to be added to the block.
+ * @param array $settings       The plugin settings.
+ * @param array $controls       The control set controls.
+ * @return array                Updated array of classes.
+ */
+function add_screen_size_classes( $custom_classes, $settings, $controls ) {
+
+	$control_atts = isset( $controls['screenSize'] )
+		? $controls['screenSize']
+		: null;
+
+	$has_advanced_controls = get_setting(
+		$settings,
+		'visibility_controls',
+		'screen_size',
+		'enable_advanced_controls',
+		null,
+		false
+	);
+
+	$sizes = array( 'extra_large', 'large', 'medium', 'small', 'extra_small' );
+
+	foreach ( $sizes as $size ) {
+		$enabled = get_setting(
+			$settings,
+			'visibility_controls',
+			'screen_size',
+			'controls',
+			$size,
+			true
+		);
+		$is_set  = isset( $control_atts['hideOnScreenSize'][ snake_to_camel_case( $size ) ] )
+			? $control_atts['hideOnScreenSize'][ snake_to_camel_case( $size ) ]
+			: false;
+
+		// If advanced controls are not enabled, don't print the corresponding
+		// classes.
+		if (
+			! $has_advanced_controls &&
+			( 'extra_large' === $size || 'extra_small' === $size )
+		) {
+			continue;
+		}
+
+		if ( $enabled && $is_set ) {
+			array_push(
+				$custom_classes,
+				'block-visibility-hide-' . str_replace( '_', '-', $size ) . '-screen'
+			);
+		}
+	}
+
+	return $custom_classes;
+}
+add_filter( 'block_visibility_control_set_add_custom_classes', __NAMESPACE__ . '\add_screen_size_classes', 10, 3 );
+
+/**
+ * Only add inline styles if a block with Screen Size controls is present.
+ *
+ * @since 2.4.1
+ */
+function add_inline_styles() {
+
+	// Get the plugin core settings.
+	$settings = get_option( 'block_visibility_settings' );
+
+	// We do not want to have to do this, but needed for classic themes. This
+	// will enqueue the screen size inline styles on all pages, but does fix
+	// the multiple printing of styles issue.
+	// @TODO explore alternative approaches.
+	if (
+		is_control_enabled( $settings, 'screen_size' ) &&
+		is_control_enabled( $settings, 'screen_size', 'enable_frontend_css' ) &&
+		! wp_script_is( 'block-visibility-screen-size-styles' )
+	) {
+		wp_register_style( 'block-visibility-screen-size-styles', false, array(), '1.0.0' );
+		wp_enqueue_style( 'block-visibility-screen-size-styles' );
+	}
+
+	if ( wp_style_is( 'block-visibility-screen-size-styles' ) ) {
+		$styles = get_screen_size_styles( $settings );
+
+		wp_add_inline_style( 'block-visibility-screen-size-styles', $styles );
+	}
+}
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\add_inline_styles', 1000 );
 
 /**
  * Get the screen size styles.
@@ -251,4 +337,18 @@ function get_advanced_styles( $settings ) {
 function set_max_width( $width ) {
 	$max_width = trim( $width, 'px' ) - 0.02;
 	return (string) $max_width . 'px';
+}
+
+/**
+ * A simple utlity that transforms a snake case string to camel case.
+ *
+ * @since 2.4.1
+ *
+ * @param string $string A snake case string.
+ * @return string        The string in camel case.
+ */
+function snake_to_camel_case( $string ) {
+	return lcfirst(
+		str_replace( ' ', '', ucwords( str_replace( '_', ' ', $string ) ) )
+	);
 }

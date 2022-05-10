@@ -4,7 +4,7 @@ Tags: code, content, css, facebook pixel, footer, footer code, footer scripts, f
 Requires at least: 4.6
 Tested up to: 5.9
 Requires PHP: 5.2
-Stable tag: 1.6.1
+Stable tag: 1.6.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -97,6 +97,9 @@ Thank you
 Syed Balkhi
 
 == Changelog ==
+
+= 1.6.2 =
+* Fix: Reverted a method visibility that was conflicting with other plugins using it.
 
 = 1.6.1 =
 * Tested compatibility with WordPress 5.9

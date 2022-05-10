@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Insert Headers and Footers
  * Plugin URI: http://www.wpbeginner.com/
- * Version: 1.6.1
+ * Version: 1.6.2
  * Requires at least: 4.6
  * Requires PHP: 5.2
  * Tested up to: 5.9
@@ -44,7 +44,7 @@ class InsertHeadersAndFooters {
 	/**
 	 * Constructor
 	 */
-	private function __construct() {
+	public function __construct() {
 		$file_data = get_file_data( __FILE__, array( 'Version' => 'Version' ) );
 
 		// Plugin Details
