@@ -1,7 +1,5 @@
 /* eslint-disable */
 import {init as faqInit} from "../components/faq";
-import {bootstrap, Collapse} from "bootstrap";
-// import {ScrollSpy, Collapse} from "bootstrap";
 
 export default {
   init() {
@@ -34,14 +32,14 @@ export default {
         let targetBlock = mainMenu.querySelector( '.' + linkClass + '.active' ).getAttribute( 'href' );
         if ( targetBlock && ( targetBlock.indexOf( '#' ) > -1 ) && document.querySelector( targetBlock ) ) {
           mainMenu.querySelector( '.nav' ).classList.remove( colorAssoc[lightBG], colorAssoc[darkBG] );
-          
+
           let targetBG = document.querySelector( targetBlock ).classList;
           for ( let i = 0; i < targetBG.length; i++ ) {
             if ( colorAssoc[ targetBG[ i ] ] ) {
               mainMenu.querySelector( '.nav' ).classList.add( colorAssoc[ targetBG[ i ] ] );
             }
           }
-          
+
           let parentItem = mainMenu.querySelector( '.' + linkClass + '.active' ).closest( 'li' );
           if ( parentItem.classList.contains( 'd-none' ) ) {
             let sibling = parentItem.previousElementSibling;
@@ -56,6 +54,7 @@ export default {
     
     const menuLink = mainMenu.querySelectorAll( 'a' );
     const menuButton = document.querySelector( '.navbar-toggler' );
+    
     menuLink.forEach( ( menuItem, index ) => {
       menuItem.addEventListener( 'click', function (e) {
         mainMenu.classList.remove( 'show' );
