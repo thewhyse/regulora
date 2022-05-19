@@ -22,13 +22,17 @@
             }
         }
     }
-    .wp-block-columns {
-        flex-wrap: wrap;
-        .wp-block-column {
-            flex-basis: 100%!important;
 
-            &:not(:first-child) {
-                margin-left: 0;
+    #main-content {
+        .wp-block-columns {
+            flex-wrap: wrap;
+
+            .wp-block-column {
+                flex-basis: 100% !important;
+
+                &:not(:first-child) {
+                    margin-left: 0;
+                }
             }
         }
     }

@@ -43,6 +43,8 @@
 
 @include media-breakpoint-down(lg) {
   .wp-block-button {
+    margin: 0 auto !important;
+
     a {
       font-size: 20px;
       line-height: 1.1;

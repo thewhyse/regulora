@@ -89,6 +89,11 @@
       }
 
       &.wide {
+        .aligncenter {
+          margin-left: 0;
+          width: 100%;
+        }
+
         figcaption {
           width: 360px;
           max-width: 80%;
