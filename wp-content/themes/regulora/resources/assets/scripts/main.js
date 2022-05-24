@@ -24,10 +24,3 @@ const routes = new Router({
 
 // Load Events
 jQuery(document).ready(() => routes.loadEvents());
-
-// TODO: Should be removed. You can set the link target in menu editor
-// Target Black for footer menu links
-// const blank = $('#menu-footer-menu-1 li a');
-// blank.each(function () {
-//   $(this).attr('target', '_blank');
-// });
