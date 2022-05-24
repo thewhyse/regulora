@@ -138,7 +138,8 @@ header {
           &.dark-color {
             li {
               a {
-                color: $primary;
+                /*color: $primary;*/
+                color: #90A6B7;
 
                 &:hover,
                 &.active {
