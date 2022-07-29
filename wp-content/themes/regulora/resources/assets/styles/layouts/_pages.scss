@@ -36,6 +36,14 @@ color: #fff;
   }
 }
 
+#home {
+  .hero-title-colm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
 /*
 @include media-breakpoint-down(md) {
   #efficacy {
