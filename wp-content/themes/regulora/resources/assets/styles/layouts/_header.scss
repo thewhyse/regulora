@@ -102,8 +102,7 @@ header {
 
             a {
               font-weight: 500;
-              /*color: $white;*/
-              color: #90A6B7;
+              color: $black;
               font-size: 22px;
               display: flex;
               align-items: center;
@@ -125,8 +124,8 @@ header {
 
               &:hover,
               &.active {
-                color: $blue;
-                background: $secondary;
+                color: $white;
+                background: $blue;
                 text-transform: uppercase;
 
                 &::after {
@@ -139,8 +138,7 @@ header {
           &.dark-color {
             li {
               a {
-                /*color: $primary;*/
-                color: #90A6B7;
+                color: $primary;
 
                 &:hover,
                 &.active {
