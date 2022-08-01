@@ -33,7 +33,7 @@ a.skip-main:active {
 
 /* Header container */
 header {
-
+  background-color: $blue !important;
   .navbar {
     height: var(--header-height);
     padding: 0 26px;
