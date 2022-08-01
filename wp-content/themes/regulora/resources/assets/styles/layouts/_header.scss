@@ -129,7 +129,7 @@ header {
                 text-transform: uppercase;
 
                 &::after {
-                  background: $blue;
+                  background: $white;
                 }
               }
             }
@@ -138,11 +138,11 @@ header {
           &.dark-color {
             li {
               a {
-                color: $primary;
+                color: $black;
 
                 &:hover,
                 &.active {
-                  color: $blue;
+                  color: $black;
                   background: $secondary;
                 }
               }
