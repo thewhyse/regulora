@@ -1,5 +1,5 @@
 <a class="skip-main" href="#main-content" aria-label="Go to main content">Skip to main content</a>
-<header class="banner bg-secondary fixed-top-custom">
+<header class="banner fixed-top-custom">
   <nav id="site-navbar" class="navbar navbar-expand-xl alignfull fullwidth-104">
     <a class="brand navbar-brand" href="{{ home_url('/') }}" aria-label="Site logo">{!! \App\Controllers\App::siteLogo() !!}</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navPrimaryMenu" aria-controls="navPrimaryMenu" aria-expanded="false" aria-label="Toggle navigation">
