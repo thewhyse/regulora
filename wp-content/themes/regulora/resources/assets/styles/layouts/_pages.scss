@@ -36,6 +36,8 @@
   }
 }
 
+
+/*      HERO SECTION      */
 #home {
   .hero-title-colm {
     display: -webkit-box;
@@ -57,6 +59,17 @@
     }
   }
 }
+
+/*   END   HERO SECTION      */
+
+/*      TREATMENT SECTION     */
+#treatment {
+  background: $secondary;
+
+
+}
+
+/*   END  TREATMENT SECTION     */
 
 /*
 @include media-breakpoint-down(md) {
