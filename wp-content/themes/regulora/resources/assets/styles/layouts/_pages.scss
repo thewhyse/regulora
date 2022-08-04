@@ -39,6 +39,11 @@
 
 /*      HERO SECTION      */
 #home {
+  padding: 50px 0 0;
+
+  .wp-block-image {
+    margin: 0;
+  }
   .hero-title-colm {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -65,8 +70,6 @@
 /*      HOW REGULORA SECTION     */
 #how-it-works {
   background: $secondary;
-
-
 }
 
 /*   END  HOW REGULORA SECTION     */
@@ -78,7 +81,15 @@
 
 /*   END   TREATMENT SECTION     */
 
-
+.is-style-icon-with-text.info-icon {
+  img {
+    width: 180px;
+    height: 180px;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+  }
+}
 
 
 
