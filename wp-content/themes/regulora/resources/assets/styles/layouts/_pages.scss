@@ -69,9 +69,11 @@
   #home {
     .hero-title-colm {
       width: 25% !important;
+      flex-basis: 25% !important;
     }
     .hero-img-colm {
       width: 25% !important;
+      flex-basis: 25% !important;
     }
   }
 
