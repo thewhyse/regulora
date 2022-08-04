@@ -65,6 +65,18 @@
   }
 }
 
+@include media-breakpoint-down(md) {
+  #home {
+    .hero-title-colm {
+      width: 25% !important;
+    }
+    .hero-img-colm {
+      width: 25% !important;
+    }
+  }
+
+}
+
 /*   END   HERO SECTION      */
 
 /*      HOW REGULORA SECTION     */
@@ -93,6 +105,11 @@
 
 @include media-breakpoint-down(sm) {
   .is-style-icon-with-text.info-icon {
+    img {
+      width: 190px;
+      height: 190px;
+    }
+
     figcaption {
       padding: 10px 10px 10px 30px;
     }
