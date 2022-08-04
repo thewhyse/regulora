@@ -91,7 +91,13 @@
   }
 }
 
-
+@include media-breakpoint-down(sm) {
+  .is-style-icon-with-text.info-icon {
+    figcaption {
+      padding: 10px 10px 10px 30px;
+    }
+  }
+}
 
 /*
 @include media-breakpoint-down(md) {
