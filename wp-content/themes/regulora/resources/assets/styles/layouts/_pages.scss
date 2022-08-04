@@ -89,6 +89,8 @@
 
 /*   END   TREATMENT SECTION     */
 
+
+/*      FIGURE WITH TEXT      */
 .is-style-icon-with-text.info-icon {
   img {
     width: 180px;
@@ -97,6 +99,11 @@
     box-shadow: none;
     background: transparent;
   }
+  figcaption {
+    padding: 20px 30px 20px 50px;
+    margin: 0 0 0 -60px;
+  }
+
 }
 
 @include media-breakpoint-down(sm) {
@@ -111,6 +118,8 @@
     }
   }
 }
+
+/*    END   FIGURE WITH TEXT      */
 
 /*
 @include media-breakpoint-down(md) {
