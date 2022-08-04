@@ -65,29 +65,13 @@
   }
 }
 
-@media (max-width: 991.98px) {
-  #home {
-    .hero-img-colm {
-      flex-basis: 25% !important;
-    }
-  }
-}
-
-/*
 @include media-breakpoint-down(md) {
-  #home {
+  #main-content .wp-block-columns {
     .hero-title-colm {
-      width: 25% !important;
-      flex-basis: 25% !important;
-    }
-    .hero-img-colm {
-      width: 25% !important;
       flex-basis: 25% !important;
     }
   }
-
 }
-*/
 
 /*   END   HERO SECTION      */
 
