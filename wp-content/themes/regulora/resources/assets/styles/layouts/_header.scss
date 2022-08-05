@@ -57,8 +57,11 @@ header {
       }
 
       &[aria-expanded="false"] {
-        .navbar-toggler-icon {
+        /*.navbar-toggler-icon {
           background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='21' viewBox='0 0 24 21'%3E%3Cg id='Menu_Icon' data-name='Menu Icon' transform='translate(-349 -28)'%3E%3Crect id='Rectangle_169' data-name='Rectangle 169' width='24' height='3' transform='translate(349 28)' fill='%234c4c4c'/%3E%3Crect id='Rectangle_170' data-name='Rectangle 170' width='24' height='3' transform='translate(349 37)' fill='%234c4c4c'/%3E%3Crect id='Rectangle_171' data-name='Rectangle 171' width='24' height='3' transform='translate(349 46)' fill='%234c4c4c'/%3E%3C/g%3E%3C/svg%3E");
+        }*/
+        .navbar-toggler-icon {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='21' viewBox='0 0 24 21'%3E%3Cg id='Menu_Icon' data-name='Menu Icon' transform='translate(-349 -28)'%3E%3Crect id='Rectangle_169' data-name='Rectangle 169' width='24' height='3' transform='translate(349 28)' fill='%23ffffff'/%3E%3Crect id='Rectangle_170' data-name='Rectangle 170' width='24' height='3' transform='translate(349 37)' fill='%23ffffff'/%3E%3Crect id='Rectangle_171' data-name='Rectangle 171' width='24' height='3' transform='translate(349 46)' fill='%234c4c4c'/%3E%3C/g%3E%3C/svg%3E");
         }
       }
     }
