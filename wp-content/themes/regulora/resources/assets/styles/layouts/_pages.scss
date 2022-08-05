@@ -102,7 +102,7 @@
 
 @include media-breakpoint-down(lg) {
   #how-it-works {
-    .wp-block-column:first-of-type {
+    .wp-block-column:first-child {
       margin: 0 40px 0 0;
     }
   }
