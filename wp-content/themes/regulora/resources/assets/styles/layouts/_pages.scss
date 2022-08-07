@@ -111,7 +111,24 @@
 
 
 /*      TREATMENT SECTION     */
-
+#treatment {
+.treatment-left-side {
+  p {
+    font-size: 20px;
+  }
+}
+  .treatment-right-side {
+  h4 {
+    margin: 0 0 5px;
+  }
+    .percent-info {
+      margin: 0 0 20px;
+    }
+    .quote-block {
+      margin: 0 0 10px;
+    }
+  }
+}
 
 /*   END   TREATMENT SECTION     */
 
