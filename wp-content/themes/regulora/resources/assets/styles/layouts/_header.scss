@@ -370,7 +370,51 @@ header {
   header {
     .navbar {
       padding: 0 20px;
+
+      .nav-primary {
+        .menu-main-menu-container {
+          background: #A3B7DA;
+          padding: 0;
+
+          ul {
+            background: $mobi-nav-bg;
+
+            &::after {
+              content: "";
+              display: block;
+              position: absolute;
+              top: 0;
+              right: 0;
+              width: 40px;
+              height: 100%;
+              background: #A3B7DA;
+              border-radius: 20px 0 0 20px;
+            }
+
+            li {
+              margin: 0;
+
+              a {
+                width: 100%;
+
+                &:hover,
+                &.active {
+                  color: $white;
+                  background: $blue;
+
+                  &::after {
+                    background: $white;
+                  }
+                }
+              }
+            }
+
+          }
+        }
+      }
+
     }
   }
 }
+
 
