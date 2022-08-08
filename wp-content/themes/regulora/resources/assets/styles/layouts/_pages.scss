@@ -105,6 +105,14 @@
       margin: 0 40px 0 0;
     }
   }
+@include media-breakpoint-down(sm) {
+  #how-it-works {
+    .wp-block-column:first-child {
+      margin: 0;
+    }
+  }
+
+}
 
 /*   END  HOW REGULORA SECTION     */
 
@@ -131,6 +139,13 @@
     }
     .quote-block {
       margin: 0 0 10px;
+    }
+  }
+}
+@include media-breakpoint-down(sm) {
+  #treatment {
+    .treatment-left-side {
+      margin: 0;
     }
   }
 }
