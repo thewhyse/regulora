@@ -193,6 +193,17 @@
 
 /*    END   FIGURE WITH TEXT      */
 
+/*      REFRENCES LIST      */
+#refs-list {
+  ol {
+    padding-left: 20px;
+    li {
+      font-size: 14px;
+    }
+  }
+}
+/*   END   REFRENCES LIST      */
+
 @include media-breakpoint-down(lg) {
   #main-content .wp-block-group:first-of-type {
     padding: 0 0 20px !important;
