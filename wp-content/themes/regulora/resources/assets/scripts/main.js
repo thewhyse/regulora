@@ -24,3 +24,9 @@ const routes = new Router({
 
 // Load Events
 jQuery(document).ready(() => routes.loadEvents());
+
+
+// Footer menu links
+$('#menu-footer-menu-1 li a').each(function () {
+  $(this).attr('target', '_blank');
+});
