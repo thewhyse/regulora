@@ -52,10 +52,9 @@
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-    padding: 0 0 40px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     p,
     h1 {
       margin: 0;
@@ -101,10 +100,10 @@
 }
 
 #how-it-works {
-    .wp-block-column:first-child {
-      margin: 0 40px 0 0;
-    }
+  .wp-block-column:first-child {
+    margin: 0 40px 0 0;
   }
+}
 @include media-breakpoint-down(sm) {
   #how-it-works {
     .wp-block-column:first-child {
@@ -120,17 +119,17 @@
 
 /*      TREATMENT SECTION     */
 #treatment {
-.treatment-left-side {
-  margin: 0 60px 0 0;
-  p {
-    font-size: 20px;
-    line-height: 1.6rem;
+  .treatment-left-side {
+    margin: 0 60px 0 0;
+    p {
+      font-size: 20px;
+      line-height: 1.6rem;
+    }
   }
-}
   .treatment-right-side {
-  h4 {
-    margin: 0 0 5px;
-  }
+    h4 {
+      margin: 0 0 5px;
+    }
     .percent-info {
       margin: 0 0 20px;
     }
@@ -211,7 +210,7 @@
 }
 
 
-      /*      SECTIONS PADDING OVERRIDE           */
+/*      SECTIONS PADDING OVERRIDE           */
 #how-it-works,
 #treatment,
 #about-ibs,
