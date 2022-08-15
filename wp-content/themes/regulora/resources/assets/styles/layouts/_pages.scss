@@ -157,7 +157,10 @@
 
 /*      ABOUT IBS SECTION     */
 #about-ibs {
-
+  .wp-container-32,
+  .wp-container-36 {
+    display: none;
+  }
 }
 /*   END   ABOUT IBS SECTION     */
 
