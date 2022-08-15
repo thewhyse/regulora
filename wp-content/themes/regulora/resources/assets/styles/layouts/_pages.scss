@@ -95,11 +95,13 @@
 #how-it-works {
   background: $secondary;
 
+  /*
   .wp-block-column:last-child {
     figure {
-      margin: 0;
+      margin: 0 !important;
     }
   }
+  */
 }
 
 #how-it-works {
