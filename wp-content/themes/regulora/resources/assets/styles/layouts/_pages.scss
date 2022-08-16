@@ -106,6 +106,10 @@
   .wp-block-column:first-child {
     margin: 0 40px 0 0;
   }
+  .is-style-icon-with-text.info-icon:nth-child(2),
+  .is-style-icon-with-text.info-icon:nth-child(3) {
+    margin-top: -20px;
+  }
 }
 @include media-breakpoint-down(sm) {
   #how-it-works {
