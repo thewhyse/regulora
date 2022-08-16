@@ -106,11 +106,16 @@
   .wp-block-column:first-child {
     margin: 0 40px 0 0;
   }
-  .is-style-icon-with-text.info-icon:nth-child(2),
-  .is-style-icon-with-text.info-icon:nth-child(3) {
-    margin-top: -20px !important;
+  .how-it-right-col {
+    .is-style-icon-with-text:nth-child(2),
+    .is-style-icon-with-text:nth-child(3) {
+      &.info-icon {
+        margin-top: -20px 0 0 -20px !important;
+      }
+    }
   }
 }
+
 @include media-breakpoint-down(sm) {
   #how-it-works {
     .wp-block-column:first-child {
