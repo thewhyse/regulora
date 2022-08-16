@@ -108,7 +108,7 @@
   }
   .is-style-icon-with-text.info-icon:nth-child(2),
   .is-style-icon-with-text.info-icon:nth-child(3) {
-    margin-top: -20px;
+    margin-top: -20px !important;
   }
 }
 @include media-breakpoint-down(sm) {
