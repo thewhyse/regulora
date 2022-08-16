@@ -107,8 +107,8 @@
     margin: 0 40px 0 0;
   }
   .how-it-right-col {
-    figure:nth-child(2),
-    figure:nth-child(3) {
+    figure:nth-of-type(2),
+    figure:nth-of-type(3) {
         margin: -20px 0 0 -20px !important;
     }
   }
