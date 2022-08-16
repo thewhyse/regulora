@@ -107,11 +107,9 @@
     margin: 0 40px 0 0;
   }
   .how-it-right-col {
-    .is-style-icon-with-text:nth-child(2),
-    .is-style-icon-with-text:nth-child(3) {
-      &.info-icon {
+    figure:nth-child(2),
+    figure:nth-child(3) {
         margin-top: -20px 0 0 -20px !important;
-      }
     }
   }
 }
