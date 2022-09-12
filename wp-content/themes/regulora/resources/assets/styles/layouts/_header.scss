@@ -70,16 +70,27 @@ header {
         right: 0;
         top: 0;
         height: 100%;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         z-index: 1;
 
         ul {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
           justify-content: space-between;
           list-style: none;
           margin: 0;
           padding: 0;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
           flex-direction: column;
           position: relative;
 
@@ -105,8 +116,14 @@ header {
               font-weight: 500;
               color: $black;
               font-size: 22px;
+              display: -webkit-box;
+              display: -ms-flexbox;
               display: flex;
+              -webkit-box-align: center;
+              -ms-flex-align: center;
               align-items: center;
+              -webkit-box-pack: end;
+              -ms-flex-pack: end;
               justify-content: flex-end;
               padding: 5px 0 5px 25px;
               border-radius: 30px 0 0 30px;
@@ -155,6 +172,8 @@ header {
   }
 
   #site-navbar {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     #hcp-link {
       a {
@@ -169,6 +188,8 @@ header {
 
     #site-navbar {
       height: auto !important;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
       justify-content: space-between;
       padding: 0 26px 16px !important;
     }
@@ -194,7 +215,11 @@ header {
   }
 
   .back-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
 }
@@ -241,6 +266,7 @@ header {
   }
 
   header .navbar .navbar-toggler {
+    -webkit-box-shadow: none !important;
     box-shadow: none !important;
   }
 
@@ -284,6 +310,8 @@ header {
             a {
               font-weight: 400;
               font-size: 24px;
+              -webkit-box-pack: start;
+              -ms-flex-pack: start;
               justify-content: flex-start;
               padding: 0;
               border-radius: 0;
@@ -376,6 +404,7 @@ header {
   }
 
   .position-left-mobile img {
+    -o-object-position: left!important;
     object-position: left!important;
   }
 }
@@ -421,6 +450,3 @@ header {
     }
   }
 }
-
-
-
