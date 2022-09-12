@@ -156,6 +156,11 @@ header {
 
   #site-navbar {
     justify-content: space-between;
+    #hcp-link {
+      a {
+        font-size: 18px;
+      }
+    }
   }
 }
 
@@ -248,7 +253,8 @@ header {
     }
     .nav-primary {
       position: absolute;
-      top: var(--header-height);
+      /*top: var(--header-height);*/
+      top: 110px;
       background: #f3f5f7;
       z-index: 2;
       width: 100vw;
