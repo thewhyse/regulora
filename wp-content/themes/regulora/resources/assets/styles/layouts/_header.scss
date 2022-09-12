@@ -159,6 +159,18 @@ header {
   }
 }
 
+@include media-breakpoint-down(sm) {
+  header {
+
+    #site-navbar {
+      height: auto !important;
+      justify-content: space-between;
+      padding: 0 26px 16px !important;
+    }
+  }
+
+}
+
 
 .admin-bar {
   header {
