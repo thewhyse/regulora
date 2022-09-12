@@ -36,7 +36,7 @@ header {
   background-color: $blue !important;
 
   .navbar {
-    height: var(--header-height);
+    /*height: var(--header-height);*/
     padding: 0 26px;
 
     // Site Logo
@@ -152,6 +152,10 @@ header {
         }
       }
     }
+  }
+
+  #site-navbar {
+    justify-content: space-between;
   }
 }
 
