@@ -15,6 +15,8 @@
         @php dynamic_sidebar('sidebar-menu') @endphp
       </div>
     </div>
+
+    <div id="hcp-link"><a href="https://www.regulorahcp.com" target="_blank">For Healthcare Professionals</a></div>
   </nav>
 </header>
 
