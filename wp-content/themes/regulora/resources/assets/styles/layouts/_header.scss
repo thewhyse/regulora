@@ -176,6 +176,7 @@ header {
     -ms-flex-pack: justify;
     justify-content: space-between;
     #hcp-link {
+      margin: 0 10px 0 0;
       a {
         font-size: 14px;
       }
@@ -192,6 +193,10 @@ header {
       -ms-flex-pack: justify;
       justify-content: space-between;
       padding: 0 26px 16px !important;
+      #hcp-link {
+        margin: 0;
+      }
+
     }
   }
 
