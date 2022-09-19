@@ -176,6 +176,7 @@ header {
     -ms-flex-pack: justify;
     justify-content: space-between;
     #hcp-link {
+      z-index: 100000;
       margin: 0 10px 0 0;
       a {
         font-size: 14px;
