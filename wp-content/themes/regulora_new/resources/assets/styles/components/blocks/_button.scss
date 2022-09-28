@@ -1,0 +1,268 @@
+.wp-block-button {
+  a {
+    font-size: 18px;
+    line-height: 27px;
+    transition: all 0.3s;
+    padding: 8px 15px;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &.has-primary-background-color {
+      &:hover {
+        background: $secondary !important;
+        color: $black !important;
+      }
+    }
+
+    &.has-secondary-background-color {
+      &:hover {
+        background: $primary !important;
+        color: $white !important;
+      }
+    }
+
+    &.has-primary-color.has-secondary-background-color {
+      &:hover {
+        background: $primary;
+        color: $white !important;
+      }
+    }
+
+    &.has-primary-color.has-white-background-color {
+      &:hover {
+        background: $secondary;
+        color: $white !important;
+      }
+    }
+  }
+
+  &.w-100 {
+    a {
+      width: 100% !important;
+    }
+  }
+
+  &.is-style-inactive {
+    a {
+      font-weight: 500;
+      cursor: default;
+
+      &.has-primary-color {
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+
+    &.has-extra-large-font-size {
+      a {
+        font-size: 40px !important;
+        line-height: 48px;
+        padding: 40px 60px;
+      }
+    }
+
+    &.text-start {
+      text-align: start;
+    }
+  }
+
+  &.is-style-simple-link {
+    margin-right: 35px;
+
+    a {
+      font-size: 14px;
+      line-height: 17px;
+      color: $white;
+      padding: 0;
+      background: none;
+      border-radius: 0;
+
+      &:hover {
+        text-decoration: underline;
+        color: $white;
+      }
+    }
+  }
+
+  &.is-style-short {
+    a {
+      width: 350px;
+      padding: 15px 5px;
+    }
+  }
+
+  &.is-style-medium {
+    a {
+      width: 450px;
+      padding: 15px 10px;
+    }
+  }
+
+  &.is-style-wide {
+    a {
+      width: 550px;
+      padding: 12px;
+    }
+  }
+}
+
+.wp-block-buttons {
+  &.is-style-tabs {
+    gap: 0;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    .wp-block-button {
+      flex-basis: 100%;
+
+      .wp-block-button__link {
+        background-color: $primary-light;
+        color: $black;
+        font-size: 36px;
+        padding: 15px 40px 15px 0;
+        opacity: .6;
+        transition: opacity 0.3s ease-in-out;
+        border-radius: 0;
+        display: block;
+        width: 100%;
+        text-align: left;
+
+        img {
+          width: 115px;
+          margin: -50px 0 -48px 0;
+        }
+
+        &.active,
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      &:first-child .wp-block-button__link {
+        border-radius: 50px 0 0 50px;
+      }
+
+      &:last-child .wp-block-button__link {
+        border-radius: 0 50px 50px 0;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-between(lg, xl) {
+  .wp-block-button {
+    &.is-style-short {
+      a {
+        width: 320px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(xl) {
+  .wp-block-buttons {
+    .wp-block-button {
+      a {
+        font-size: 20px;
+        line-height: 1.1;
+      }
+
+      &.is-style-short {
+        a {
+          width: 285px;
+        }
+      }
+
+      &.is-style-medium {
+        a {
+          width: 250px;
+        }
+      }
+
+      &.is-style-wide {
+        a {
+          width: 330px;
+        }
+      }
+
+      &.is-style-inactive {
+        a {
+          font-weight: 600;
+        }
+
+        &.has-extra-large-font-size {
+          a {
+            font-size: 28px !important;
+            line-height: 38px;
+            padding: 25px 40px;
+            margin-bottom: 40px;
+          }
+        }
+      }
+    }
+
+    &.is-style-tabs {
+      margin-right: -30px;
+      margin-left: -30px;
+
+      .wp-block-button {
+        .wp-block-button__link {
+          font-size: 26px;
+          padding: 0 0 10px;
+          border-radius: 0;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          min-height: 184px;
+          position: relative;
+
+          &::after {
+            content: "";
+          }
+
+          img {
+            width: 155px !important;
+            margin: -60px auto 0;
+            display: block;
+          }
+
+          &.active {
+            &::after {
+              width: 0;
+              height: 0;
+              border-left: 15px solid transparent;
+              border-right: 15px solid transparent;
+              border-top: 18px solid $primary-light;
+              position: absolute;
+              top: 100%;
+              left: 50%;
+              display: block;
+              margin-left: -15px;
+            }
+          }
+        }
+
+        &:first-child .wp-block-button__link {
+          border-radius: 0;
+        }
+
+        &:last-child .wp-block-button__link {
+          border-radius: 0;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-between(sm, md) {
+  .wp-block-button {
+    &.is-style-short {
+      a {
+        width: 250px;
+      }
+    }
+  }
+}

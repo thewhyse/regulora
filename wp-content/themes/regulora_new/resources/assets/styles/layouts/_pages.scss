@@ -1,0 +1,9 @@
+.search-results {
+  & > .wrap {
+    padding: 0;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+
+}

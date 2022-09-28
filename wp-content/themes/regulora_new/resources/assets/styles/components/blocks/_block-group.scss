@@ -1,0 +1,140 @@
+.wp-block-group {
+  &.is-style-rounded {
+    border-radius: 10px;
+    height: 100%;
+    padding: 45px 10px;
+
+    .wp-block-group__inner-container {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-basis: 100%;
+      justify-content: space-between;
+
+      .wp-block-buttons {
+        .wp-block-button {
+          &.w-100 {
+            width: calc(100% - 20px) !important;
+            margin-right: auto;
+            margin-left: auto;
+          }
+        }
+      }
+    }
+  }
+
+  &.alignwide {
+    .wp-block-group__inner-container {
+      max-width: 100%;
+    }
+  }
+
+  &.rounded-pill {
+    .wp-block-group__inner-container {
+      margin-left: 0;
+      margin-right: 0;
+
+      h2 {
+        margin-bottom: 10px;
+        font-size: 40px !important;
+        line-height: 48px;
+        font-weight: 500;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &.tab-content {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &.with-stretched {
+    position: relative;
+
+    .wp-block-button__link {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.editor-styles-wrapper {
+  .wp-block-group {
+    &.is-style-faq-item {
+      p {
+        height: auto !important;
+        overflow: visible !important;
+      }
+    }
+
+    &.tab-content {
+      display: block;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(xl) {
+  .wp-block-group {
+    //&.alignfull:not(.p-0) {
+    //  padding: var(--spacer-110) 0 !important;
+    //}
+    //
+    &.is-style-faq-item {
+      padding: 22px 25px 22px 25px;
+
+      .wp-block-group__inner-container {
+        padding: 0;
+      }
+
+      h5 {
+        font-size: 20px;
+        line-height: 1.2;
+
+        &::after {
+          background-repeat: no-repeat;
+          width: 26px;
+          height: 32px;
+        }
+
+        &:hover {
+          &::after {
+            background: url($chevron-primary-hover);
+          }
+        }
+      }
+
+      p {
+        padding: 0;
+      }
+    }
+
+    &.rounded-pill {
+      padding: 30px 10px !important;
+      text-align: center;
+
+      .wp-block-group__inner-container {
+        h2 {
+          font-size: 28px !important;
+          line-height: 38px;
+        }
+      }
+    }
+  }
+}

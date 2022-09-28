@@ -1,0 +1,41 @@
+.wp-block-cover {
+  width: 100vw;
+
+  &.has-custom-content-position {
+    .wp-block-cover__inner-container {
+      width: inherit !important;
+    }
+  }
+
+  &.is-style-full-height-content {
+    .wp-block-cover__inner-container {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+
+      .wp-block {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.container-fluid-with-padding {
+  .wp-block-cover {
+    &.alignfull {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+@include media-breakpoint-down(xl) {
+  .wp-block-cover {
+    //min-height: auto !important;
+    padding: 75px 0;
+
+    &.useStylesheet {
+      padding: 0 !important;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+  &.is-style-with-rounded-bg {
+    background: $blue-light;
+    padding: 10px 50px;
+    border-radius: 50px;
+
+    img {
+      margin-right: 25px;
+      margin-top: -50px;
+      margin-bottom: -50px;
+    }
+  }
+}
+
+@include media-breakpoint-down(xl) {
+  h1, 
+  h2 {
+    &.is-style-use-margin-bottom {
+      margin-bottom: 10px;
+    }
+  }
+}

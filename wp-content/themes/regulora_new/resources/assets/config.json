@@ -1,0 +1,54 @@
+{
+  "entry": {
+    "main": [
+      "./scripts/main.js",
+      "./styles/main.scss"
+    ],
+    "customizer": [
+      "./scripts/customizer.js"
+    ]
+  },
+  "publicPath": "/wp-content/themes/regulora",
+  "devUrl": "https://regulora-hcp.local",
+  "proxyUrl": "http://localhost:3000",
+  "cacheBusting": "[name]_[hash:8]",
+  "criticals": [
+    {
+      "key": "front-page",
+      "src": "/"
+    },
+    {
+      "key": "page",
+      "src": "/about-regulora/"
+    },
+    {
+      "key": "about-regulora",
+      "src": "/about-regulora/"
+    },
+    {
+      "key": "about-gdh",
+      "src": "/about-gdh/"
+    },
+    {
+      "key": "educating-patients",
+      "src": "/educating-patients/"
+    },
+    {
+      "key": "prescribing-regulora",
+      "src": "/prescribing-regulora/"
+    },
+    {
+      "key": "resources",
+      "src": "/resources/"
+    },
+    {
+      "key": "reviews-and-news",
+      "src": "/reviews-and-news/"
+    }
+  ],
+  "watch": [
+    "app/**/*.php",
+    "config/**/*.php",
+    "resources/views/**/*.php"
+  ]
+}

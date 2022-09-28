@@ -1,0 +1,379 @@
+.testimonialSlider {
+  .wp-block-testimonials-slider {
+    .slider-container {
+      padding: 25px 0;
+
+      .tns-outer {
+        max-width: 100%;
+      }
+
+      .slider-inner {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+
+        .prev-but-place {
+          width: 36px;
+          margin-right: 38px;
+          cursor: pointer;
+
+          svg {
+            width: 36px;
+            fill: $blue;
+            margin-top: -128px;
+
+            &:hover {
+              fill: $secondary;
+            }
+          }
+
+          &[aria-disabled=true] {
+            svg {
+              fill: transparent;
+            }
+          }
+        }
+
+        .next-but-place {
+          width: 36px;
+          margin-left: 38px;
+          cursor: pointer;
+
+          svg {
+            width: 36px;
+            fill: $blue;
+            margin-top: -128px;
+
+            &:hover {
+              fill: $secondary;
+            }
+          }
+
+          &[aria-disabled=true] {
+            svg {
+              fill: transparent;
+            }
+          }
+        }
+
+        .tns-inner {
+          border-radius: 10px;
+          overflow: hidden;
+        }
+        //
+        //.testimonials-slider {
+        //  background: $white;
+        //}
+
+        .slide-item {
+          background: $white;
+          padding: 40px 30px 50px;
+          font-size: 38px !important;
+          line-height: 1.35;
+          font-weight: 400;
+          color: $black;
+          //margin-left: 2px;
+          //margin-right: 2px;
+
+          .slide-content {
+            position: relative;
+            padding-top: 70px;
+
+            svg.quote {
+              position: absolute;
+              top: -25px;
+              left: -3px;
+              width: 75px;
+            }
+          }
+
+
+          h3,
+          h4 {
+            margin-bottom: 0;
+          }
+
+          p {
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+
+          ul {
+            padding-left: 20px;
+            margin-bottom: 1.5rem;
+
+            li {
+              margin-bottom: 10px;
+
+              &::marker {
+                color: $black;
+              }
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+
+        .tns-nav {
+          text-align: center;
+          margin-top: 90px;
+          position: relative;
+          z-index: 1;
+
+          button {
+            border: none;
+            border-radius: 6px;
+            width: 20px;
+            height: 20px;
+            background: $primary-light;
+            margin: 0 10px;
+            padding: 0;
+
+            &.tns-nav-active {
+              background: $blue;
+            }
+          }
+        }
+
+        .controll-buttons {
+          position: relative;
+          z-index: 1;
+        }
+      }
+    }
+
+    // default view
+    &.view-default {
+      .slider-container {
+        .tns-ovh {
+          overflow: visible;
+        }
+
+        .tns-outer {
+          max-width: 672px;
+          width: 100%;
+        }
+
+        .slider-inner {
+          max-width: 820px;
+          //
+          //.testimonials-slider {
+          //  display: flex;
+          //  align-items: center;
+          //}
+
+          .tns-inner {
+            border-radius: 25px;
+            overflow: hidden;
+            //border: 5px solid $secondary;
+          }
+
+          .slide-item {
+            padding: 40px 60px 50px;
+            font-size: 22px !important;
+            line-height: 1.6;
+            font-weight: 500;
+            border-radius: 25px;
+            overflow: visible;
+            border: 5px solid $secondary;
+            margin-bottom: 25px;
+            position: relative;
+
+            .slide-content {
+              padding-top: 80px;
+
+              svg.quote {
+                position: absolute;
+                top: -25px;
+                left: -3px;
+                width: 75px;
+              }
+            }
+
+            .pdfLink {
+              background: $secondary;
+              padding: 10px 25px;
+              border-radius: 50px;
+              font-weight: 700;
+              position: absolute;
+              bottom: -30px;
+              left: 50%;
+              margin-left: -145px;
+              z-index: 2;
+
+              &:hover {
+                color: $black;
+                text-decoration: none;
+              }
+            }
+          }
+
+          .tns-nav {
+            margin-top: 70px;
+          }
+        }
+      }
+    }
+
+    &.view-head {
+      .slider-container {
+        .slider-inner {
+          .testimonials-slider {
+            background: transparent;
+          }
+
+          .slide-item {
+            opacity: 0;
+            background: $white;
+            border-radius: 25px;
+
+            &.tns-slide-active {
+              opacity: 1;
+            }
+          }
+
+          .prev-but-place {
+            margin-right: 16px;
+
+            svg {
+              margin-top: -68px;
+            }
+          }
+
+          .next-but-place {
+            margin-left: 18px;
+
+            svg {
+              margin-top: -68px;
+            }
+          }
+
+          .tns-nav {
+            margin-top: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(xl) {
+  .testimonialSlider {
+    .wp-block-testimonials-slider {
+      .slider-container {
+        padding: 25px 0;
+
+        .slider-inner {
+          width: 100%;
+          flex-direction: column;
+
+          .prev-but-place {
+            width: 27px;
+            margin-right: 20px;
+
+            svg {
+              width: 27px;
+              margin-top: 0;
+            }
+          }
+
+          .next-but-place {
+            width: 27px;
+            margin-left: 20px;
+
+            svg {
+              width: 27px;
+              margin-top: 0;
+            }
+          }
+
+          .slide-item {
+            padding: 20px 15px 50px;
+            font-size: 26px !important;
+
+            .slide-content {
+              padding-top: 55px;
+
+              svg.quote {
+                top: -5px;
+                width: 50px;
+              }
+            }
+          }
+
+          .tns-nav {
+            margin-top: 40px;
+            margin-bottom: 40px;
+          }
+        }
+      }
+
+      // default view
+      &.view-default {
+        .slider-container {
+          .slider-inner {
+            width: 100%;
+            flex-direction: column;
+
+            .slide-item {
+              padding: 20px 15px 50px;
+              font-size: 22px !important;
+
+              .slide-content {
+                padding-top: 55px;
+
+                svg.quote {
+                  top: -5px;
+                  width: 50px;
+                }
+              }
+
+              .pdfLink {
+                padding: 5px 15px;
+                bottom: -25px;
+                margin-left: -136px;
+              }
+            }
+
+            .tns-nav {
+              margin-top: 30px;
+              margin-bottom: 30px;
+
+              button {
+                width: 25px;
+                height: 10px;
+              }
+            }
+          }
+        }
+      }
+
+      &.view-head {
+        .slider-container {
+          .tns-outer {
+            width: 85%;
+          }
+          .slider-inner {
+            flex-direction: row;
+
+            .prev-but-place {
+              margin-right: 10px;
+              margin-left: -13px;
+              margin-top: -100px;
+            }
+
+            .next-but-place {
+              margin-right: -13px;
+              margin-left: 10px;
+              margin-top: -100px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
