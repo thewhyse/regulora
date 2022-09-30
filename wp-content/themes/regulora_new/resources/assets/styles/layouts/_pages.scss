@@ -22,3 +22,15 @@
     right: -55%;
   }
 }
+
+@include media-breakpoint-down(sm) {
+  #hp_hero_section {
+    .wp-container-4 {
+      bottom: inherit;
+      right: inherit;
+      top: 10%;
+      left: 15%;
+    }
+  }
+
+}
