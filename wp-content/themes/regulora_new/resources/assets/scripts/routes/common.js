@@ -113,6 +113,7 @@ export default {
       } )
     }
     
+/*
     const prof = document.getElementById( 'prof' );
     if ( prof ) {
       let popupBlock = document.getElementById( 'choice-popup' );
@@ -136,7 +137,8 @@ export default {
         document.cookie = "usertype=professional;path=/;expires=" + date;
       } )
     }
-  
+*/
+
   
     testimonialsSlider();
     tweetsSlider();

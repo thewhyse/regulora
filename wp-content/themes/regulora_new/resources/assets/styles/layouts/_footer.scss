@@ -190,6 +190,7 @@ footer {
   }
 }
 
+/*
 #choice-popup {
   position: fixed;
   top: 0;
@@ -258,6 +259,7 @@ footer {
     }
   }
 }
+*/
 
 @media (min-width: 1400px) and (max-width: 1585px) {
   footer {
@@ -360,6 +362,7 @@ footer {
     }
   }
 
+  /*
   #choice-popup {
     .inner {
       width: 90%;
@@ -375,6 +378,8 @@ footer {
       }
     }
   }
+  */
+
 }
 
 @include media-breakpoint-down(md) {
