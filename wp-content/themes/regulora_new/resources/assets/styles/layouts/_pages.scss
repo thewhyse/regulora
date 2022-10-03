@@ -7,14 +7,16 @@
 @include media-breakpoint-down(lg) {
 
 }
-
+/*DELETE WHEN NOT NECESSARY*/
 #quizForm1 {
   .qsm-before-message {
     display: flex;
     justify-content: space-between;
   }
 }
+/*DELETE ABOVE WHEN NOT NECESSARY*/
 
+/*      HOME PAGE       */
 #hp_hero_section {
   .wp-container-4 {
     position: absolute;
@@ -34,6 +36,25 @@
 /* TITLES WITH LINES CLASS */
 /*    title-w-lines   */
 
+
+// Home page sections
+#phone-app-section {
+  margin-bottom: 0;
+  figure {
+    margin-bottom: 0;
+    &:before,
+    &:after {
+      background: #fff;
+    }
+  }
+}
+
+#brain-connection {
+
+}
+
 @include media-breakpoint-down(sm) {
 
 }
+
+/*   END   HOME PAGE       */

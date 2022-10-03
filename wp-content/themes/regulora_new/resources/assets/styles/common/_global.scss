@@ -172,10 +172,10 @@ h6,
 /* Transitions */
 a,
 .hov-trans {
-  transition: color ease-in-out 0.2s;
+  transition: color ease-in-out 0.5s;
 
   svg * {
-    transition: color, fill, stroke ease-in-out 0.2s;
+    transition: color, fill, stroke ease-in-out 0.5s;
   }
 }
 
