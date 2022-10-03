@@ -47,6 +47,7 @@
   </div>
 </footer>
 
+{{--
 <div id="choice-popup" class="">
   <div class="inner">
     <h2>ARE YOU A US HEALTHCARE PROFESSIONAL?</h2>
@@ -61,6 +62,7 @@
     </div>
   </div>
 </div>
+--}}
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VVEVEH16NV"></script>
