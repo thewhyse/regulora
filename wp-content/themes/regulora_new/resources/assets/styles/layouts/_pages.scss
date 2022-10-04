@@ -55,6 +55,18 @@
 
 }
 
+#for-change {
+  .wp-block-column:last-child {
+    .wp-block-buttons {
+      margin: -42px 0 0;
+    }
+  }
+}
+
+#hp-cards-section {
+
+}
+
 @include media-breakpoint-down(sm) {
 
 }
