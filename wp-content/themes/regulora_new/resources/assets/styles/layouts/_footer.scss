@@ -158,8 +158,20 @@ footer {
     }
   }
 
-  .ps-lg-5 {
-    padding-left: 0;
+  .footer-holder {
+    .col-lg-1 {
+      .footer-logo {
+        img {
+          max-height: 100% !important;
+          height: auto !important;
+        }
+      }
+    }
+
+    .ps-lg-5 {
+      padding-left: 0 !important;
+    }
+
   }
 }
 
