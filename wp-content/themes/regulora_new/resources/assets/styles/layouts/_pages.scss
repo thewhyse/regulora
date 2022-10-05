@@ -64,15 +64,15 @@
 }
 
 #hp-cards-section {
-  .wp-block-column {
+  .wp-block-column:nth-child(odd) {
     .is-style-rounded {
-      &:nth-child(even) {
-        border: 2px solid #B7C3DF !important;
-      }
+      border: 2px solid #7A95BF;
+    }
+  }
 
-      &:nth-child(odd) {
-        border: 2px solid #7A95BF;
-      }
+  .wp-block-column:nth-child(even) {
+    .is-style-rounded {
+      border: 2px solid #B7C3DF;
     }
   }
 }
