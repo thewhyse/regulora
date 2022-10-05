@@ -65,7 +65,16 @@
 
 #hp-cards-section {
   .wp-block-column {
+    .is-style-rounded {
+      &:nth-child(odd) {
+        border: 2px solid #7A95BF;
+      }
 
+      &:nth-child(even) {
+        border: 2px solid #B7C3DF !important;
+      }
+
+    }
   }
 }
 
