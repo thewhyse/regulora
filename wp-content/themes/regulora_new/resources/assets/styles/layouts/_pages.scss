@@ -69,9 +69,11 @@
       border: 2px solid #7A95BF;
     }
     .wp-block-buttons {
-      a:hover {
-        background: #6fd3c8 !important;
-        color: #333 !important;
+      a {
+        &:hover {
+          background: #6fd3c8 !important;
+          color: #333 !important;
+        }
       }
     }
   }
