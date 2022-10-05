@@ -68,6 +68,12 @@
     .is-style-rounded {
       border: 2px solid #7A95BF;
     }
+  }
+
+  .wp-block-column:nth-child(even) {
+    .is-style-rounded {
+      border: 2px solid #B7C3DF;
+    }
     .wp-block-buttons {
       a {
         &:hover {
@@ -76,12 +82,7 @@
         }
       }
     }
-  }
 
-  .wp-block-column:nth-child(even) {
-    .is-style-rounded {
-      border: 2px solid #B7C3DF;
-    }
   }
 }
 
