@@ -68,6 +68,12 @@
     .is-style-rounded {
       border: 2px solid #7A95BF;
     }
+    .wp-block-buttons {
+      a:hover {
+        background: #6fd3c8 !important;
+        color: #333 !important;
+      }
+    }
   }
 
   .wp-block-column:nth-child(even) {
