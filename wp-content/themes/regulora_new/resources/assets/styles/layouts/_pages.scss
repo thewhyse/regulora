@@ -104,4 +104,9 @@
   background-attachment: initial;
 }
 
+@include media-breakpoint-down(sm) {
+  background-image: url(/wp-content/uploads/2022/10/Brain-Gut_Hero_mobi.png);
+}
+
+
 /*    END    BRAIN-GUT-CONNECTION PAGE           */
