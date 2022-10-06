@@ -104,6 +104,15 @@
   background-attachment: initial;
 }
 
+#restoring-brain-gut-section {
+  .wp-block-pullquote {
+    &:before,
+    &:after {
+      background: #fff;
+    }
+  }
+}
+
 @include media-breakpoint-down(sm) {
   #brain-gut-hero {
     background-image: url(/wp-content/uploads/2022/10/Brain-Gut_Hero_mobi.png);
