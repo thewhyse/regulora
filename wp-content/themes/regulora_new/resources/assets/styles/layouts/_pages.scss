@@ -111,6 +111,18 @@
       background: #fff;
     }
   }
+
+  .brain-gut-section-first-para {
+    margin-bottom: 0;
+  }
+
+  .brain-gut-section-second-para {
+    float: left;
+  }
+
+  .brain-gut-section-img {
+    float: right;
+  }
 }
 
 @include media-breakpoint-down(sm) {
