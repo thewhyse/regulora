@@ -261,6 +261,27 @@
   }
 }
 
+/*      BRAIN-GUT CONNECTION PAGE TESTIMONIALS OVERRIDE      */
+.testimonialSlider.did-you-know {
+  .wp-block-testimonials-slider.view-default {
+    .slider-container {
+      .slider-inner {
+        .slide-item {
+          border: none;
+          .slide-content {
+            svg.quote {
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/*   END   BRAIN-GUT CONNECTION PAGE OVERRIDE      */
+
 @include media-breakpoint-down(xl) {
   .testimonialSlider {
     .wp-block-testimonials-slider {
