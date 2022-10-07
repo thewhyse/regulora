@@ -126,6 +126,9 @@
     width: 48%;
     margin: 20px 0 0;
   }
+  h5 {
+    text-transform: uppercase;
+  }
 }
 
 @include media-breakpoint-down(sm) {
