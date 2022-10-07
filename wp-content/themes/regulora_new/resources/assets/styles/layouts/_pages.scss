@@ -141,13 +141,16 @@
 
     .brain-gut-section-second-para {
       float: none;
-      width: 90%;
+      width: 100%;
     }
 
     .brain-gut-section-img {
       float: none;
-      width: 90%;
-      margin: 40px 0 0;
+      width: 100%;
+      margin: 40px auto 0;
+      img {
+        width: 100%;
+      }
     }
   }
 
