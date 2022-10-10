@@ -131,6 +131,25 @@
   }
 }
 
+#brain-gut-cards-section {
+  .wp-block-column:nth-child(odd) {
+    .is-style-rounded {
+      border: 2px solid #7A95BF;
+    }
+  }
+  .wp-block-column:nth-child(even) {
+    .is-style-rounded {
+      border: 2px solid #B7C3DF;
+      .wp-block-button__link {
+        background-color: #B7C3DF;
+        color: #333;
+      }
+    }
+  }
+
+}
+
+
 @include media-breakpoint-down(sm) {
   #brain-gut-hero {
     background-image: url(/wp-content/uploads/2022/10/Brain-Gut_Hero_mobi.png);
