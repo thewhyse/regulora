@@ -154,9 +154,16 @@
     display: flex;
     justify-content: center;
     .question-block {
+      position: relative;
       margin: 0 40px 0 0;
       &:before {
         content: '';
+        display: block;
+        width: 92px;
+        height: 105px;
+        position: absolute;
+        top: 0;
+        left: -100px;
         background: url("/wp-content/uploads/2022/10/Icon_question.png") no-repeat center center;
       }
     }
