@@ -270,8 +270,21 @@
           border: none;
           .slide-content {
             svg.quote {
-
+              display: none;
             }
+          }
+        }
+        .tns-outer {
+          .tns-ovh {
+            .slide-item {
+              margin-bottom: 0;
+              .slide-content {
+                margin-top: 0;
+              }
+            }
+          }
+          .tns-nav {
+            margin-top: 0;
           }
         }
       }
