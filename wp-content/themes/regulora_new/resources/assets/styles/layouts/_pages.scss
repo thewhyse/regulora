@@ -154,9 +154,10 @@
     display: flex;
     justify-content: center;
     .question-block {
+      margin: 0 40px 0 0;
       &:before {
         content: '';
-        background: url("../images/icon_question.png") no-repeat center center;
+        background: url("/wp-content/uploads/2022/10/Icon_question.png") no-repeat center center;
       }
     }
   }
