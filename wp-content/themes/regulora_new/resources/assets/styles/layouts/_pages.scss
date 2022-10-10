@@ -170,6 +170,31 @@
   }
 }
 
+@include media-breakpoint-down(md) {
+  .question-section {
+    .wp-block-column {
+      flex-direction: column;
+
+      .question-block {
+        margin: 0 -130px 60px 0;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .question-section {
+    .wp-block-column {
+      flex-direction: column;
+
+      .question-block {
+        margin: 0 -130px 60px 0;
+      }
+    }
+  }
+}
+
+
 
 @include media-breakpoint-down(sm) {
   #brain-gut-hero {
