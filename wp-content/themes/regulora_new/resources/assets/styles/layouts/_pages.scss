@@ -236,10 +236,26 @@
 
 
       /*      SURVEY PAGE           */
-.smcx-widget {
-max-width: 100%;
+.smcx-widget.smcx-embed {
+  max-width: 100% !important;
+  border: none !important;
+
   .smcx-iframe-container {
-    max-width: 100%;
+    max-width: 100% !important;
+  }
+}
+
+
+//  let's if we can get into iframe
+.smcx-widget.smcx-embed {
+  .smcx-iframe-container {
+iframe {
+  #patas {
+    .privacy-policy-icon-super-container {
+      display: none !important;
+    }
+  }
+}
   }
 }
       /*   END   SURVEY PAGE           */
