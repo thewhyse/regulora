@@ -7,14 +7,6 @@
 @include media-breakpoint-down(lg) {
 
 }
-/*DELETE WHEN NOT NECESSARY*/
-#quizForm1 {
-  .qsm-before-message {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-/*DELETE ABOVE WHEN NOT NECESSARY*/
 
 /*      HOME PAGE       */
 #hp_hero_section {
@@ -194,8 +186,6 @@
   }
 }
 
-
-
 @include media-breakpoint-down(sm) {
   #brain-gut-hero {
     background-image: url(/wp-content/uploads/2022/10/Brain-Gut_Hero_mobi.png);
@@ -223,9 +213,26 @@
   }
 
 }
-
-
 /*    END    BRAIN-GUT-CONNECTION PAGE           */
+
+/*      ABOUT REGULORA PAGE     */
+#about_hero_section {
+  .wp-container-4 {
+    position: absolute;
+    bottom: 20%;
+    right: -55%;
+  }
+}
+
+#about_hero_section_mobi {
+  .wp-container-2 {
+    position: absolute;
+    top: 8%;
+    left: 15%;
+  }
+}
+
+/*   END   ABOUT REGULORA PAGE     */
 
 
       /*      SURVEY PAGE           */
