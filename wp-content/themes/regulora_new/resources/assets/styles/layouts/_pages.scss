@@ -225,6 +225,16 @@
   }
 }
 
+@include media-breakpoint-down(md) {
+  #about_hero_section {
+    .wp-container-4 {
+      position: absolute;
+      bottom: 20%;
+      right: -55%;
+    }
+  }
+}
+
 #about_hero_section_mobi {
   .wp-container-2 {
     position: absolute;
