@@ -68,6 +68,7 @@
     }
     .wp-block-buttons {
       a {
+        color: #333;
         &:hover {
           background: #6fd3c8 !important;
           color: #333 !important;
@@ -242,20 +243,6 @@
 
   .smcx-iframe-container {
     max-width: 100% !important;
-  }
-}
-
-
-//  let's if we can get into iframe
-.smcx-widget.smcx-embed {
-  .smcx-iframe-container {
-iframe {
-  #patas {
-    .privacy-policy-icon-super-container {
-      display: none !important;
-    }
-  }
-}
   }
 }
       /*   END   SURVEY PAGE           */
