@@ -262,6 +262,10 @@
 
 #about-testimonials-section {
   background-color: #000;
+  #testimonials-container {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 @include media-breakpoint-down(sm) {
