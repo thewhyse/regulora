@@ -243,6 +243,29 @@
   }
 }
 
+#how-it-works-section {
+  .wp-block-column {
+    .how-title,
+    .has-white-color,
+    .how-icons-columns {
+      width: 70%;
+      margin: 0 auto;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  #how-it-works-section {
+    .wp-block-column {
+      .how-title,
+      .has-white-color,
+      .how-icons-columns {
+        width: 100%;
+      }
+    }
+  }
+}
+
 /*   END   ABOUT REGULORA PAGE     */
 
 
