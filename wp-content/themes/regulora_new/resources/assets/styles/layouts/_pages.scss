@@ -246,17 +246,22 @@
 #how-it-works-section {
   .wp-block-column {
     .how-title,
-    .has-white-color,
-    .how-icons-columns {
+    .has-white-color {
       width: 70%;
       margin: 0 auto;
     }
     .how-icons-columns {
+      width: 75%;
+      margin: 0 auto;
       .wp-block-column p:last-child {
         font-size: 16px;
       }
     }
   }
+}
+
+#about-testimonials-section {
+  background-color: #000;
 }
 
 @include media-breakpoint-down(sm) {
