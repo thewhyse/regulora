@@ -251,6 +251,11 @@
       width: 70%;
       margin: 0 auto;
     }
+    .how-icons-columns {
+      .wp-block-column p:last-child {
+        font-size: 16px;
+      }
+    }
   }
 }
 
