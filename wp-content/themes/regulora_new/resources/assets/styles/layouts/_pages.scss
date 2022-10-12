@@ -265,6 +265,11 @@
   #testimonials-container {
     width: 80%;
     margin: 0 auto;
+    .testimonialSlider {
+      #tns1-mw {
+        height: auto !important;
+      }
+    }
   }
 }
 
