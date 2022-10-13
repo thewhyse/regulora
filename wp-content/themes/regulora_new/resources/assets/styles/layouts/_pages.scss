@@ -270,6 +270,13 @@
       .wp-block-testimonials-slider.view-default {
         .slider-container {
           .slider-inner {
+
+            .slide-item {
+              margin-bottom: 0;
+              padding: 40px 20px;
+              min-height: 328px;
+            }
+
             .tns-nav {
               margin-top: 0;
             }
@@ -288,7 +295,7 @@
   }
   #testimonials-left-side {
     background: url("/wp-content/uploads/2022/10/Reviews_BG_2.png") no-repeat center center !important;
-    background-size: cover;
+    background-size: cover !important;
   }
 }
 
