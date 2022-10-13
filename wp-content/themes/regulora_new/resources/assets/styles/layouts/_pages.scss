@@ -266,6 +266,17 @@
     width: 80%;
     margin: 0 auto;
     .testimonialSlider {
+
+      .wp-block-testimonials-slider.view-default {
+        .slider-container {
+          .slider-inner {
+            .tns-nav {
+              margin-top: 0;
+            }
+          }
+        }
+      }
+
       #tns1-mw {
         height: auto !important;
       }
