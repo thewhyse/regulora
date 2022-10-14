@@ -299,6 +299,38 @@
   }
 }
 
+@include media-breakpoint-down(md) {
+  #about-testimonials-section {
+    #testimonials-container {
+      .testimonialSlider {
+
+        .wp-block-testimonials-slider.view-default {
+          .slider-container {
+            .slider-inner {
+
+              .slide-item {
+
+              }
+
+              .tns-nav {
+
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #testimonials-left-side {
+      h3, p {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+}
+
 @include media-breakpoint-down(sm) {
   #how-it-works-section {
     .wp-block-column {
@@ -335,6 +367,10 @@
     #testimonials-left-side {
       height: 780px;
       background: url("/wp-content/uploads/2022/10/Patient_Review_mobi_2.png") no-repeat center center !important;
+      h3, p {
+        width: 80%;
+        margin: 0 auto;
+      }
     }
   }
 
