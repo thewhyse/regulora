@@ -283,7 +283,7 @@
               border: none;
               border-radius: 0;
               margin-bottom: 0;
-              padding: 40px 20px;
+              padding: 40px;
               height: 412px;
             }
 
@@ -302,6 +302,10 @@
     .about-disclaimer-block,
     .testimonials-left_side-title {
       color: #fff !important
+    }
+    .about-disclaimer-block {
+      width: 80%;
+      margin: 0 auto;
     }
   }
 
@@ -374,9 +378,12 @@
         .wp-block-testimonials-slider.view-default {
           .slider-container {
             .slider-inner {
+              #tns1-ow {
+                max-width: 70%;
+              }
 
               .slide-item {
-
+                height: 632px;
               }
 
               .tns-nav {
