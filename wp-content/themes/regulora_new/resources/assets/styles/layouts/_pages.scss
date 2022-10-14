@@ -239,7 +239,7 @@
   .wp-container-2 {
     position: absolute;
     top: 8%;
-    left: 15%;
+    left: 0;
   }
 }
 
@@ -389,8 +389,19 @@
               .tns-nav {
 
               }
+
               .controll-buttons {
-                position: absolute;
+                .prev-but-place {
+                  position: absolute;
+                  top: 500px;
+                  left: 188px;
+                }
+
+                .next-but-place {
+                  position: absolute;
+                  top: 500px;
+                  right: 188px;
+                }
               }
             }
           }
