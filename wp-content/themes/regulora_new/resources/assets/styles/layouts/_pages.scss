@@ -393,14 +393,14 @@
               .controll-buttons {
                 .prev-but-place {
                   position: absolute;
-                  top: 500px;
-                  left: 188px;
+                  top: -500px;
+                  left: -188px;
                 }
 
                 .next-but-place {
                   position: absolute;
-                  top: 500px;
-                  right: 188px;
+                  top: -500px;
+                  right: -188px;
                 }
               }
             }
