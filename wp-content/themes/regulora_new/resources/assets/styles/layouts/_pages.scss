@@ -87,7 +87,7 @@
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 
-      /*        BRAIN-GUT-CONNECTION PAGE           */
+/*        BRAIN-GUT-CONNECTION PAGE           */
 
 #brain-gut-hero {
   background-image: url(/wp-content/uploads/2022/10/brainGut_hero_sm.png);
@@ -125,7 +125,7 @@
 }
 
 #brain-gut-cards-section, // possibly delete this line later
-  .cards_3-section  {
+.cards_3-section  {
   .wp-block-column:nth-child(odd) {
     .is-style-rounded {
       border: 2px solid #7A95BF;
@@ -145,7 +145,11 @@
 
 .question-section {
   .wp-block-column {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     .question-block {
       position: relative;
@@ -170,7 +174,11 @@
   margin: 0 auto;
 
   .question-mark-column {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 
     figure {
@@ -186,7 +194,9 @@
 
   .faq-column {
     .wp-block-buttons {
-      justify-content: center;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
     }
   }
 }
@@ -194,7 +204,12 @@
 @include media-breakpoint-down(md) {
   .question-section {
     .wp-block-column {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       .question-block {
         margin: 0 -130px 60px 0;
@@ -206,7 +221,12 @@
 @include media-breakpoint-down(sm) {
   .question-section {
     .wp-block-column {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       .question-block {
         margin: 0 -130px 60px 0;
@@ -471,7 +491,7 @@
 /*   END   ABOUT REGULORA PAGE     */
 
 
-      /*      SURVEY PAGE           */
+/*      SURVEY PAGE           */
 .smcx-widget.smcx-embed {
   max-width: 100% !important;
   border: none !important;
@@ -480,4 +500,4 @@
     max-width: 100% !important;
   }
 }
-      /*   END   SURVEY PAGE           */
+/*   END   SURVEY PAGE           */
