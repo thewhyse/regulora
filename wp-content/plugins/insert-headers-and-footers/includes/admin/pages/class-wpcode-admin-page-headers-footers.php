@@ -107,11 +107,15 @@ class WPCode_Admin_Page_Headers_Footers extends WPCode_Admin_Page {
 	 */
 	public function output() {
 		if ( ! $this->can_edit ) {
-			$this->set_error_message( __( 'Sorry, only have read-only access to this page. Ask your administrator for assistance editing.', 'insert-headers-and-footers' ) );
-			// If the user can't edit the values just don't load form at all.
-			parent::output();
+			$this->set_error_message( __( 'Sorry, you only have read-only access to this page. Ask your administrator for assistance editing.', 'insert-headers-and-footers' ) );
+			$headers_footers_mode = wpcode()->settings->get_option( 'headers_footers_mode' );
+			// If in headers & footers mode allow them to update to disable the simple mode.
+			if ( ! $headers_footers_mode ) {
+				// If the user can't edit the values just don't load form at all.
+				parent::output();
 
-			return;
+				return;
+			}
 		}
 		?>
 		<form action="<?php echo esc_url( $this->get_page_action_url() ); ?>" method="post">
@@ -178,7 +182,8 @@ class WPCode_Admin_Page_Headers_Footers extends WPCode_Admin_Page {
 	 * @return void
 	 */
 	public function output_header_bottom() {
-		$button_disabled = ! $this->can_edit ? 'disabled' : '';
+		$headers_footers_mode = wpcode()->settings->get_option( 'headers_footers_mode' );
+		$button_disabled      = ! $this->can_edit && ! $headers_footers_mode ? 'disabled' : '';
 		?>
 		<div class="wpcode-column">
 			<h1><?php esc_html_e( 'Global Header and Footer', 'insert-headers-and-footers' ); ?></h1>
@@ -237,19 +242,12 @@ class WPCode_Admin_Page_Headers_Footers extends WPCode_Admin_Page {
 			return;
 		}
 
-		if ( ! $this->can_edit ) {
-			// They are not allowed to edit the page so they shouldn't be able to submit the form in the first place.
-			return;
+		if ( $this->can_edit && isset( $_REQUEST['ihaf_insert_header'] ) && isset( $_REQUEST['ihaf_insert_footer'] ) ) {
+			// If they are not allowed to edit the page these should not be processed but we still allow them to save to disable the simple mode.
+			update_option( 'ihaf_insert_header', $_REQUEST['ihaf_insert_header'] );
+			update_option( 'ihaf_insert_footer', $_REQUEST['ihaf_insert_footer'] );
+			update_option( 'ihaf_insert_body', isset( $_REQUEST['ihaf_insert_body'] ) ? $_REQUEST['ihaf_insert_body'] : '' );
 		}
-
-		if ( ! isset( $_REQUEST['ihaf_insert_header'] ) || ! isset( $_REQUEST['ihaf_insert_footer'] ) ) {
-			// If the values are not set, just don't try.
-			return;
-		}
-
-		update_option( 'ihaf_insert_header', $_REQUEST['ihaf_insert_header'] );
-		update_option( 'ihaf_insert_footer', $_REQUEST['ihaf_insert_footer'] );
-		update_option( 'ihaf_insert_body', isset( $_REQUEST['ihaf_insert_body'] ) ? $_REQUEST['ihaf_insert_body'] : '' );
 
 		if ( wpcode()->settings->get_option( 'headers_footers_mode' ) && ! isset( $_REQUEST['headers_footers_mode'] ) ) {
 			wpcode()->settings->update_option( 'headers_footers_mode', false );

@@ -4,7 +4,7 @@ Tags: code, css, php, footer, functions, content, facebook pixel, footer code, f
 Requires at least: 4.6
 Tested up to: 6.0
 Requires PHP: 5.5
-Stable tag: 2.0.2
+Stable tag: 2.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -284,6 +284,11 @@ Thank you
 Syed Balkhi
 
 == Changelog ==
+
+= 2.0.3 =
+* Tweak: Adjusted the hook used to load "Run Everywhere" PHP snippets to "plugins_loaded" to allow running snippets on earlier hooks.
+* Fix: Adjusted the link in the plugins list to point to the correct admin page in headers & footers mode.
+* Fix: Adjusted logic for headers & footers page when user is not allowed to edit HTML & improved messaging based on permissions.
 
 = 2.0.2 =
 * Tweak: Snippets used as shortcodes will no longer be executed if they are inactive.

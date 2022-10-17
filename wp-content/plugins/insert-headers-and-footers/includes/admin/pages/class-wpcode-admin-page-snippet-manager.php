@@ -131,6 +131,10 @@ class WPCode_Admin_Page_Snippet_Manager extends WPCode_Admin_Page {
 	public function process_message() {
 		// phpcs:disable WordPress.Security.NonceVerification
 		if ( ! isset( $_GET['message'] ) ) {
+			if ( ! current_user_can( 'unfiltered_html' ) ) {
+				$this->set_error_message( __( 'Sorry, you only have read-only access to this page. Ask your administrator for assistance editing.', 'insert-headers-and-footers' ) );
+			}
+
 			return;
 		}
 

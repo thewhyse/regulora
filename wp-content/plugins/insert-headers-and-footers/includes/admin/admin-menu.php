@@ -79,16 +79,27 @@ function wpcode_load_admin_pages() {
  * @return array
  */
 function wpcode_add_plugin_action_links( $links ) {
+	$url  = add_query_arg(
+		array(
+			'page' => 'wpcode',
+		),
+		admin_url( 'admin.php' )
+	);
+	$text = esc_html__( 'Code Snippets', 'insert-headers-and-footers' );
+	if ( wpcode()->settings->get_option( 'headers_footers_mode' ) ) {
+		$url = add_query_arg(
+			array(
+				'page' => 'wpcode-headers-footers',
+			),
+			admin_url( 'options-general.php' )
+		);
+		$text = esc_html__( 'Settings', 'insert-headers-and-footers' );
+	}
 	$wpcode_links = array(
 		sprintf(
 			'<a href="%1$s">%2$s</a>',
-			add_query_arg(
-				array(
-					'page' => 'wpcode',
-				),
-				admin_url( 'admin.php' )
-			),
-			esc_html__( 'Code Snippets', 'insert-headers-and-footers' )
+			$url,
+			$text
 		),
 	);
 
