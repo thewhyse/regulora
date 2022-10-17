@@ -193,6 +193,12 @@
   }
 
   .faq-column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     .wp-block-buttons {
       -webkit-box-pack: start;
       -ms-flex-pack: start;
