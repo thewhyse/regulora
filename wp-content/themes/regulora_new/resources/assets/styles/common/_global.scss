@@ -177,6 +177,16 @@ h6,
  width: 80% !important;
   margin: 0 auto;
 }
+@include media-breakpoint-down(sm) {
+  .percent-60 {
+    width: 90% !important;
+  }
+  .percent-80 {
+    width: 90% !important;
+  }
+
+}
+
 
 /* Transitions */
 a,
