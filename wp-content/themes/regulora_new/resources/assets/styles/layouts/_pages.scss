@@ -124,7 +124,8 @@
   }
 }
 
-#brain-gut-cards-section {
+#brain-gut-cards-section, // possibly delete this line later
+  .cards_3-section  {
   .wp-block-column:nth-child(odd) {
     .is-style-rounded {
       border: 2px solid #7A95BF;
@@ -322,6 +323,10 @@
       padding: 30px 0 0 30px;
     }
   }
+}
+
+#about-cards-section {
+
 }
 
 @include media-breakpoint-down(md) {
