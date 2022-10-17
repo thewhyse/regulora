@@ -326,7 +326,18 @@
 }
 
 #about-cards-section {
+  width: 80% !important;
 
+  .wp-block-group__inner-container {
+    .wp-block-column {
+      .p-block-image {
+        margin: 0;
+      }
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 @include media-breakpoint-down(md) {
