@@ -1,0 +1,72 @@
+// NEW question/FAQ link block
+.question-section_new {
+  width: 70%;
+  margin: 0 auto;
+
+  .question-mark-column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    figure {
+      margin: 0 20px 0 0;
+    }
+
+    p {
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+  }
+
+  .faq-column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    .wp-block-buttons {
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .question-section {
+    .wp-block-column {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      .question-block {
+        margin: 0 -130px 60px 0;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .question-section {
+    .wp-block-column {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      .question-block {
+        margin: 0 -130px 60px 0;
+      }
+    }
+  }
+}
