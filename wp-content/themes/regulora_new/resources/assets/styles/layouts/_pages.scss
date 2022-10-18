@@ -536,6 +536,13 @@
     height: 600px;
     background: url(/wp-content/uploads/2022/10/hero_get_regulora_mobi.png) no-repeat center center;
     background-size: cover;
+
+    .wp-block-group__inner-container {
+      .wp-block-columns {
+        top: 4%;
+      }
+    }
+
   }
 
 }
