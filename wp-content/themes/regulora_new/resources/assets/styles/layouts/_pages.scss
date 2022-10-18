@@ -496,6 +496,44 @@
 
 /*   END   ABOUT REGULORA PAGE     */
 
+/*
+      GET REGULORA PAGE
+*/
+#get-regulora_hero_section {
+  height: 660px;
+  background: url(/wp-content/uploads/2022/10/hero_get_regulora.png) no-repeat center center;
+  background-size: cover;
+
+
+  /*
+  .get-reg-hero-title {
+    p:first-child {
+      &:after {
+        background-color: #79CCC3;
+      }
+
+    }
+    p:last-child {
+      &:after {
+        background-color: #BBE5E1;
+      }
+
+    }
+  }
+  */
+}
+
+@include media-breakpoint-down(sm) {
+  #get-regulora_hero_section {
+    height: 600px;
+    background: url(/wp-content/uploads/2022/10/hero_get_regulora_mobi.png) no-repeat center center;
+    background-size: cover;
+  }
+
+}
+
+
+/*    END GET REGULORA PAGE     */
 
 /*      SURVEY PAGE           */
 .smcx-widget.smcx-embed {
