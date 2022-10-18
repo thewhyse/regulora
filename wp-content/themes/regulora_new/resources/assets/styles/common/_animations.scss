@@ -94,6 +94,27 @@
   }
 }
 
+/*
+NEW 'ABOUT REGULORA' PAGE HERO
+*/
+
+#get-regulora_hero_section {
+  .get-reg-hero-title {
+    p:first-child {
+      &:after {
+        background-color: #79CCC3;
+      }
+
+    }
+    p:last-child {
+      &:after {
+        background-color: #BBE5E1;
+      }
+
+    }
+  }
+}
+
 .active-line {
   display: block;
   height: 5px;
