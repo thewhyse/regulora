@@ -504,23 +504,31 @@
   background: url(/wp-content/uploads/2022/10/hero_get_regulora.png) no-repeat center center;
   background-size: cover;
 
+  .wp-block-group__inner-container {
+    height: 100%;
+    position: relative;
 
-  /*
-  .get-reg-hero-title {
-    p:first-child {
-      &:after {
-        background-color: #79CCC3;
-      }
-
+    .wp-block-columns {
+      position: absolute;
+      top: 10%;
+      /*
+.get-reg-hero-title {
+  p:first-child {
+    &:after {
+      background-color: #79CCC3;
     }
-    p:last-child {
-      &:after {
-        background-color: #BBE5E1;
-      }
 
+  }
+  p:last-child {
+    &:after {
+      background-color: #BBE5E1;
+    }
+
+  }
+}
+*/
     }
   }
-  */
 }
 
 @include media-breakpoint-down(sm) {
