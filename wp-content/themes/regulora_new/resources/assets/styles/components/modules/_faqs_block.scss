@@ -38,35 +38,55 @@
 }
 
 @include media-breakpoint-down(md) {
-  .question-section {
-    .wp-block-column {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      .question-block {
-        margin: 0 -130px 60px 0;
+  .question-section_new {
+    width: 70%;
+    margin: 0 auto;
+
+    .question-mark-column {
+
+      figure {
+        margin: 0 0 20px;
+      }
+
+      p {
+
+      }
+
+    }
+
+    .faq-column {
+
+      .wp-block-buttons {
+
       }
     }
   }
 }
 
 @include media-breakpoint-down(sm) {
-  .question-section {
-    .wp-block-column {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
+  .question-section_new {
+    width: 80%;
+    margin: 0 auto;
+
+    .question-mark-column {
       flex-direction: column;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      .question-block {
-        margin: 0 -130px 60px 0;
+
+      figure {
+        margin: 0 0 20px;
+      }
+
+      p {
+
+      }
+
+    }
+
+    .faq-column {
+
+      .wp-block-buttons {
+
       }
     }
   }
 }
+
