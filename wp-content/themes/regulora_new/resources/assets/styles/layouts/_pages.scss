@@ -489,10 +489,35 @@
         color: $white;
       }
     }
-    
+
     .wp-block-column:last-child {
-      figure {
+      .wp-block-image {
         margin: 0;
+        figure {
+          margin: 0;
+        }
+
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  #support-get-faqs-section {
+    .wp-block-columns {
+      .wp-block-column:first-child {
+        padding: 50px 0 0;
+      }
+
+      .wp-block-column:last-child {
+        .wp-block-image {
+          margin: 0;
+
+          figure {
+            margin: 0;
+          }
+
+        }
       }
     }
   }
