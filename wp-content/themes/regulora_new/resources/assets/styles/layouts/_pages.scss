@@ -484,6 +484,12 @@
 #support-get-faqs-section {
   background: #000;
   .wp-block-columns {
+    .wp-block-column:first-child {
+      .support-black-mid_section_title {
+        color: $white;
+      }
+    }
+    
     .wp-block-column:last-child {
       figure {
         margin: 0;
