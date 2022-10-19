@@ -171,11 +171,11 @@ h6,
 
 .percent-60 {
   width: 60% !important;
-  margin: 0 auto;
+  margin: 0 auto !important;
 }
 .percent-80 {
  width: 80% !important;
-  margin: 0 auto;
+  margin: 0 auto !important;
 }
 @include media-breakpoint-down(sm) {
   .percent-60 {
