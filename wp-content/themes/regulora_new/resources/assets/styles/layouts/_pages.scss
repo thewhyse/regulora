@@ -485,7 +485,9 @@
   background: #000;
   .wp-block-columns {
     .wp-block-column:last-child {
-      margin: 0;
+      figure {
+        margin: 0;
+      }
     }
   }
 }
