@@ -124,6 +124,7 @@ NEW 'ABOUT REGULORA' PAGE HERO
   background: $blue;
   transition: left 1.5s ease-in-out, right 1.5s ease-in-out;
 
+  /*
   &.blue-light {
     background: $blue-light;
   }
@@ -135,7 +136,21 @@ NEW 'ABOUT REGULORA' PAGE HERO
   &.primary-light {
     background: $primary-light;
   }
+  */
+  ///////////////////
+  &.blue-light {
+    background: $blue-light;
+  }
 
+  &.primary {
+    background: #79CCC3;
+  }
+
+  &.primary-light {
+    background: #BBE5E1;
+  }
+
+  //////////////////
   &.secondary {
     background: $secondary;
   }
