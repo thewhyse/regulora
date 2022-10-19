@@ -504,7 +504,7 @@
 
 @include media-breakpoint-down(md) {
   #support-get-faqs-section {
-    .wp-block-columns {
+    .percent-60 {
       width: 100% !important;
       .wp-block-column:first-child {
         padding: 50px 0 0;
