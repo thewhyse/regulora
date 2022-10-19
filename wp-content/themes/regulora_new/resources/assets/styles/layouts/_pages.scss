@@ -483,6 +483,11 @@
 
 #support-get-faqs-section {
   background: #000;
+  .wp-block-columns {
+    .wp-block-column:last-child {
+      margin: 0;
+    }
+  }
 }
 
 /*  END SUPPORT AND RESOURCES PAGE      */
