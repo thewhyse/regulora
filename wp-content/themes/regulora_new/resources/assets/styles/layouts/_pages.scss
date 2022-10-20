@@ -509,6 +509,9 @@
   .wp-block-column:first-child {
     display: flex;
     align-items: center;
+    #living-with-left-side {
+      flex-direction: column;
+    }
   }
 }
 
