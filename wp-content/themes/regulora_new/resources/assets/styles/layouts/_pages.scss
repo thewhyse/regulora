@@ -502,6 +502,12 @@
   }
 }
 
+#support_living-with-ibs_section {
+  min-height: 600px;
+  background: url("/wp-content/uploads/2022/10/support_living_section_BG.png") no-repeat center center;
+  background-size: cover;
+}
+
 @include media-breakpoint-down(md) {
   #support-get-faqs-section {
     .percent-60 {
