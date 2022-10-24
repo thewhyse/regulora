@@ -378,13 +378,13 @@ header.banner {
       justify-content: space-between;
       .stay-connected-btn {
         a {
-          width: 33%;
+          width: 33% !important;
           border-radius: 25px 25px 0 0;
         }
       }
 
       .survey-btn a {
-        width: 33%;
+        width: 33% !important;
         border-radius: 25px 25px 0 0;
       }
 
@@ -400,6 +400,13 @@ header.banner {
 
 @include media-breakpoint-down(sm)  {
 
+  .learn-more-top-section {
+    .link-div,
+    .txt {
+      font-size: 13px !important;
+    }
+  }
+
   .main-site-links-section {
     flex-direction: column;
 
@@ -408,20 +415,29 @@ header.banner {
       justify-content: space-between;
       .stay-connected-btn {
         a {
-          width: 33%;
+          width: 33% !important;
           border-radius: 25px 25px 0 0;
+          font-size: 13px !important;
         }
       }
 
       .survey-btn a {
-        width: 33%;
+        width: 33% !important;
         border-radius: 25px 25px 0 0;
+        font-size: 13px !important;
       }
 
     }
 
     .links-right-side {
-      width: 90% !important;
+      width: 100% !important;
+      order: -1;
+      .secondary-top-links {
+        width: 30% !important;
+        a {
+          font-size: 13px !important;
+        }
+      }
     }
 
   }
