@@ -369,45 +369,61 @@ header.banner {
 }
 
 @include media-breakpoint-down(md) {
-  .btns-left-side {
-    width: 90%;
-    .stay-connected-btn {
-      width: 252px;
+
+  .main-site-links-section {
+    flex-direction: column;
+
+    .btns-left-side {
+      width: 100% !important;
+      justify-content: space-between;
+      .stay-connected-btn {
+        a {
+          width: 33%;
+          border-radius: 25px 25px 0 0;
+        }
+      }
+
+      .survey-btn a {
+        width: 33%;
+        border-radius: 25px 25px 0 0;
+      }
+
     }
 
-    .survey-btn a {
-      display: block;
-      width: 252px;
-      background: $secondary;
-      padding: 12px 40px;
+    .links-right-side {
+      width: 90% !important;
     }
 
-  }
-
-  .links-right-side {
-    width: 90%;
   }
 
 }
 
 @include media-breakpoint-down(sm)  {
-  .btns-left-side {
-    width: 90% !important;
-    .stay-connected-btn {
-      width: 252px;
+
+  .main-site-links-section {
+    flex-direction: column;
+
+    .btns-left-side {
+      width: 100% !important;
+      justify-content: space-between;
+      .stay-connected-btn {
+        a {
+          width: 33%;
+          border-radius: 25px 25px 0 0;
+        }
+      }
+
+      .survey-btn a {
+        width: 33%;
+        border-radius: 25px 25px 0 0;
+      }
+
     }
 
-    .survey-btn a {
-      display: block;
-      width: 252px;
-      background: $secondary;
-      padding: 12px 40px;
+    .links-right-side {
+      width: 90% !important;
     }
 
-  }
-
-  .links-right-side {
-    width: 90% !important;
   }
 
 }
