@@ -323,26 +323,39 @@ header.banner {
     padding: 12px 0;
     background: #E1E6EF;
 
-    .stay-connected-btn a {
-      display: block;
-      background: $primary;
-      padding: 12px 40px;
-      color: $white;
-      &:hover {
-        text-decoration: none;
+    .btns-left-side {
+      width: 48%;
+      justify-content: center;
+      .stay-connected-btn a {
+        display: block;
+        background: $primary;
+        padding: 12px 40px;
+        color: $white;
+        border-radius: 25px;
+        &:hover {
+          text-decoration: none;
+        }
       }
+
+      .survey-btn a {
+        display: block;
+        background: $secondary;
+        padding: 12px 40px;
+        color: $black;
+        border-radius: 25px;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
     }
 
-    .survey-btn a {
-      display: block;
-      background: $secondary;
-      padding: 12px 40px;
-      color: $black;
-      &:hover {
-        text-decoration: none;
-      }
+    .links-right-side {
+      width: 48%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-
 
   }
 
