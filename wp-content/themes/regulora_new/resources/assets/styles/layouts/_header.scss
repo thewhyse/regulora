@@ -454,6 +454,7 @@ header.banner {
       justify-content: space-between !important;
       position: absolute;
       bottom: -20px;
+      z-index: 100;
 
       .stay-connected-btn {
         width: 47% !important;
@@ -497,7 +498,10 @@ header.banner {
   }
   header {
     .container {
-      padding: 30px 30px 0 !important;
+      padding: 0 !important;
+      #site-navbar {
+        padding: 17px 12px 0 !important;
+      }
     }
   }
 }
