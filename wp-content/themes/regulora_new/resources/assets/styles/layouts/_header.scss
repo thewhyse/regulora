@@ -329,9 +329,10 @@ header.banner {
       justify-content: center;
       .stay-connected-btn {
         margin: 0 12px 0 0;
+        width: 252px;
         a {
           display: block;
-          width: 252px;
+          width: 100%;
           background: $primary;
           padding: 12px 40px;
           color: $white;
@@ -343,16 +344,20 @@ header.banner {
 
       }
 
-      .survey-btn a {
-        display: block;
+      .survey-btn {
         width: 252px;
-        background: $secondary;
-        padding: 12px 40px;
-        color: $black;
-        border-radius: 25px;
-        &:hover {
-          text-decoration: none;
+        a {
+          display: block;
+          width: 100%;
+          background: $secondary;
+          padding: 12px 40px;
+          color: $black;
+          border-radius: 25px;
+          &:hover {
+            text-decoration: none;
+          }
         }
+
       }
 
     }
@@ -377,17 +382,21 @@ header.banner {
       width: 100% !important;
       justify-content: space-between;
       .stay-connected-btn {
+        width: 33% !important;
         a {
-          width: 33% !important;
+          width: 100% !important;
           border-radius: 25px 25px 0 0;
         }
       }
 
-      .survey-btn a {
+      .survey-btn {
         width: 33% !important;
-        border-radius: 25px 25px 0 0;
-      }
+        a {
+          width: 100% !important;
+          border-radius: 25px 25px 0 0;
+        }
 
+      }
     }
 
     .links-right-side {
@@ -414,17 +423,23 @@ header.banner {
       width: 100% !important;
       justify-content: space-between;
       .stay-connected-btn {
+        width: 33% !important;
+
         a {
-          width: 33% !important;
+          width: 100%;
           border-radius: 25px 25px 0 0;
           font-size: 13px !important;
         }
       }
 
-      .survey-btn a {
+      .survey-btn {
         width: 33% !important;
-        border-radius: 25px 25px 0 0;
-        font-size: 13px !important;
+        a {
+          width: 100%;
+          border-radius: 25px 25px 0 0;
+          font-size: 13px !important;
+        }
+
       }
 
     }
@@ -433,7 +448,7 @@ header.banner {
       width: 100% !important;
       order: -1;
       .secondary-top-links {
-        width: 30% !important;
+        width: 40% !important;
         a {
           font-size: 13px !important;
         }
