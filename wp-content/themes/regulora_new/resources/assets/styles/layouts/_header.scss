@@ -452,10 +452,12 @@ header.banner {
     .links-right-side {
       width: 100% !important;
       order: -1;
+      justify-content: space-around !important;
       .secondary-top-links {
+        margin-left: 0 !important;
         width: 40% !important;
         a {
-          font-size: 13px !important;
+          font-size: 10px !important;
         }
       }
     }
