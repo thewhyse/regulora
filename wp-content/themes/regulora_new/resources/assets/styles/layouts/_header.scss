@@ -341,7 +341,7 @@ header.banner {
           display: block;
           width: 100%;
           background: $primary;
-          padding: 5px 40px;
+          padding: 5px 20px;
           color: $white;
           border-radius: 25px;
           &:hover {
@@ -357,7 +357,7 @@ header.banner {
           display: block;
           width: 100%;
           background: $secondary;
-          padding: 5px 40px;
+          padding: 5px 20px;
           color: $black;
           border-radius: 25px;
           &:hover {
@@ -495,7 +495,7 @@ header.banner {
   }
   header {
     .container {
-      padding: 30px 0 0 !important;
+      padding: 30px 30px 0 !important;
     }
   }
 }
