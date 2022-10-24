@@ -256,6 +256,33 @@ header.banner {
   }
 }
 
+/*      EYEBROW SECTIONS      */
+.eyebrow-section.container  {
+  padding: 0;
+  max-width: 100%;
+
+  a:hover,
+  a:focus {
+    color: $black;
+    text-decoration: underline;
+  }
+
+  .learn-more-top-section {
+display: flex;
+    justify-content: center;
+    padding: 12px 0 0;
+    background: $lavender;
+  }
+
+  .main-site-links-section {
+
+  }
+
+}
+
+
+/*   END   EYEBROW SECTIONS      */
+
 @include media-breakpoint-down(xxxl) {
   header .navbar .nav-primary .menu-main-menu-container ul li a {
     padding: 0.5rem 0.5rem;
@@ -418,8 +445,10 @@ header.banner {
 
     &.sticky-header {
       .eyebrow-section {
+        /*
         padding-right: var(--bs-gutter-x, 0.75rem);
         padding-left: var(--bs-gutter-x, 0.75rem);
+        */
 
         .wp-block-group .wp-block-group__inner-container .wp-block-columns .wp-block-column {
           padding: 3px 0;
