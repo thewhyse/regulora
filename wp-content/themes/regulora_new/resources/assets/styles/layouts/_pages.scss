@@ -38,6 +38,13 @@
 }
 
 #brain-gut-connection-section {
+  #connection-title {
+    .wp-block-pullquote {
+      p {
+        font-weight: 600;
+      }
+    }
+  }
   figure {
     &:before,
     &:after {
