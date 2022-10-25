@@ -278,13 +278,14 @@ header.banner {
   }
 
 }
+
 @include media-breakpoint-down(md) {
   header.banner {
 
     #menu-main-menu {
       li {
         a {
-          width: 100%;
+          width: 100% !important;
         }
       }
     }
