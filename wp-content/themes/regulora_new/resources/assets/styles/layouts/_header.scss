@@ -279,6 +279,22 @@ header.banner {
 
 }
 
+@include media-breakpoint-down(sm) {
+  header.banner {
+
+    #menu-main-menu {
+      li {
+        a {
+          width: inherit;
+        }
+      }
+    }
+
+  }
+}
+
+// END MAIN NAV
+
 .page-title-header {
   margin-bottom: var(--block-vertical-distance-small);
 
