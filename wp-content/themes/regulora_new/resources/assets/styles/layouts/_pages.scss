@@ -40,7 +40,9 @@
   }
   .wp-block-buttons {
     .wp-block-button {
-      font-weight: 600;
+      a {
+        font-weight: 600;
+      }
     }
   }
 }
