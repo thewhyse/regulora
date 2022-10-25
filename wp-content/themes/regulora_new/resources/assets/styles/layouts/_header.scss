@@ -278,6 +278,19 @@ header.banner {
   }
 
 }
+@include media-breakpoint-down(md) {
+  header.banner {
+
+    #menu-main-menu {
+      li {
+        a {
+          width: 100%;
+        }
+      }
+    }
+
+  }
+}
 
 @include media-breakpoint-down(sm) {
   header.banner {
@@ -285,13 +298,14 @@ header.banner {
     #menu-main-menu {
       li {
         a {
-          width: inherit !important;
+          width: 100%;
         }
       }
     }
 
   }
 }
+
 
 // END MAIN NAV
 
