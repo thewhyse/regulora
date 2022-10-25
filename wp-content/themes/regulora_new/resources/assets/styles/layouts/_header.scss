@@ -350,10 +350,14 @@ header.banner {
     justify-content: center;
     padding: 12px 0;
     background: $lavender;
+    .txt {
+      font-size: 14px;
+    }
 
     .link-div {
       margin: 0 0 0 6px;
       a {
+        font-size: 14px;
         font-weight: 600;
       }
     }
