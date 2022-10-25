@@ -348,15 +348,21 @@ header.banner {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding: 12px 0;
+    padding: 5px 0;
     background: $lavender;
     .txt {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       font-size: 14px;
     }
 
     .link-div {
       margin: 0 0 0 6px;
       a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         font-size: 14px;
         font-weight: 600;
       }
