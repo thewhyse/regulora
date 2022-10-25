@@ -111,9 +111,11 @@ header.banner {
               -ms-transform: rotate(45deg);
               transform: rotate(45deg);
             }
+
             &:nth-child(2) {
               width: 0;
             }
+
             &:nth-child(3) {
               -webkit-transform: rotate(-45deg);
               -ms-transform: rotate(-45deg);
@@ -265,6 +267,15 @@ header.banner {
       margin-top: 179px;
     }
   }
+
+  #menu-main-menu {
+    li:last-child {
+      a {
+        width: 220px;
+      }
+    }
+  }
+
 }
 
 .page-title-header {
