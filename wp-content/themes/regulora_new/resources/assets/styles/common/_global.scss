@@ -295,6 +295,18 @@ a,
   }
 }
 
+.references {
+  p {
+    font-size: 14px;
+  }
+
+  ol,
+  ul {
+    font-size: 16px;
+  }
+}
+
+
 @include media-breakpoint-down(xl) {
   html {
     margin-top: 0 !important;
@@ -407,17 +419,6 @@ a,
   p {
     a {
       white-space: nowrap;
-    }
-  }
-
-  .references {
-    p {
-      font-size: 16px;
-    }
-
-    ol,
-    ul {
-      font-size: 16px;
     }
   }
 

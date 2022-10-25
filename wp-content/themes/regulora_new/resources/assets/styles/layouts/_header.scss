@@ -424,6 +424,11 @@ header.banner {
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center;
+      .secondary-top-links {
+        a {
+          font-size: 14px;
+        }
+      }
     }
 
   }

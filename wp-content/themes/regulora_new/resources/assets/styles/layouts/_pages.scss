@@ -62,6 +62,10 @@
 }
 
 #hp-cards-section {
+
+  h4 {
+    text-transform: uppercase;
+  }
   .wp-block-column:nth-child(odd) {
     .is-style-rounded {
       border: 2px solid #7A95BF;
