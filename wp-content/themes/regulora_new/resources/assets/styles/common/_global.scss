@@ -174,7 +174,7 @@ h6,
   margin: 0 auto !important;
 }
 .percent-80 {
- width: 80% !important;
+  width: 80% !important;
   margin: 0 auto !important;
 }
 @include media-breakpoint-down(sm) {
@@ -191,9 +191,13 @@ h6,
 /* Transitions */
 a,
 .hov-trans {
+  -webkit-transition: color ease-in-out 0.5s;
+  -o-transition: color ease-in-out 0.5s;
   transition: color ease-in-out 0.5s;
 
   svg * {
+    -webkit-transition: color, fill, stroke ease-in-out 0.5s;
+    -o-transition: color, fill, stroke ease-in-out 0.5s;
     transition: color, fill, stroke ease-in-out 0.5s;
   }
 }
@@ -410,10 +414,6 @@ a,
       margin-left: -30px;
       margin-right: 0;
     }
-    //
-    //&.mw-90pc {
-    //
-    //}
   }
 
   p {
@@ -447,5 +447,7 @@ a,
 }
 
 @include media-breakpoint-down(sm) {
-
+  .lines-v {
+    padding-top: 0;
+  }
 }
