@@ -123,6 +123,17 @@ footer {
   .footer-widets {
     margin-top: 52px;
     padding: 40px 0;
+
+    .col-lg-4 {
+      .block-13 {
+        text-align: right;
+        margin: 20px 0 0;
+        #all-rights-block {
+          color: $white;
+          font-weight: 400;
+        }
+      }
+    }
   }
 
   .widget_text {

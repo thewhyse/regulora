@@ -88,7 +88,8 @@ export default {
         }
       }
   
-      if ( window.scrollY > 53 ) {
+      /*if ( window.scrollY > 53 ) {*/
+      if ( window.scrollY > 3 ) {
         if ( ! navBar.classList.contains( 'sticky-header' ) ) {
           navBar.classList.add( 'sticky-header' );
         }
