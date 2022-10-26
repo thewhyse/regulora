@@ -100,16 +100,28 @@
   #phone-app-section {
     position: relative;
     margin: 0 0 40px;
+
     .wp-block-buttons {
       justify-content: center;
+
       #learn-about-cta {
         position: absolute;
         bottom: -10px;
+
         a {
           padding: 10px 40px !important;
         }
       }
 
+    }
+  }
+
+  #for-change {
+
+    .for-change-right-side {
+      margin: 0 -10%;
+      padding: 40px 0;
+      background: $light-green;
     }
   }
 
