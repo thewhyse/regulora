@@ -36,7 +36,6 @@
     margin-bottom: 0;
   }
   .wp-block-buttons {
-    justify-content: center;
     .wp-block-button {
       a {
         font-weight: 600;
@@ -98,6 +97,21 @@
 }
 
 @include media-breakpoint-down(sm) {
+  #phone-app-section {
+    position: relative;
+    margin: 0 0 40px;
+    .wp-block-buttons {
+      justify-content: center;
+      #learn-about-cta {
+        position: absolute;
+        bottom: 0;
+        a {
+          padding: 10px 40px !important;
+        }
+      }
+
+    }
+  }
 
 }
 
