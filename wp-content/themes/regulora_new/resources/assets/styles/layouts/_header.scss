@@ -286,11 +286,12 @@ header.banner {
 
     #menu-main-menu {
       li {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: start;
+
         a {
           width: 100% !important;
-          -webkit-box-pack: start;
-          -ms-flex-pack: start;
-          justify-content: start;
         }
       }
     }
@@ -303,11 +304,12 @@ header.banner {
 
     #menu-main-menu {
       li {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: start;
+
         a {
           width: 100%;
-          -webkit-box-pack: start;
-          -ms-flex-pack: start;
-          justify-content: start;
         }
       }
     }
