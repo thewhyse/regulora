@@ -281,6 +281,28 @@ header.banner {
 
 }
 
+@include media-breakpoint-down(lg) {
+  header.banner {
+
+    #menu-main-menu {
+      li {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: start;
+
+        a {
+          width: 100% !important;
+          -webkit-box-pack: start;
+          -ms-flex-pack: start;
+          justify-content: start;
+        }
+      }
+    }
+
+  }
+}
+
+
 @include media-breakpoint-down(md) {
   header.banner {
 
@@ -292,6 +314,9 @@ header.banner {
 
         a {
           width: 100% !important;
+          -webkit-box-pack: start;
+          -ms-flex-pack: start;
+          justify-content: start;
         }
       }
     }
@@ -309,7 +334,11 @@ header.banner {
         justify-content: start;
 
         a {
-          width: 100%;
+          width: 100% !important;
+          -webkit-box-pack: start;
+          -ms-flex-pack: start;
+          justify-content: start;
+
         }
       }
     }
