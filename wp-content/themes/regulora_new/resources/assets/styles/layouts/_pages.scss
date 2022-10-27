@@ -569,6 +569,7 @@
 }
 
 #faq-section {
+  margin-bottom: 0 !important;
   .faq-subsection-header {
     margin: 50px 0 25px 10px;
   }
@@ -616,6 +617,14 @@
       }
     }
   }
+
+  #faq-section {
+    margin-bottom: 0 !important;
+    .faq-subsection-header {
+      margin: 30px 0 25px 10px;
+    }
+  }
+
 }
 
 /*  END SUPPORT AND RESOURCES PAGE      */
