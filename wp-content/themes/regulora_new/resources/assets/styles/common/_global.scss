@@ -398,7 +398,7 @@ a,
 
   .lines-v {
     padding-left: 30px !important;
-    padding-top: 35px;
+    padding-top: 35px !important;
 
     &::before {
       left: 0;
@@ -450,7 +450,7 @@ a,
   .lines-v {
     padding-top: 0;
     &:before {
-      top: -30px
+      top: -18px
     }
   }
 }
