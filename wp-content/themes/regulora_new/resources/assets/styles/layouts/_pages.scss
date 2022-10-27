@@ -535,6 +535,7 @@
 
 #support-get-faqs-section {
   background: #000;
+  margin-bottom: 0;
   .wp-block-columns {
     .wp-block-column:first-child {
       .support-black-mid_section_title {
@@ -567,8 +568,10 @@
   }
 }
 
-#follow-us-social-section {
-
+#faq-section {
+  .faq-subsection-header {
+    margin: 50px 0 25px 10%;
+  }
 }
 
 @include media-breakpoint-down(md) {
