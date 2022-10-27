@@ -459,6 +459,8 @@ header.banner {
 
           &:hover {
             text-decoration: none;
+            background: $white;
+            color: $primary;
           }
         }
 
@@ -592,6 +594,7 @@ header.banner {
           width: 100%;
           border-radius:  25px 0 0 25px !important;
           font-size: 13px !important;
+          font-weight: 700;
         }
 
       }
