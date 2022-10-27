@@ -16,16 +16,18 @@
       left: 0;
       right: 60%;
       top: -4px;
-      border-radius: 0 10px 10px 0;
-      background: $secondary;
+      /*border-radius: 0 10px 10px 0;*/
+      border-radius: 10px;
+      background: $yellow;
     }
 
     &::after {
       right: 0;
       left: 60%;
       bottom: -4px;
-      border-radius: 10px 0 0 10px;
-      background: $secondary;
+      /*border-radius: 0 10px 10px 0;*/
+      border-radius: 10px;
+      background: $yellow;
     }
 
     &.animate {
