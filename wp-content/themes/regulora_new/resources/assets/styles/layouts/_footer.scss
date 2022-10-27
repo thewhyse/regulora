@@ -428,3 +428,46 @@ footer {
     }
   }
 }
+
+@include media-breakpoint-down(sm) {
+  footer {
+
+    .footer-logo {
+      display: inline-block;
+
+      img,
+      svg {
+
+      }
+    }
+
+    .widget_nav_menu {
+      ul.menu {
+
+        li {
+
+          a {
+
+          }
+        }
+      }
+    }
+
+    .footer-widets {
+      .block-13 {
+        text-align: center;
+      }
+    }
+
+    .copyright {
+      .footer-copyright {
+
+        p {
+
+        }
+      }
+    }
+
+  }
+
+}
