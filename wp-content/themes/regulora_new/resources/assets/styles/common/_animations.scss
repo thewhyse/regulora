@@ -87,11 +87,13 @@
   display: inline;
   margin: 0;
 
+  /*
   &:after {
     content: "";
     display: block;
     position: relative;
   }
+  */
 }
 
 .active-line {

@@ -555,7 +555,6 @@ header.banner {
 @include media-breakpoint-down(sm)  {
 
   .learn-more-top-section {
-    .link-div,
     .txt {
       font-size: 13px !important;
     }
