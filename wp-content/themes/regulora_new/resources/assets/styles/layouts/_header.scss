@@ -489,7 +489,7 @@ header.banner {
     }
 
     .links-right-side {
-      width: 48%;
+      width: 52%;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -558,6 +558,9 @@ header.banner {
     .link-div,
     .txt {
       font-size: 13px !important;
+    }
+    .link-div a {
+      margin: 0 0 1px;
     }
   }
 
