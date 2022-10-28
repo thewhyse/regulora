@@ -98,7 +98,7 @@
   display: block;
   height: 5px;
   position: absolute;
-  background: $blue;
+  background: $secondary;
   transition: left 1.5s ease-in-out, right 1.5s ease-in-out;
 
   &.blue-light {
@@ -110,7 +110,7 @@
   }
 
   &.primary-light {
-    background: $primary-light;
+    background: $light-green;
   }
   &.secondary {
     background: $secondary;
