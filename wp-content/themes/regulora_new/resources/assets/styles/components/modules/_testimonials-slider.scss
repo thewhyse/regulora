@@ -10,7 +10,11 @@
       .slider-inner {
         max-width: 1000px;
         margin: 0 auto;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
 
         .prev-but-place {
@@ -20,11 +24,11 @@
 
           svg {
             width: 36px;
-            fill: $blue;
+            fill: $secondary;
             margin-top: -128px;
 
             &:hover {
-              fill: $secondary;
+              fill: $light-green;
             }
           }
 
@@ -61,10 +65,6 @@
           border-radius: 10px;
           overflow: hidden;
         }
-        //
-        //.testimonials-slider {
-        //  background: $white;
-        //}
 
         .slide-item {
           background: $white;
@@ -73,8 +73,6 @@
           line-height: 1.35;
           font-weight: 400;
           color: $black;
-          //margin-left: 2px;
-          //margin-right: 2px;
 
           .slide-content {
             position: relative;
@@ -87,8 +85,7 @@
               width: 75px;
             }
           }
-
-
+          
           h3,
           h4 {
             margin-bottom: 0;
@@ -160,16 +157,9 @@
 
         .slider-inner {
           max-width: 820px;
-          //
-          //.testimonials-slider {
-          //  display: flex;
-          //  align-items: center;
-          //}
-
           .tns-inner {
             border-radius: 25px;
             overflow: hidden;
-            //border: 5px solid $secondary;
           }
 
           .slide-item {
@@ -303,6 +293,9 @@
 
         .slider-inner {
           width: 100%;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
           flex-direction: column;
 
           .prev-but-place {
@@ -351,6 +344,9 @@
         .slider-container {
           .slider-inner {
             width: 100%;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
             flex-direction: column;
 
             .slide-item {
@@ -392,6 +388,9 @@
             width: 85%;
           }
           .slider-inner {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
             flex-direction: row;
 
             .prev-but-place {
