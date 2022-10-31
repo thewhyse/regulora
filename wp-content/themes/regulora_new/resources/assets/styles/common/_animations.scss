@@ -83,6 +83,36 @@
   }
 }
 
+#brain-gut-section-img {
+  position: relative;
+
+  &::before {
+    content: ' ';
+    height: 8px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: calc((100vw - var(--main-width)) / 2);
+    background: $secondary;
+    border-radius: 0 10px 10px 0;
+  }
+
+  &::after {
+    content: ' ';
+    height: 8px;
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: calc((100vw - var(--main-width)) / 2);
+    background: $secondary;
+    border-radius: 10px 0 0 10px;
+  }
+
+}
+
+
 .line-animation {
   display: inline;
   margin: 0;
