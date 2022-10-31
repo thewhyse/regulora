@@ -110,6 +110,61 @@
     border-radius: 10px 0 0 10px;
   }
 
+  &.animate {
+    &::before {
+      right: 100vw;
+      transition: all 1.3s ease-in-out;
+    }
+
+    &::after {
+      left: 100vw;
+      transition: all 1.3s ease-in-out;
+    }
+
+    &.action {
+      &::before {
+        right: calc((100vw - var(--main-width)) / 2);
+      }
+
+      &::after {
+        left: calc((100vw - var(--main-width)) / 2);
+      }
+    }
+  }
+
+  &.short {
+    &::before {
+      right: 35%;
+      border-radius: 10px;
+    }
+
+    &::after {
+      left: 35%;
+      border-radius: 10px;
+    }
+
+    &.animate {
+      &.action {
+        &::before {
+          right: 35%;
+        }
+
+        &::after {
+          left: 35%;
+        }
+      }
+    }
+  }
+
+  &.secondary-color {
+    &::before {
+      background: $secondary;
+    }
+
+    &::after {
+      background: $secondary;
+    }
+  }
 }
 
 
