@@ -92,7 +92,7 @@
     display: block;
     position: absolute;
     left: 0;
-    top: 0;
+    top: -5px;
     right: calc((100vw - var(--main-width)) / 2);
     background: $secondary;
     border-radius: 0 10px 10px 0;
@@ -104,7 +104,7 @@
     display: block;
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: -5px;
     left: calc((100vw - var(--main-width)) / 2);
     background: $secondary;
     border-radius: 10px 0 0 10px;
