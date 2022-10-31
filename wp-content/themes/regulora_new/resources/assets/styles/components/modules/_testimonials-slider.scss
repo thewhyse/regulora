@@ -46,11 +46,11 @@
 
           svg {
             width: 36px;
-            fill: $blue;
+            fill: $secondary;
             margin-top: -128px;
 
             &:hover {
-              fill: $secondary;
+              fill: $light-green;
             }
           }
 
@@ -85,7 +85,7 @@
               width: 75px;
             }
           }
-          
+
           h3,
           h4 {
             margin-bottom: 0;
