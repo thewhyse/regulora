@@ -325,6 +325,8 @@
             .tns-nav {
               margin-top: 30px;
               button {
+                width: 20px;
+                height: 20px;
                 background: $secondary;
                 &.tns-nav-active {
                   background: $light-green;
