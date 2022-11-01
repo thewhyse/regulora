@@ -625,6 +625,14 @@ SUPPORT AND RESOURCES PAGE
       }
     }
   }
+  #support_living-with-ibs_section {
+    min-height: 800px;
+    .custom-mobi-style {
+      font-size: 24px;
+    }
+
+  }
+
 }
 
 @include media-breakpoint-down(sm) {
