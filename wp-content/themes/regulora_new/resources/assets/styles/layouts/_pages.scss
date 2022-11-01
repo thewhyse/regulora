@@ -631,6 +631,7 @@ SUPPORT AND RESOURCES PAGE
   #support-get-faqs-section {
     .wp-block-columns {
       width: 100% !important;
+
       .wp-block-column:first-child {
         padding: 50px 0 0;
       }
@@ -650,9 +651,18 @@ SUPPORT AND RESOURCES PAGE
 
   #faq-section {
     padding: 20px 12px 60px !important;
+
     .faq-subsection-header {
       margin: 30px 0 25px 10px;
     }
+  }
+
+  #support_living-with-ibs_section {
+    min-height: 900px;
+    .custom-mobi-style {
+      font-size: 24px;
+    }
+
   }
 
 }
