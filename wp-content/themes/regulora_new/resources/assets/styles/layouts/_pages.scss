@@ -431,7 +431,8 @@
               }
 
               .slide-item {
-                height: 632px;
+                /*height: 632px;*/
+                height: auto;
               }
 
               .tns-nav {
@@ -459,7 +460,8 @@
     }
 
     #testimonials-left-side {
-      height: 780px;
+      /*height: 780px;*/
+      height: auto;
       background: url("/wp-content/uploads/2022/10/Patient_Review_mobi_2.png") no-repeat center center !important;
       background-size: contain !important;
       h3, p {
