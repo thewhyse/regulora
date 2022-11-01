@@ -448,7 +448,7 @@ a,
 
 @include media-breakpoint-down(sm) {
   .lines-v {
-    padding-top: 0 !important;
+    /*padding-top: 0 !important;*/
     &:before {
       top: -18px
     }
