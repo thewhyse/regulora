@@ -481,6 +481,8 @@ header.banner {
 
           &:hover {
             text-decoration: none;
+            background: $primary;
+            color: $white;
           }
         }
 
