@@ -5,8 +5,8 @@
       <div class="row mx-0 align-items-center">
         <div class="col-12 col-lg-1 p-0 text-center">
           <a class="footer-logo" href="{{ home_url('/') }}" aria-label="Footer Logo">
-            {{--{!! \App\Controllers\App::siteLogo( 'footer' ) !!}--}}
-            <img src="/wp-content/uploads/2022/10/footer_Logo.png" alt="Regulora">
+            {!! \App\Controllers\App::siteLogo( 'footer' ) !!}
+            {{--<img src="/wp-content/uploads/2022/10/footer_Logo.png" alt="Regulora">--}}
           </a>
         </div>
         <div class="col-12 col-lg-11 p-0 ps-lg-5">
