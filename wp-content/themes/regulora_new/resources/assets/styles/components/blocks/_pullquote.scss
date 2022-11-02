@@ -132,6 +132,26 @@
 
 }
 
+@include media-breakpoint-down(sm) {
+  #restoring-brain-gut-section {
+    .wp-block-pullquote {
+
+      .wp-block-pullquote.is-style-with-lines.animate.action {
+        &:before {
+          right: calc((140vw - var(--main-width)) / 2);
+        }
+
+        &:after {
+          left: calc((140vw - var(--main-width)) / 2);
+        }
+
+      }
+
+    }
+  }
+
+}
+
 
 .is-root-container {
   .wp-block-pullquote {
