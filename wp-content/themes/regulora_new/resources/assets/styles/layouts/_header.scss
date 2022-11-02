@@ -481,6 +481,7 @@ header.banner {
           font-size: 14px;
           font-weight: 600;
           text-align: center;
+          transition: color .1s ease-in-out;
 
           &:hover {
             text-decoration: none;
