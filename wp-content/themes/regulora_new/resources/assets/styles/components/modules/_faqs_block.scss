@@ -65,14 +65,14 @@
 
 @include media-breakpoint-down(sm) {
   .question-section_new {
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
 
     .question-mark-column {
-      flex-direction: column;
 
       figure {
-        margin: 0 0 20px;
+        width: 220px;
+        margin: 10px 20px 0 0;
       }
 
       p {
