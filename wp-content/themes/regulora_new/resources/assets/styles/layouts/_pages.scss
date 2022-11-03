@@ -222,6 +222,27 @@
   }
 }
 
+@include media-breakpoint-down(md) {
+  #restoring-brain-gut-section {
+
+    .brain-gut-section-first-para {
+      /*margin-bottom: 0;*/
+    }
+
+    .brain-gut-section-second-para {
+      float: none;
+      width: 100%;
+    }
+
+    #brain-gut-section-img {
+      float: none;
+      width: 300px;
+      margin: 20px 0 0;
+    }
+  }
+
+}
+
 @include media-breakpoint-down(sm) {
   #brain-gut-hero {
     background-image: url(/wp-content/uploads/2022/10/Brain-Gut_Hero_mobi.png);
