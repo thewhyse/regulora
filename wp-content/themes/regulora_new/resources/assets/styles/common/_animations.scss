@@ -94,7 +94,7 @@
     left: 0;
     top: -5px;
     right: calc((100vw - var(--main-width)) / 2);
-    background: $secondary;
+    background: $yellow;
     border-radius: 0 10px 10px 0;
   }
 
@@ -106,7 +106,7 @@
     right: 0;
     bottom: -5px;
     left: calc((100vw - var(--main-width)) / 2);
-    background: $secondary;
+    background: $yellow;
     border-radius: 10px 0 0 10px;
   }
 
