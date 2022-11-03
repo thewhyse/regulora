@@ -222,6 +222,27 @@
   }
 }
 
+@include media-breakpoint-down(lg) {
+  #restoring-brain-gut-section {
+
+    .brain-gut-section-first-para {
+      /*margin-bottom: 0;*/
+    }
+
+    .brain-gut-section-second-para {
+      float: none !important;
+      width: 100% !important;
+    }
+
+    #brain-gut-section-img {
+      float: none;
+      width: 300px;
+      margin: 20px auto 0;
+    }
+  }
+
+}
+
 @include media-breakpoint-down(md) {
   #restoring-brain-gut-section {
 
@@ -237,7 +258,7 @@
     #brain-gut-section-img {
       float: none;
       width: 300px;
-      margin: 20px 0 0;
+      margin: 20px auto 0;
     }
   }
 
