@@ -65,7 +65,8 @@ p {
 }
 
 p,
-figure {
+figure,
+div {
   &.like-stroke {
     display: inline;
     margin: 10px 0;
