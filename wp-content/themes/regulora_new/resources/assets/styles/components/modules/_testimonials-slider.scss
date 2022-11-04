@@ -331,19 +331,23 @@
     .wp-block-testimonials-slider.view-default {
       .slider-container {
         .slider-inner {
-
-          .prev-but-place.mobile {
+          position: relative;
+          .controll-buttons {
             position: absolute;
-            left: -150px;
-            top: -900%;
-          }
+            height: 100%;
+            .prev-but-place.mobile {
+              position: absolute;
+              left: -170px;
+              top: 160px;
+            }
 
-          .next-but-place.mobile {
-            position: absolute;
-            right: -150px;
-            top: -900%;
-          }
+            .next-but-place.mobile {
+              position: absolute;
+              right: -170px;
+              top: 160px;
+            }
 
+          }
         }
       }
     }
