@@ -39,7 +39,7 @@
 
 @include media-breakpoint-down(md) {
   .question-section_new {
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
 
     .question-mark-column {
@@ -67,7 +67,7 @@
 
 @include media-breakpoint-down(sm) {
   .question-section_new {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
 
     .question-mark-column {
