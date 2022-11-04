@@ -288,6 +288,39 @@
 
           }
         }
+
+        .prev-but-place {
+
+          svg {
+            /*
+            width: 36px;
+            margin-top: -128px;
+            */
+            fill: $primary;
+
+            &:hover {
+              fill: $lavender;
+            }
+          }
+
+        }
+
+        .next-but-place {
+
+          svg {
+            /*
+            width: 36px;
+            margin-top: -128px;
+            */
+            fill: $primary;
+
+            &:hover {
+              fill: $lavender;
+            }
+          }
+        }
+
+
       }
     }
   }
