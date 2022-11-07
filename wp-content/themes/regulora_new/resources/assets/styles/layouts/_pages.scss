@@ -248,6 +248,15 @@
 }
 
 @include media-breakpoint-down(md) {
+  #brain-gut-hero {
+    .bgc-page_hero_right-side {
+      p {
+        color: $black;
+      }
+    }
+  }
+
+
   #restoring-brain-gut-section {
 
     .brain-gut-section-first-para {
@@ -271,6 +280,11 @@
 @include media-breakpoint-down(sm) {
   #brain-gut-hero {
     background-image: url(/wp-content/uploads/2022/10/Brain-Gut_Hero_mobi.png);
+    .bgc-page_hero_right-side {
+      p {
+        color: $black;
+      }
+    }
   }
 
   #restoring-brain-gut-section {
