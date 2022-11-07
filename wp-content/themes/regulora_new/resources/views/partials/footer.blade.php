@@ -9,7 +9,7 @@
             <img src="/wp-content/uploads/2022/11/footer_Logo.svg" alt="Regulora">
           </a>
         </div>
-        <div class="col-12 col-lg-11 p-0 ps-lg-5">
+        <div class="col-12 col-lg-11 ps-lg-5">
           <div class="row mx-0 h-100">
             <div class="col-12 mb-lg-2 align-self-start">
               @if (has_nav_menu('footer_navigation'))
@@ -73,7 +73,7 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-VVEVEH16NV');
+  gtag('config', 'G-VRN1PJ9VDW');
 </script>
 
 
