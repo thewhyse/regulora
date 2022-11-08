@@ -515,6 +515,9 @@ header.banner {
         a {
           font-size: 14px;
         }
+        &:first-child {
+          margin: 0 30px 0 0;
+        }
       }
     }
 
