@@ -651,6 +651,7 @@ header.banner {
       .site-links-inner-container {
         max-width: 1350px;
 
+        /*
         .btns-left-side {
           width: 50%;
           display: -webkit-box;
@@ -715,6 +716,7 @@ header.banner {
           }
 
         }
+        */
 
         .links-right-side {
           width: 50%;
@@ -724,9 +726,6 @@ header.banner {
           -webkit-box-align: center;
           -ms-flex-align: center;
           align-items: center;
-          -webkit-box-pack: center;
-          -ms-flex-pack: center;
-          justify-content: center;
           .secondary-top-links {
             a {
               font-size: 14px;
@@ -827,9 +826,6 @@ header.banner {
           -webkit-box-align: center;
           -ms-flex-align: center;
           align-items: center;
-          -webkit-box-pack: center;
-          -ms-flex-pack: center;
-          justify-content: center;
           .secondary-top-links {
             a {
               font-size: 14px;
@@ -930,9 +926,6 @@ header.banner {
           -webkit-box-align: center;
           -ms-flex-align: center;
           align-items: center;
-          -webkit-box-pack: center;
-          -ms-flex-pack: center;
-          justify-content: center;
           .secondary-top-links {
             a {
               font-size: 14px;
@@ -1033,9 +1026,6 @@ header.banner {
           -webkit-box-align: center;
           -ms-flex-align: center;
           align-items: center;
-          -webkit-box-pack: center;
-          -ms-flex-pack: center;
-          justify-content: center;
           .secondary-top-links {
             a {
               font-size: 14px;
@@ -1136,9 +1126,6 @@ header.banner {
           -webkit-box-align: center;
           -ms-flex-align: center;
           align-items: center;
-          -webkit-box-pack: center;
-          -ms-flex-pack: center;
-          justify-content: center;
           .secondary-top-links {
             a {
               font-size: 14px;
@@ -1157,9 +1144,6 @@ header.banner {
 
 }
 
-@include media-breakpoint-down(sm) {
-
-}
 ///////////////////////////
 
 
