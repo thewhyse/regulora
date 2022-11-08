@@ -409,8 +409,14 @@ header.banner {
     display: flex;
     */
     width: 100%;
-    padding: 5px var(--bs-gutter-x, .75rem);
     background: #E1E6EF;
+
+    .site-links-inner-container {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px var(--bs-gutter-x, .75rem);
+      margin: 0 auto;
+    }
 
     .btns-left-side {
       width: 48%;
