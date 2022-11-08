@@ -249,6 +249,7 @@ header.banner {
         img,
         svg {
           height: 80px;
+          transition: height .5s;
         }
       }
     }
