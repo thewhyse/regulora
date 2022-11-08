@@ -130,6 +130,7 @@ header.banner {
     // Navigation
     .nav-primary {
       .menu-main-menu-container {
+        width: 85%;
         ul {
           display: -webkit-box;
           display: -ms-flexbox;
@@ -146,8 +147,10 @@ header.banner {
 
           li {
             position: relative;
+            /*
             -ms-flex-preferred-size: 12%;
             flex-basis: 12%;
+            */
             z-index: 1;
             display: -webkit-box;
             display: -ms-flexbox;
