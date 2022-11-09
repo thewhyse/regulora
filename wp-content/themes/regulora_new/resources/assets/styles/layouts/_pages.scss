@@ -355,6 +355,17 @@
   }
 }
 
+#pdt-as-abc-section {
+  .pdt-as-abc-right {
+    figure {
+      &:before,
+      &:after {
+        background: $secondary !important;
+      }
+    }
+  }
+}
+
 #about-testimonials-section {
   background-color: #000;
 
@@ -572,22 +583,6 @@
     .wp-block-columns {
       position: absolute;
       top: 10%;
-      /*
-.get-reg-hero-title {
-  p:first-child {
-    &:after {
-      background-color: #79CCC3;
-    }
-
-  }
-  p:last-child {
-    &:after {
-      background-color: #BBE5E1;
-    }
-
-  }
-}
-*/
     }
   }
 }
