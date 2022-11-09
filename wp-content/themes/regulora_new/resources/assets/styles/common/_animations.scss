@@ -132,6 +132,7 @@
     }
   }
 
+  /*
   &.short {
     &::before {
       right: 35%;
@@ -165,6 +166,36 @@
       background: $secondary;
     }
   }
+  */
+}
+
+#restore-connection-img {
+  position: relative;
+
+  &::before {
+    content: ' ';
+    height: 8px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -5px;
+    right: calc((100vw - var(--main-width)) / 2);
+    background: $yellow;
+    border-radius: 0 10px 10px 0;
+  }
+
+  &::after {
+    content: ' ';
+    height: 8px;
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    left: calc((100vw - var(--main-width)) / 2);
+    background: $yellow;
+    border-radius: 10px 0 0 10px;
+  }
+
 }
 
 
