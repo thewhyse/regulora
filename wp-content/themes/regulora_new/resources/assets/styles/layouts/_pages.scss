@@ -665,6 +665,18 @@ SUPPORT AND RESOURCES PAGE
   }
 }
 
+#support-info-about-you {
+  #hbsp-form-container {
+    .hbsp-form-right-side {
+      figure {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
 @include media-breakpoint-down(md) {
   #support-get-faqs-section {
     .percent-60 {
