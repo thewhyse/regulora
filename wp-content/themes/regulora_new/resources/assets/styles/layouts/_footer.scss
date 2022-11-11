@@ -192,8 +192,11 @@ footer {
   .sub-footer-links {
     position: relative;
     margin: 0 0 10px;
-    .under-menu {
+
+    .footer-social-links {
       position: absolute;
+      right: 0;
+      bottom: -10px;
     }
   }
 }
@@ -300,21 +303,11 @@ footer {
 }
 */
 
-@media (min-width: 1400px) and (max-width: 1585px) {
-  footer {
-    background-position: 120% 50%;
-  }
-}
 
-@include media-breakpoint-between(xl, xxl) {
-  footer {
-    background-position: 130% 50%;
-  }
-}
 
-@include media-breakpoint-down(xl) {
+@include media-breakpoint-down(xxl) {
   footer {
-    background: #f3f5f7;
+
   }
 }
 
