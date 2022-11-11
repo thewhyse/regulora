@@ -10,7 +10,7 @@
           </a>
         </div>
         <div class="col-12 col-lg-11 ps-lg-5">
-          <div class="row mx-0 h-100">
+          <div class="row mx-0 h-100 sub-footer-links">
             <div class="col-12 mb-lg-2 align-self-end">
               @if (has_nav_menu('footer_navigation'))
                 {!! wp_nav_menu( [ 'theme_location' => 'footer_navigation', 'menu_class' => 'nav-footer' ] ) !!}
