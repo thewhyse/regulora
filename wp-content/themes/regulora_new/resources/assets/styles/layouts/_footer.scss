@@ -188,6 +188,13 @@ footer {
     }
 
   }
+
+  .sub-footer-links {
+    position: relative;
+    .under-menu {
+      position: absolute;
+    }
+  }
 }
 
 #back-to-top {
