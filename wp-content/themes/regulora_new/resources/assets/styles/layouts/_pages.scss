@@ -625,6 +625,10 @@ SUPPORT AND RESOURCES PAGE
   min-height: 600px;
   background: url("/wp-content/uploads/2022/10/support_living_section_BG.png") no-repeat center center;
   background-size: cover;
+
+  h2.lines-v {
+    word-break: keep-all;
+  }
   .wp-block-column:first-child {
     display: -webkit-box;
     display: -ms-flexbox;
