@@ -189,6 +189,18 @@ footer {
 
   }
 
+  .sub-footer-links {
+    position: relative;
+    margin: 0 0 10px;
+
+    .footer-social-links {
+      position: absolute;
+      right: -50px;
+      bottom: -10px;
+    }
+  }
+
+
 }
 
 #back-to-top {
