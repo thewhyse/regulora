@@ -255,6 +255,15 @@
   }
 }
 
+// Home Page
+@include media-breakpoint-down(sm) {
+  .page-homepage-data {
+    span.active-line.on-the-right {
+      margin: 22px 0 0;
+    }
+  }
+}
+
 .infographic {
   .anchor-target {
     opacity: 0;
