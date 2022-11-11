@@ -2,7 +2,8 @@
   <div class="container">
     {{--<div class="alignwide">--}}
     <div class="footer-holder">
-      <div class="row mx-0 align-items-center">
+      {{--<div class="row mx-0 align-items-center">--}}
+      <div class="row mx-0 align-items-end">
         <div class="col-12 col-lg-1 p-0 text-center">
           <a class="footer-logo" href="{{ home_url('/') }}" aria-label="Footer Logo">
             {{--{!! \App\Controllers\App::siteLogo( 'footer' ) !!}--}}
