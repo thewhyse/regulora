@@ -432,15 +432,10 @@ footer {
 
     .footer-social-links {
       position: absolute;
-      /*
-      right: calc(50% - 39px);
-      bottom: -40px;
-      */
-      right: -50px;
-      bottom: -10px;
+      right: calc(50% - 39px) !important;
+      bottom: -40px !important;
     }
   }
-
 
 }
 
