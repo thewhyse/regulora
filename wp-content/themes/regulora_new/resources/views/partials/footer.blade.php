@@ -17,9 +17,9 @@
               @if (has_nav_menu('footer_navigation'))
                 {!! wp_nav_menu( [ 'theme_location' => 'footer_navigation', 'menu_class' => 'nav-footer' ] ) !!}
               @endif
-                {{--<div class="footer-social-links">--}}
+                <div class="footer-social-links">
                   @php dynamic_sidebar('sidebar-footer-under-menu') @endphp
-                {{--</div>--}}
+                </div>
             </div>
             {{--<div class="col-12 align-self-end under-menu">
               @php dynamic_sidebar('sidebar-footer-under-menu') @endphp
