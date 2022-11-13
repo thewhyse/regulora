@@ -1,31 +1,31 @@
 /**
  *  Advanced iframe external workaround file v2022 free 
- *  Created: 2022-10-28 19:49:01  
+ *  Created: 2022-11-13 22:19:39  
 */ 
 
 
 
-var domain_ = '//dev-regulora.pantheonsite.io/wp-content/plugins/advanced-iframe'; // Check if this is your wordpress directory of ai
+var domain_survey_iframe = '//dev-regulora.pantheonsite.io/wp-content/plugins/advanced-iframe'; // Check if this is your wordpress directory of ai
  
  // Variables are checked with typeof before because this enables that the user can
 // define this values before and after including this file and they don't have to set 
 // them at all if not needed.
-var iframe_id_;
+var iframe_id_survey_iframe;
 if (typeof iframe_id === 'undefined') {
-    iframe_id_ = '';
+    iframe_id_survey_iframe = 'survey_iframe';
 }  else {
 /* jshint ignore:start */
-    iframe_id_ = iframe_id;
+    iframe_id_survey_iframe = iframe_id;
 /* jshint ignore:end */
 }
 if (typeof updateIframeHeight === 'undefined') {
     var updateIframeHeight = 'true';
 } 
 if (typeof keepOverflowHidden === 'undefined') {
-    var keepOverflowHidden = '';
+    var keepOverflowHidden = 'false';
 }
 if (typeof hide_page_until_loaded_external === 'undefined') {
-    var hide_page_until_loaded_external = '';
+    var hide_page_until_loaded_external = 'false';
 }
        
 // load jQuery if not available   TODO - use the one from wordpress!
@@ -36,14 +36,14 @@ window.jQuery || document.write('<script src="//dev-regulora.pantheonsite.io/wp-
  * current page. This is then set as height parameter for the iframe 
  * which triggers the resize function in the parent.  
  */ 
-function aiExecuteWorkaround_() {
+function aiExecuteWorkaround_survey_iframe() {
     if (window!==window.top) { /* I'm in a frame! */ 
 
       if (updateIframeHeight === 'true') { 
         // add the iframe dynamically
-        var url = domain_+'/js/iframe_height.html';
+        var url = domain_survey_iframe+'/js/iframe_height.html';
         var empty_url = 'about:blank';
-        var newElementStr = '<iframe id="ai_hidden_iframe_" style="display:none;clear:both" width="0" height="0" src="';
+        var newElementStr = '<iframe id="ai_hidden_iframe_survey_iframe" style="display:none;clear:both" width="0" height="0" src="';
         newElementStr += empty_url +'">Iframes not supported.</iframe>';
         var newElement = aiCreate(newElementStr);
         document.body.appendChild(newElement);
@@ -69,10 +69,10 @@ function aiExecuteWorkaround_() {
         //  This is the width - need to detect a change of the iframe width at a browser resize!
         var iframeWidth = getIframeWidth();
     
-        var iframe = document.getElementById('ai_hidden_iframe_');
+        var iframe = document.getElementById('ai_hidden_iframe_survey_iframe');
         // 4 pixels extra are needed because of IE! (2 for Chrome)
         // If you still have scrollbars add a little bit more offset.
-        var url_str = url + '?height=' + (newHeight + 4) + '&width=' + iframeWidth + '&id=' + iframe_id_; 
+        var url_str = url + '?height=' + (newHeight + 4) + '&width=' + iframeWidth + '&id=' + iframe_id_survey_iframe; 
         iframe.src = url_str; 
         
         // set overflow to visible again.
@@ -81,8 +81,8 @@ function aiExecuteWorkaround_() {
         }
       } else if (hide_page_until_loaded_external === 'true') {  // only one iframe is rendered - if auto height is disabled still the parent has to be informed to show the iframe ;).
         // add the iframe dynamically
-        var urlShow = domain_ + '/js/iframe_show.html?id='+ iframe_id_;
-        var newElementStrShow = '<iframe id="ai_hidden_iframe_show_" style="display:none;" width="0" height="0" src="';
+        var urlShow = domain_survey_iframe + '/js/iframe_show.html?id='+ iframe_id_survey_iframe;
+        var newElementStrShow = '<iframe id="ai_hidden_iframe_show_survey_iframe" style="display:none;" width="0" height="0" src="';
         newElementStrShow += urlShow+'">Iframes not supported.</iframe>';
         var newElementShow = aiCreate(newElementStrShow);
         document.body.appendChild(newElementShow);
@@ -205,4 +205,4 @@ function addOnloadEvent(fnc){
 }
 
 // add the aiUpdateIframeHeight to the onload of the site.
-addOnloadEvent(aiExecuteWorkaround_);
+addOnloadEvent(aiExecuteWorkaround_survey_iframe);
