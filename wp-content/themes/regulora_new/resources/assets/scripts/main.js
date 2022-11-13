@@ -23,3 +23,13 @@ const routes = new Router({
 
 // Load Events
 jQuery(document).ready(() => routes.loadEvents());
+
+const preloadLink = document.createElement('link');
+preloadLink.href = '/wp-content/themes/regulora_new/dist/styles/main_*.css';
+preloadLink.rel = 'preload';
+preloadLink.as = 'script';
+document.head.appendChild(preloadLink);
+
+const preloadedScript = document.createElement('script');
+preloadedScript.src = '/wp-content/themes/regulora_new/dist/styles/main_*.css';
+document.body.appendChild(preloadedScript);
