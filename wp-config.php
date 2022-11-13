@@ -73,6 +73,7 @@ if ( ! defined( 'WP_DEBUG' ) ) {
 	define('WP_DEBUG', false);
 }
 
+define( 'WP_CACHE', true ); // Added by Hummingbird
 /* That's all, stop editing! Happy Pressing. */
 
 
