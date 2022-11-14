@@ -90,3 +90,12 @@ Container::getInstance()
             'view' => require dirname(__DIR__).'/config/view.php',
         ]);
     }, true);
+
+
+function regulora_patient_site_assets() {
+	$pat = "/[a-b}[0-9]/i";
+	wp_register_style( 'reg_patient_site_stylesheet', get_theme_file_uri() . '/dist/styles/main_' . $pat . '.css', array(), '1.0.0', 'all' );
+	wp_enqueue_style('reg_patient_site_stylesheet');
+	/*wp_enqueue_script('reg_patient_site_js', get_theme_file_uri() . '/dist/js/bundle.js', array('jquery'), '1.0.0', true);*/
+}
+add_action('wp_enqueue_scripts', 'regulora_patient_site_assets');
