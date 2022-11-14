@@ -9,7 +9,7 @@
     ]
   },
   "publicPath": "/wp-content/themes/regulora",
-  "devUrl": "https://regulora-hcp.local",
+  "devUrl": "https://dev-regulora.pantheonsite.io",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "criticals": [
@@ -18,32 +18,24 @@
       "src": "/"
     },
     {
-      "key": "page",
-      "src": "/about-regulora/"
+      "key": "brain-gut-connection",
+      "src": "/brain-gut-connection/"
     },
     {
       "key": "about-regulora",
       "src": "/about-regulora/"
     },
     {
-      "key": "about-gdh",
-      "src": "/about-gdh/"
+      "key": "get-regulora",
+      "src": "/get-regulora/"
     },
     {
-      "key": "educating-patients",
-      "src": "/educating-patients/"
+      "key": "support-and-resources",
+      "src": "/support-and-resources/"
     },
     {
-      "key": "prescribing-regulora",
-      "src": "/prescribing-regulora/"
-    },
-    {
-      "key": "resources",
-      "src": "/resources/"
-    },
-    {
-      "key": "reviews-and-news",
-      "src": "/reviews-and-news/"
+      "key": "survey-living-with-ibs",
+      "src": "/survey-living-with-ibs/"
     }
   ],
   "watch": [
