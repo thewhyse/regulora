@@ -94,8 +94,8 @@ Container::getInstance()
 
 function regulora_patient_site_assets() {
 	$pat =  preg_match("/[^A-Za-z0-9]+/");
-	wp_register_style( 'reg_patient_site_stylesheet', get_theme_file_uri() . '/dist/styles/main_' . $pat . '.css', array(), '1.0.0', 'all' );
-	wp_enqueue_style('reg_patient_site_styleshe', 'false', 'false');
+	wp_register_style( 'reg_patient_site_stylesheet', get_theme_file_uri() . '/dist/styles/main_' . $pat . '.css', array(), '1.0.0', 'all');
+	wp_enqueue_style('reg_patient_site_styleshe', false);
 	/*wp_enqueue_script('reg_patient_site_js', get_theme_file_uri() . '/dist/js/bundle.js', array('jquery'), '1.0.0', true);*/
 }
 add_action('wp_enqueue_scripts', 'regulora_patient_site_assets');
@@ -104,7 +104,7 @@ add_action('wp_enqueue_scripts', 'regulora_patient_site_assets');
  * WP - Load CSS Asynchronously
  * Eliminate blocking-resources
  */
-function regulora_patient_site_tag($html, $handle) {
+/*function regulora_patient_site_tag($html, $handle) {
 	$async_loading = array(
 		'u1_theme-style'
 	);
@@ -115,4 +115,4 @@ function regulora_patient_site_tag($html, $handle) {
 	}
 	return $html;
 }
-add_filter('style_loader_tag', 'regulora_patient_site_tag', 10, 2);
+add_filter('style_loader_tag', 'regulora_patient_site_tag', 10, 2);*/
