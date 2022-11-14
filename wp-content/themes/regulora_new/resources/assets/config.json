@@ -8,7 +8,7 @@
       "./scripts/customizer.js"
     ]
   },
-  "publicPath": "/wp-content/themes/regulora",
+  "publicPath": "/wp-content/themes/regulora_new",
   "devUrl": "https://dev-regulora.pantheonsite.io",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
