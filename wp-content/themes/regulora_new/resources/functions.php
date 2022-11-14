@@ -90,38 +90,3 @@ Container::getInstance()
             'view' => require dirname(__DIR__).'/config/view.php',
         ]);
     }, true);
-
-
-function regulora_patient_site_assets() {
-	$pat =  '/[^A-Za-z0-9]+/';
-	/*$pat =  preg_match_all("/[A-Za-z\d]+/");*/
-
-
-	wp_register_style( 'reg_patient_site_stylesheet', get_theme_file_uri() . '/dist/styles/main_' . $pat . '.css');
-	wp_enqueue_style('reg_patient_site_stylesheet', false);
-
-/*	wp_register_style( 'reg_patient_site_stylesheet', get_theme_file_uri() . '/dist/styles/main_ff9ffa61.css', false);
-	wp_enqueue_style('reg_patient_site_stylesheet');*/
-
-
-	/*wp_enqueue_script('reg_patient_site_js', get_theme_file_uri() . '/dist/js/bundle.js', array('jquery'), '1.0.0', true);*/
-}
-/*add_action('wp_enqueue_scripts', 'regulora_patient_site_assets');*/
-add_action('wp_head', 'regulora_patient_site_assets');
-
-/**
- * WP - Load CSS Asynchronously
- * Eliminate blocking-resources
- */
-/*function regulora_patient_site_tag($html, $handle) {
-	$async_loading = array(
-		'u1_theme-style'
-	);
-	if( in_array($handle, $async_loading) ) {
-		$async_html = str_replace("rel='stylesheet'", "rel='preload' as='style'", $html);
-		$async_html .= str_replace( 'media=\'all\'', 'media="print" onload="this.media=\'all\'"', $html );
-		return $async_html;
-	}
-	return $html;
-}
-add_filter('style_loader_tag', 'regulora_patient_site_tag', 10, 2);*/
