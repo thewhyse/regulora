@@ -95,8 +95,16 @@ Container::getInstance()
 function regulora_patient_site_assets() {
 	/*$pat =  preg_match('/[^A-Za-z0-9]+/');*/
 	$pat =  preg_match_all("/[A-Za-z\d]+/");
-	wp_register_style( 'reg_patient_site_stylesheet', get_theme_file_uri() . '/dist/styles/main_' . $pat . '.css', array(), '1.0.0', 'all');
+
+
+	/*wp_register_style( 'reg_patient_site_stylesheet', get_theme_file_uri() . '/dist/styles/main_' . $pat . '.css', array(), '1.0.0', 'all');
+	wp_enqueue_style('reg_patient_site_stylesheet');*/
+
+	wp_register_style( 'reg_patient_site_stylesheet', get_theme_file_uri() . '/dist/styles/main_' . '/[A-Za-z\d]+/' . '.css', array(), '1.0.0', 'all');
 	wp_enqueue_style('reg_patient_site_stylesheet');
+
+	
+
 	/*wp_enqueue_script('reg_patient_site_js', get_theme_file_uri() . '/dist/js/bundle.js', array('jquery'), '1.0.0', true);*/
 }
 /*add_action('wp_enqueue_scripts', 'regulora_patient_site_assets');*/
