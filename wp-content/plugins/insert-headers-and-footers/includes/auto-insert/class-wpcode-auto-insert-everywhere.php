@@ -58,3 +58,5 @@ class WPCode_Auto_Insert_Everywhere extends WPCode_Auto_Insert_Type {
 		add_action( 'plugins_loaded', array( $this, 'run_snippets' ), 5 );
 	}
 }
+
+new WPCode_Auto_Insert_Everywhere();

@@ -2,7 +2,7 @@
 /*
 Plugin Name: Advanced iFrame
 Plugin URI: https://1.envato.market/VDRDJ
-Version: 2022.7
+Version: 2022.8
 Text Domain: advanced-iframe
 Domain Path: /languages
 Author: Michael Dempfle
@@ -34,6 +34,7 @@ define('AIP_URL_CUSTOM', plugins_url() . '/advanced-iframe-custom/');
 include dirname(__FILE__) . '/includes/advanced-iframe-main-helper.php';
 include dirname(__FILE__) . '/includes/advanced-iframe-main-cookie.php';
 
+$aiVersion = '2022.8';
 if (!class_exists('advancediFrame')) {
     class advancediFrame
     {
@@ -52,8 +53,8 @@ if (!class_exists('advancediFrame')) {
             }
             if ($options['src'] === '//www.tinywebgallery.com') {
                 $options['src'] =  '//www.tinywebgallery.com/blog/advanced-iframe';
-                update_option($this->adminOptionsName, $options);
             } 
+			update_option($this->adminOptionsName, $options);
 			$this->resetMetaBoxes();
 			$this->saveExternalJsFile();
         }
@@ -372,7 +373,7 @@ if (!class_exists('advancediFrame')) {
         }
 
         function aiAddHeader() {
-            $devOptions = get_option($this->adminOptionsName);
+            $devOptions = $this->getAiAdminOptions();
 		
 			// IE fix for cookies.
             header('P3P: CP="ALL DSP NID CURa ADMa DEVa HISa OTPa OUR NOR NAV DEM"');
@@ -758,7 +759,7 @@ if (!class_exists('advancediFrame')) {
         function saveExternalJsFile($backend = true)
         {
             global $aiVersion;
-			$devOptions = get_option($this->adminOptionsName);
+			$devOptions = $this->getAiAdminOptions();
             $template_name = dirname(__FILE__) . '/js/ai_external.template.js';
 
             $jquery_path = site_url() . '/wp-includes/js/jquery/jquery.js';
@@ -1079,6 +1080,7 @@ if (!class_exists('advancediFrame')) {
 		
 
         function aiShowValidationErrors() {
+            global $aiVersion;
             if ( $error = get_transient( "ai_no_rights_post_errors" ) ) { ?>
                 <div class="error">
                     <p><?php echo $error ?></p>
@@ -1113,6 +1115,7 @@ if (!class_exists('advancediFrame')) {
         }
 		
 		function ai_getlatestVersion() {
+			global $aiVersion;
 			$aip_version = get_transient('aip_version');
 			if ($aip_version !== false) {
 			   return $aip_version;
@@ -1127,7 +1130,7 @@ if (!class_exists('advancediFrame')) {
 				$url =  'http://www.tinywebgallery.com/updatecheck/getAipVersion.php';
 				$urls = 'https://www.tinywebgallery.com/updatecheck/getAipVersion.php';
 				$rand = substr(md5(microtime()),rand(0,26),2);
-				$data = http_build_query(array('url' => get_site_url(), 'codehash' => $rand . base64_encode($purchaseCode)   , 'sitehash' => hash('sha256', $auth_key), 'type' => $pro, 'version' => $aip_version), '', '&'); 
+				$data = http_build_query(array('url' => get_site_url(), 'codehash' => $rand . base64_encode($purchaseCode)   , 'sitehash' => hash('sha256', $auth_key), 'type' => $pro, 'version' =>  $aiVersion), '', '&'); 
 				// use key 'http' even if you send the request to https://...
 				$options = array(
 				   'ssl' => array(
@@ -1225,7 +1228,7 @@ if (!class_exists('advancediFrame')) {
 
     function ai_show_id_only() {
 		global $post;
-        $options = get_option($this->adminOptionsName);
+        $options = $this->getAiAdminOptions();
 
 		if ($options['enable_content_filter'] === 'true' && isset( $_GET['ai-show-id-only'] ) && isset( $_GET['ai-server-side'] ) && is_singular() ) {
 			the_post();
@@ -1376,7 +1379,7 @@ if (!class_exists('advancediFrame')) {
 	* internally for pagination. 
 	*/
     function aiParseRequest( $query ) { 
-        $options = get_option($this->adminOptionsName);
+        $options = $this->getAiAdminOptions();
 	    $remove_page_param_from_query = $options['remove_page_param_from_query'];
 		if ($remove_page_param_from_query === 'true') {
 			if (isset($_GET['page']) && isset($query->query_vars['page'])) {			

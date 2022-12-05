@@ -937,7 +937,7 @@ function qsm_questions_answers_shortcode_to_text( $mlw_quiz_array, $qmn_question
 	global $mlwQuizMasterNext;
 	$question_types = $mlwQuizMasterNext->pluginHelper->get_question_type_options();
 	$quiz_options  = $mlwQuizMasterNext->quiz_settings->get_quiz_options();
-	if ( 0 == $quiz_options->show_optin && isset($answer['question_type']) && 8 == $answer['question_type'] ) {
+	if ( isset($answer['question_type']) && ( ( 0 == $quiz_options->show_optin && 8 == $answer['question_type'] ) || ( 0 == $quiz_options->show_text_html && 6 == $answer['question_type'] ) ) ) {
 		return '';
 	}
 
@@ -1011,9 +1011,18 @@ function qsm_questions_answers_shortcode_to_text( $mlw_quiz_array, $qmn_question
 	} else {
 		$mlw_question_answer_display = str_replace( '%QUESTION%', '<b>' . $question_description . '</b>', $mlw_question_answer_display );
 	}
-	$mlw_question_answer_display = qsm_varibale_question_title_func( $mlw_question_answer_display );
+	$mlw_question_answer_display = qsm_varibale_question_title_func( $mlw_question_answer_display, $answer['question_type'] );
 	$extra_border_bottom_class   = '';
 	$remove_border               = true;
+	if ( 6 == $answer['question_type'] ) {
+		$mlw_question_answer_display = str_replace( '%USER_ANSWERS_DEFAULT%', '', $mlw_question_answer_display );
+		$mlw_question_answer_display = str_replace( '%USER_ANSWER%', '', $mlw_question_answer_display );
+		$mlw_question_answer_display = str_replace( '%CORRECT_ANSWER%', '', $mlw_question_answer_display );
+		$mlw_question_answer_display = str_replace( '%USER_COMMENTS%', '', $mlw_question_answer_display );
+		$mlw_question_answer_display = str_replace( '%CORRECT_ANSWER_INFO%', '', $mlw_question_answer_display );
+		$mlw_question_answer_display = str_replace( '%QUESTION_POINT_SCORE%', '', $mlw_question_answer_display );
+		$mlw_question_answer_display = str_replace( '%QUESTION_MAX_POINTS%', '', $mlw_question_answer_display );
+	}
 	if ( strpos( $mlw_question_answer_display, '%USER_ANSWERS_DEFAULT%' ) !== false ) {
 		$remove_border             = false;
 		$question_with_answer_text = '';
@@ -1051,13 +1060,13 @@ function qsm_questions_answers_shortcode_to_text( $mlw_quiz_array, $qmn_question
 									$current_answer_zero = trim( str_replace( ' ', '', preg_replace( '/\s\s+/', '', $current_answer_zero ) ) );
 								}
 
-								if ( 0 == strcasecmp( $user_given_answer, $current_answer_zero ) ) {
+								if ( 'correct' === $answer['correct'] ) {
 									$question_with_answer_text .= '<span class="qsm-text-correct-option qsm-text-user-correct-answer">' . $user_given_answer . '</span>';
 									$do_show_wrong              = false;
 								}
 							}
 						} else {
-							if ( isset( $single_answer[2] ) && strcasecmp( $user_given_answer, $current_answer_zero ) == 0 ) {
+							if ( isset( $single_answer[2] ) && 'correct' === $answer['correct'] ) {
 								$question_with_answer_text .= '<span class="qsm-text-correct-option">' . $mlwQuizMasterNext->pluginHelper->qsm_language_support( $single_answer[0], 'answer-' . $single_answer[0], 'QSM Answers' ) . '</span>';
 								$do_show_wrong              = false;
 							}
@@ -1250,14 +1259,20 @@ function qsm_questions_answers_shortcode_to_text( $mlw_quiz_array, $qmn_question
 			$user_answer_new = __( 'No Answer Provided', 'quiz-master-next' );
 		}
 		if ( isset( $question_settings['answerEditor'] ) && 'image' === $question_settings['answerEditor'] && '' !== $user_answer_new ) {
+			$size_style = '';
+			if ( ! empty($question_settings['image_size-width']) ) {
+				$size_style .= 'width:'.$question_settings['image_size-width'].'px !important;';
+			}
+			if ( ! empty($question_settings['image_size-height']) ) {
+				$size_style .= ' height:'.$question_settings['image_size-height'].'px !important;';
+			}
 			$image_url                   = htmlspecialchars_decode( $user_answer_new, ENT_QUOTES );
 			$caption = "";
 			if ( ! empty($single_answer[3]) ) {
 				$caption_name = array_search($image_url, $image_list, true);
 				$caption = '<span class="qsm_image_result_caption">'.$caption_name.'</span>';
-
 			}
-			$mlw_question_answer_display = str_replace( '%USER_ANSWER%', "$open_span_tag<img src='$image_url'/>$close_span_with_br$caption ", $mlw_question_answer_display );
+			$mlw_question_answer_display = str_replace( '%USER_ANSWER%', "$open_span_tag<img src='$image_url'  style='" . esc_attr( $size_style ) . "'/>$close_span_with_br$caption ", $mlw_question_answer_display );
 
 
 		} elseif ( 5 == $answer['question_type'] || 3 == $answer['question_type'] ) {
@@ -1292,6 +1307,7 @@ function qsm_questions_answers_shortcode_to_text( $mlw_quiz_array, $qmn_question
 	$answer_3                    = ! empty( $answer[3] ) ? $answer[3] : 'NA';
 	$mlw_question_answer_display = str_replace( '%USER_COMMENTS%', $answer_3, $mlw_question_answer_display );
 	$answer_4                    = ! empty( $qmn_questions[ $answer['id'] ] ) ? $qmn_questions[ $answer['id'] ] : 'NA';
+	$answer_4                    = 6 == $answer['question_type'] ? "" : $answer_4 ;
 	$mlw_question_answer_display = str_replace( '%CORRECT_ANSWER_INFO%', htmlspecialchars_decode( $answer_4, ENT_QUOTES ), $mlw_question_answer_display );
 	// Point score of the particular question.
 	$question_point              = isset( $answer['points'] ) ? $answer['points'] : '0';
@@ -1521,18 +1537,12 @@ function qsm_varibale_question_title_func( $question, $question_type = '', $new_
 	$question_title    = preg_replace( '/\s*[a-zA-Z\/\/:\.]*youtube.com\/watch\?v=([a-zA-Z0-9\-_]+)([a-zA-Z0-9\/\*\-\_\?\&\;\%\=\.]*)/i', '<iframe width="420" height="315" src="//www.youtube.com/embed/$1" frameborder="0" allowfullscreen></iframe>', $question_title );
 	$polar_extra_class = '';
 	$question_display  = '';
-	if ( 'polar' == $question_type ) {
-		$polar_extra_class = 'question-type-polar-s';
-	}
+
 	$qmn_quiz_options = $mlwQuizMasterNext->quiz_settings->get_quiz_options();
-	$deselect_answer  = '';
-	if ( isset( $qmn_quiz_options->enable_deselect_option ) && 1 == $qmn_quiz_options->enable_deselect_option && ( 'multiple_choice' === $question_type || 'horizontal_multiple_choice' === $question_type ) ) {
-		$deselect_answer = '<a href="javascript:void(0)" class="qsm-deselect-answer">Deselect Answer</a>';
-	}
 
 	$question_numbering   = '';
-	$qmn_total_questions += 1;
-	if ( isset( $qmn_quiz_options->question_numbering ) && 1 == $qmn_quiz_options->question_numbering ) {
+	if ( isset( $qmn_quiz_options->question_numbering ) && 1 == $qmn_quiz_options->question_numbering && 6 != $question_type ) {
+		$qmn_total_questions += 1;
 		$question_numbering = '<span class="mlw_qmn_question_number">' . esc_html( $qmn_total_questions ) . '.&nbsp;</span>';
 	}
 
@@ -1547,6 +1557,6 @@ function qsm_varibale_question_title_func( $question, $question_type = '', $new_
 		$question_display  .= "<div class='mlw_qmn_new_question'>" . $new_question_title . '</div>';
 		$polar_extra_class .= ' qsm_remove_bold';
 	}
-	$question_display .= "<div class='mlw_qmn_question {$polar_extra_class}' >" . $question_numbering . do_shortcode( htmlspecialchars_decode( $question_title, ENT_QUOTES ) ) . $deselect_answer . '</div>';
+	$question_display .= "<div class='mlw_qmn_question' >" . $question_numbering . do_shortcode( htmlspecialchars_decode( $question_title, ENT_QUOTES ) ) . '</div>';
 	return $question_display;
 }

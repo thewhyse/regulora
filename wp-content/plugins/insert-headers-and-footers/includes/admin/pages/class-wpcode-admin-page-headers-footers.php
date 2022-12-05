@@ -40,11 +40,9 @@ class WPCode_Admin_Page_Headers_Footers extends WPCode_Admin_Page {
 
 	/**
 	 * Call this just to set the page title translatable.
-	 *
-	 * @param bool $settings_submenu If true, the page will be added as a submenu of the Settings page.
 	 */
-	public function __construct( $settings_submenu = false ) {
-		if ( $settings_submenu ) {
+	public function __construct() {
+		if ( wpcode()->settings->get_option( 'headers_footers_mode' ) ) {
 			$this->settings_submenu = true;
 		}
 		$this->page_title = __( 'Header & Footer', 'insert-headers-and-footers' );
@@ -58,7 +56,10 @@ class WPCode_Admin_Page_Headers_Footers extends WPCode_Admin_Page {
 	 */
 	public function add_page() {
 		if ( $this->settings_submenu ) {
-			add_options_page( $this->menu_title, $this->page_title, 'wpcode_edit_snippets', $this->page_slug, 'wpcode_admin_menu_page' );
+			add_options_page( $this->menu_title, $this->page_title, 'wpcode_edit_snippets', $this->page_slug, array(
+				wpcode()->admin_page_loader,
+				'admin_menu_page'
+			) );
 
 			return;
 		}
@@ -130,28 +131,37 @@ class WPCode_Admin_Page_Headers_Footers extends WPCode_Admin_Page {
 	 * @return void
 	 */
 	public function output_content() {
-		$body_supported = function_exists( 'wp_body_open' ) && version_compare( get_bloginfo( 'version' ), '5.2', '>=' );
-		$header_desc    = sprintf(
+
+		$header_desc = sprintf(
 		/* translators: %s: The `<head>` tag */
 			esc_html__( 'These scripts will be printed in the %s section.', 'insert-headers-and-footers' ),
 			'<code>&lt;head&gt;</code>'
 		);
-		$body_desc      = sprintf(
+		$body_desc   = sprintf(
 		/* translators: %s: The `<head>` tag */
 			esc_html__( 'These scripts will be printed just below the opening %s tag.', 'insert-headers-and-footers' ),
 			'<code>&lt;body&gt;</code>'
 		);
-		$footer_desc    = sprintf(
+		$footer_desc = sprintf(
 		/* translators: %s: The `</body>` tag */
 			esc_html__( 'These scripts will be printed above the closing %s tag.', 'insert-headers-and-footers' ),
 			'<code>&lt;/body&gt;</code>'
 		);
 		$this->textarea_field( 'ihaf_insert_header', __( 'Header', 'insert-headers-and-footers' ), $header_desc );
-		if ( $body_supported ) {
+		if ( $this->body_supported() ) {
 			$this->textarea_field( 'ihaf_insert_body', __( 'Body', 'insert-headers-and-footers' ), $body_desc );
 		}
 		$this->textarea_field( 'ihaf_insert_footer', __( 'Footer', 'insert-headers-and-footers' ), $footer_desc );
 		wp_nonce_field( $this->action, $this->nonce_name );
+	}
+
+	/**
+	 * Check if the website supports wp_body_open.
+	 *
+	 * @return bool
+	 */
+	public function body_supported() {
+		return function_exists( 'wp_body_open' ) && version_compare( get_bloginfo( 'version' ), '5.2', '>=' );
 	}
 
 	/**
@@ -221,14 +231,14 @@ class WPCode_Admin_Page_Headers_Footers extends WPCode_Admin_Page {
 	 * @return void
 	 */
 	public function page_scripts() {
-		$settings = $this->load_code_mirror();
-		if ( false === $settings ) {
-			return;
-		}
+		$editor = new WPCode_Code_Editor();
 
-		wp_add_inline_script( 'code-editor', sprintf( 'jQuery( function() { wp.codeEditor.initialize( "ihaf_insert_header", %s ); } );', wp_json_encode( $settings ) ) );
-		wp_add_inline_script( 'code-editor', sprintf( 'jQuery( function() { wp.codeEditor.initialize( "ihaf_insert_body", %s ); } );', wp_json_encode( $settings ) ) );
-		wp_add_inline_script( 'code-editor', sprintf( 'jQuery( function() { wp.codeEditor.initialize( "ihaf_insert_footer", %s ); } );', wp_json_encode( $settings ) ) );
+		$editor->register_editor( 'ihaf_insert_header' );
+		$editor->register_editor( 'ihaf_insert_footer' );
+		if ( $this->body_supported() ) {
+			$editor->register_editor( 'ihaf_insert_body' );
+		}
+		$editor->init_editor();
 	}
 
 	/**

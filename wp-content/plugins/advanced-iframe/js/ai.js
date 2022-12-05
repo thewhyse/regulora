@@ -1,5 +1,5 @@
 /**
- *  Advanced iframe pro functions v2022.5
+ *  Advanced iframe pro functions v2022.8
 */
 /* jslint devel: true, unused: false */
 /* globals ai_show_id_only:false, aiIsIe8: false, aiChangeUrl: false, aiResizeIframeHeightId: false, aiShowIframeId: false, findAndReplaceDOMText: false, aiShowDebug: false */

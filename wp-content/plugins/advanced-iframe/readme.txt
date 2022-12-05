@@ -3,8 +3,8 @@ Contributors: mdempfle
 Donate link: http://www.tinywebgallery.com
 Tags: iframe, embed, resize, zoom, content, advanced, shortcode, modify css, widget 
 Requires at least: 3.3
-Tested up to: 6.0.2
-Stable tag: 2022.7
+Tested up to: 6.1.1
+Stable tag: 2022.8
 Requires PHP: 5.4
 License: Envato market standard or extended license
 License URI: https://themeforest.net/licenses/standard
@@ -169,9 +169,14 @@ Use the Wordpress installer to update or simply overwrite all files from your pr
 If you have some radio elements empty after the update simply select the one you like and save again.
 
 == Change log ==
+= 2022.8 =
+- New: Tested with Wordpress 6.1.1
+- Fix: "Undefined array key" warnings when updating to php 8.x. If the database does not contain the required values now defaults are stored always during activation. Before it was only saved if no values where present.  
+
 = 2022.7 =
 - Fix: hide_content_until_iframe_color was causing an "Too few arguments ..." error. This is fixed now. 
 - Fix: addAdminHeaderCode is now using getAiAdminOptions instead of get_option. This does then always load the defaults even when the data could not be loaded from the database.
+
 = 2022.6 =
 - New: The HTML attribute refererpolicy is now available in the administration and as shortcode attribute.
 - New: Custom attributes can be added on the basic attributes page and in the shortcode. The shortcode attribute for this is custom="". e.g. custom="data-custom='data1' data-custom-2='data2'" if you like to add 2 custom attributes. See https://www.tinywebgallery.com/blog/advanced-iframe/demo-advanced-iframe-2-0 for an example.

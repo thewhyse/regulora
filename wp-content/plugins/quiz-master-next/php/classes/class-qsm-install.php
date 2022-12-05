@@ -487,6 +487,26 @@ class QSM_Install {
 		);
 		$mlwQuizMasterNext->pluginHelper->register_quiz_setting( $field_array, 'quiz_options' );
 
+		// Registers show-optin setting
+		$field_array = array(
+			'id'         => 'show_text_html',
+			'label'      => __( 'Show Text/HTML type section in result page', 'quiz-master-next' ),
+			'type'       => 'radio',
+			'options'    => array(
+				array(
+					'label' => __( 'Yes', 'quiz-master-next' ),
+					'value' => 1,
+				),
+				array(
+					'label' => __( 'No', 'quiz-master-next' ),
+					'value' => 0,
+				),
+			),
+			'default'    => 0,
+			'option_tab' => 'display',
+		);
+		$mlwQuizMasterNext->pluginHelper->register_quiz_setting( $field_array, 'quiz_options' );
+
 		// Registers store_responses setting
 		$field_array = array(
 			'id'         => 'store_responses',
@@ -990,7 +1010,7 @@ class QSM_Install {
 		// Registers message_before setting
 		$field_array = array(
 			'id'        => 'message_before',
-			'label'     => __( 'Message Displayed Before Quiz', 'quiz-master-next' ),
+			'label'     => __( 'Text Before Quiz', 'quiz-master-next' ),
 			'type'      => 'editor',
 			'default'   => 0,
 			'variables' => array(
@@ -1004,7 +1024,7 @@ class QSM_Install {
 		// Registers message_comment setting
 		$field_array = array(
 			'id'        => 'message_comment',
-			'label'     => __( 'Message Displayed Before Comments Box If Enabled', 'quiz-master-next' ),
+			'label'     => __( 'Text for Comment Box', 'quiz-master-next' ),
 			'type'      => 'editor',
 			'default'   => 0,
 			'variables' => array(
@@ -1018,7 +1038,7 @@ class QSM_Install {
 		// Registers message_end_template setting
 		$field_array = array(
 			'id'        => 'message_end_template',
-			'label'     => __( 'Message Displayed At End Of Quiz (Leave Blank To Omit Text Section)', 'quiz-master-next' ),
+			'label'     => __( 'Text After Quiz', 'quiz-master-next' ),
 			'type'      => 'editor',
 			'default'   => 0,
 			'variables' => array(
@@ -1032,7 +1052,7 @@ class QSM_Install {
 		// Registers total_user_tries_text setting
 		$field_array = array(
 			'id'        => 'total_user_tries_text',
-			'label'     => __( 'Message Displayed If User Has Tried Quiz Too Many Times', 'quiz-master-next' ),
+			'label'     => __( 'Text For Limited Attempts', 'quiz-master-next' ),
 			'type'      => 'editor',
 			'default'   => 0,
 			'variables' => array(
@@ -1046,7 +1066,7 @@ class QSM_Install {
 		// Registers require_log_in_text setting
 		$field_array = array(
 			'id'        => 'require_log_in_text',
-			'label'     => __( 'Message Displayed If User Is Not Logged In And Quiz Requires Users To Be Logged In', 'quiz-master-next' ),
+			'label'     => __( 'Text for Registered User', 'quiz-master-next' ),
 			'type'      => 'editor',
 			'default'   => 0,
 			'variables' => array(
@@ -1060,7 +1080,7 @@ class QSM_Install {
 		// Registers scheduled_timeframe_text setting
 		$field_array = array(
 			'id'        => 'scheduled_timeframe_text',
-			'label'     => __( 'Message Displayed If Date Is Outside Scheduled Timeframe', 'quiz-master-next' ),
+			'label'     => __( 'Text for Expired Quiz', 'quiz-master-next' ),
 			'type'      => 'editor',
 			'default'   => 0,
 			'variables' => array(
@@ -1074,7 +1094,7 @@ class QSM_Install {
 		// Registers limit_total_entries_text setting
 		$field_array = array(
 			'id'        => 'limit_total_entries_text',
-			'label'     => __( 'Message Displayed If The Limit Of Total Entries Has Been Reached', 'quiz-master-next' ),
+			'label'     => __( 'Text for Limited Entries', 'quiz-master-next' ),
 			'type'      => 'editor',
 			'default'   => 0,
 			'variables' => array(
@@ -1088,7 +1108,7 @@ class QSM_Install {
 		// Registers question_answer_template setting
 		$field_array = array(
 			'id'        => 'question_answer_template',
-			'label'     => __( 'Results Page %QUESTIONS_ANSWERS% Text', 'quiz-master-next' ),
+			'label'     => __( '%QUESTIONS_ANSWERS% Text', 'quiz-master-next' ),
 			'type'      => 'editor',
 			'default'   => 0,
 			'variables' => array(

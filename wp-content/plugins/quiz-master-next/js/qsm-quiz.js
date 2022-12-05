@@ -22,7 +22,7 @@ var qsmTimerInterval = [];
 				$('.g-recaptcha').hide();
 				// Cycle through all quizzes
 				_.each(qmn_quiz_data, function (quiz) {
-					quizID = parseInt(quiz.quiz_id);
+					let quizID = parseInt(quiz.quiz_id);
 					QSM.initPagination(quizID);
 					qsmTimerInterval[quizID] = setInterval(function () { qmnTimeTakenTimer(quizID) }, 1000);
 					if ( ( quiz.hasOwnProperty('pagination') || ( _.keys(quiz.qpages).length > 1 && !jQuery('.qsm-quiz-container-'+quizID+' .qsm-auto-page-row').length ) ) ) {
@@ -783,7 +783,7 @@ function qmnValidation(element, quiz_form_id) {
 	var error_messages = qmn_quiz_data[quiz_id].error_messages;
 	qmnResetError(quiz_form_id);
 	jQuery(element).each(function () {
-		if (jQuery(this).attr('class')) {
+		if ( jQuery(this).attr('class') && jQuery(this).is(':visible') ) {
 			if (jQuery(this).attr('class').indexOf('mlwEmail') !== -1 && this.value !== "") {
 				// Remove any trailing and preceeding space.
 				var x = jQuery.trim(this.value);
@@ -828,7 +828,7 @@ function qmnValidation(element, quiz_form_id) {
 				}
 			}
 			var by_pass = true;
-			if (qmn_quiz_data[quizID].timer_limit_val > 0 && qmn_quiz_data[quiz_id].hasOwnProperty('skip_validation_time_expire') && qmn_quiz_data[quiz_id].skip_validation_time_expire == 0) {
+			if (qmn_quiz_data[quiz_id].timer_limit_val > 0 && qmn_quiz_data[quiz_id].hasOwnProperty('skip_validation_time_expire') && qmn_quiz_data[quiz_id].skip_validation_time_expire == 0) {
 				by_pass = false;
 			}
 
@@ -937,8 +937,8 @@ function qmnFormSubmit(quiz_form_id) {
 	fd.append("currentuserTimeZone", Intl.DateTimeFormat().resolvedOptions().timeZone);
 
 
-	qsmEndTimeTakenTimer(quizID);
-	if (qmn_quiz_data[quizID].hasOwnProperty('advanced_timer') && qmn_quiz_data[quizID].advanced_timer.hasOwnProperty('show_stop_timer') ) {
+	qsmEndTimeTakenTimer(quiz_id);
+	if (qmn_quiz_data[quiz_id].hasOwnProperty('advanced_timer') && qmn_quiz_data[quiz_id].advanced_timer.hasOwnProperty('show_stop_timer') ) {
 		QSMPageTimer.endPageTimer(quiz_id);
 	}
 	if (qmn_quiz_data[quiz_id].hasOwnProperty('timer_limit')) {
@@ -958,7 +958,7 @@ function qmnFormSubmit(quiz_form_id) {
 			if (window.qsm_results_data === undefined) {
 				window.qsm_results_data = new Object();
 			}
-			window.qsm_results_data[quizID] = {
+			window.qsm_results_data[quiz_id] = {
 				'save_response': response.result_status['save_response'],
 				'id': response.result_status['id']
 			};
@@ -1249,7 +1249,7 @@ function qmnInitProgressbarOnClick(quiz_id, page_number, total_page_number) {
 			}).animate({
 				Counter: new_text
 			}, {
-				duration: 1000,
+				duration: 500,
 				easing: 'swing',
 				step: function () {
 					jQuery('#qsm_progress_bar_' + quiz_id).find('.progressbar-text').text(Math.round(this.Counter) + ' %');
@@ -1529,6 +1529,7 @@ jQuery(function () {
 		var question_id = $this.parent('.quiz_section').find('.mlw_file_upload_media_id').attr("name").replace('question', '');
 		form_data.append('question_id', question_id);
 		$this.next('.loading-uploaded-file').show();
+		jQuery(".qsm-submit-btn").attr('disabled', true);
 		jQuery.ajax({
 			url: qmn_ajax_object.ajaxurl,
 			type: 'POST',
@@ -1539,6 +1540,7 @@ jQuery(function () {
 			success: function (response) {
 				var obj = jQuery.parseJSON(response);
 				$this.next('.loading-uploaded-file').hide();
+				jQuery(".qsm-submit-btn").attr('disabled', false);
 				if (obj.type == 'success') {
 					$this.next().next('.remove-uploaded-file').show();
 					$this.parent('.quiz_section').find('.mlw_file_upload_hidden_path').val(obj.file_path);
