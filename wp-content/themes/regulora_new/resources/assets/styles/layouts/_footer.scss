@@ -197,6 +197,10 @@ footer {
       position: absolute;
       right: -50px;
       bottom: -10px;
+
+      div:last-child {
+        display: flex;
+      }
     }
   }
 
