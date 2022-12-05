@@ -200,12 +200,15 @@ footer {
 
       div:last-child {
         display: flex;
-        figure a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 40px;
-          height: 40px;
+        figure {
+          margin: 0 0 10px;
+          a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+          }
         }
       }
     }

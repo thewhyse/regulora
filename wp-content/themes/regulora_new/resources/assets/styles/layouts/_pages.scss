@@ -667,6 +667,12 @@ SUPPORT AND RESOURCES PAGE
   }
 }
 
+.videos-holders {
+  .vidyard-player-container {
+    width: 98%;
+  }
+}
+
 @include media-breakpoint-down(md) {
   #support-get-faqs-section {
     .percent-60 {
