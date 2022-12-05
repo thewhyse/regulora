@@ -179,6 +179,7 @@
   }
 
   #restore-brain_gut-section {
+    -ms-flex-pack: distribute;
     justify-content: space-around;
   }
 }
@@ -671,6 +672,12 @@ SUPPORT AND RESOURCES PAGE
   .vidyard-player-container {
     width: 98% !important;
   }
+}
+
+#support-social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @include media-breakpoint-down(md) {

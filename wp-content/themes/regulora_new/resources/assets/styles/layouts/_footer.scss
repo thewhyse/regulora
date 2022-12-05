@@ -27,6 +27,8 @@ footer {
   .widget_nav_menu {
     ul.menu {
       padding: 0;
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
       column-count: 2;
 
       li {
@@ -82,6 +84,8 @@ footer {
     margin: 0;
     padding: 0;
     list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 
     li {
@@ -200,12 +204,20 @@ footer {
       bottom: -10px;
 
       div:last-child {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         figure {
           margin: 0 0 10px;
           a {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
             justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
             align-items: center;
             width: 30px;
             height: 30px;
@@ -255,7 +267,12 @@ footer {
     }
 
     .nav-footer {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
 
       li {
@@ -367,6 +384,8 @@ footer {
 
     .widget_nav_menu {
       ul.menu {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
         column-count: 1;
         li {
           padding: 0;
@@ -456,7 +475,11 @@ footer {
 
 #back-to-top {
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   position: fixed;
   bottom: 100px;
@@ -465,6 +488,8 @@ footer {
   padding: 10px 20px;
   background: $white;
   border-radius: 50px 0 0 50px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 
   span {
