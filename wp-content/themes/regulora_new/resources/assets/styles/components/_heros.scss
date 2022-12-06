@@ -1,0 +1,40 @@
+#brain-gut-hero {
+  .bgc-page_hero_right-side {
+    position: absolute;
+    bottom: 35%;
+    right: -70%;
+  }
+}
+
+#get-regulora_hero_section {
+  .get-reg-hero-title {
+
+  }
+}
+
+
+#hp_hero_section_mobi,
+#about_hero_section_mobi,
+#support-hero-section-mobi {
+display: none;
+}
+
+
+@include media-breakpoint-down(sm) {
+  #hp_hero_section,
+  #about_hero_section,
+  #support-hero-section {
+    display: none !important;
+  }
+
+  #hp_hero_section_mobi,
+  #about_hero_section_mobi,
+  #support-hero-section-mobi {
+    display: block !important;
+  }
+
+
+}
+
+
+@include media-breakpoint-down(sm) {}
