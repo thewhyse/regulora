@@ -607,6 +607,11 @@
   .pdt-as-abc-right {
     padding: 0 20px;
   }
+  .pdt-as-abc-right {
+    #brain-gut-section-img img {
+      width: 100%;
+    }
+  }
 }
 @include media-breakpoint-down(sm) {
   #pdt-as-abc-section {
