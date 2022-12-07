@@ -73,6 +73,23 @@
       display: flex;
     }
   }
+
+  .for-change-left-side,
+  .for-change-right-side {
+    padding: 0 20px;
+  }
+  .for-change-right-side {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
 }
 
 #hp-cards-section {
@@ -799,3 +816,4 @@ SUPPORT AND RESOURCES PAGE
   }
 }
 /*   END   SURVEY PAGE           */
+ 
