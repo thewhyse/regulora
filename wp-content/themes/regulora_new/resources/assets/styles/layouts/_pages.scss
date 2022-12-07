@@ -730,6 +730,20 @@ SUPPORT AND RESOURCES PAGE
         }
       }
     }
+    .hbsp-form-left-side,
+    .hbsp-form-right-side {
+      padding: 0 20px;
+    }
+  }
+}
+@include media-breakpoint-down(sm) {
+  #support-info-about-you {
+    #hbsp-form-container {
+      .hbsp-form-left-side,
+      .hbsp-form-right-side {
+        padding: 0;
+      }
+    }
   }
 }
 
