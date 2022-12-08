@@ -54,11 +54,16 @@
       font-weight: 600;
     }
   }
-
   figure {
     &:before,
     &:after {
       background: #fff;
+    }
+  }
+
+  #pain-symptom-section {
+    .wp-block-column {
+      padding: 0 20px;
     }
   }
 
@@ -182,6 +187,16 @@
     .gut-connection-txt-2 {
       padding: 0 30px;
     }
+  }
+
+  #brain-gut-connection-section {
+    #pain-symptom-section {
+      .wp-block-column {
+        padding: 0 20px;
+      }
+
+    }
+
   }
 
 }
