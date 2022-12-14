@@ -5,7 +5,7 @@ Tags: GDPR, CCPA, cookie notice, DSGVO, RGPD, LGPD, PIPEDA, POPIA, cookies , coo
 Requires at least: 5.0.0
 Tested up to: 6.1
 Requires PHP: 5.6
-Stable tag: 3.0.6
+Stable tag: 3.0.7
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -160,6 +160,12 @@ For every update of the plugin, you will be notified of the installed plugins pa
 9. Privacy policy generator and cookie policy generator
 
 == Changelog ==
+
+= 3.0.7 = 
+
+[Enhancement] - New CCPA Opt-out center
+[Fix] - Not able to change the Optout preference center text color
+[Fix] - Not able to disable the "Reject All" button from preference center
 
 = 3.0.6 = 
 
@@ -574,7 +580,8 @@ For every update of the plugin, you will be notified of the installed plugins pa
 
 == Upgrade Notice ==
 
-= 3.0.6 = 
+= 3.0.7 = 
 
-[Enhancement] - Clickable video placeholders
-[Fix] - Revisit consent button color is not reset on colour scheme changes
+[Enhancement] - New CCPA Opt-out center
+[Fix] - Not able to change the Optout preference center text color
+[Fix] - Not able to disable the "Reject All" button from preference center

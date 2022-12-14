@@ -392,6 +392,8 @@ class Frontend {
 		$data['config']['videoPlaceholder']['styles'] = array_merge( $properties['config']['videoPlaceholder']['styles'], $properties['config']['videoPlaceholder']['elements']['title']['styles'] );
 		$data['config']['readMore']                   = $properties['config']['notice']['elements']['buttons']['elements']['readMore'];
 		$data['config']['auditTable']['status']       = $properties['config']['auditTable']['status'];
+		$data['config']['optOption']['status']        = $properties['config']['optoutPopup']['elements']['optOption']['status'];
+		$data['config']['optOption']['toggle']        = $properties['config']['optoutPopup']['elements']['optOption']['elements']['toggle'];
 		return $data;
 	}
 
@@ -466,7 +468,41 @@ class Frontend {
 			'status'     => true,
 			'attributes' => array(),
 		);
-
+		$data[] = array(
+			'key'        => 'cky_enable_optout_label',
+			'content'    => do_shortcode( '[cky_enable_optout_label]' ),
+			'tag'        => '',
+			'status'     => true,
+			'attributes' => array(),
+		);
+		$data[] = array(
+			'key'        => 'cky_disable_optout_label',
+			'content'    => do_shortcode( '[cky_disable_optout_label]' ),
+			'tag'        => '',
+			'status'     => true,
+			'attributes' => array(),
+		);
+		$data[] = array(
+			'key'        => 'cky_optout_toggle_label',
+			'content'    => do_shortcode( '[cky_optout_toggle_label]' ),
+			'tag'        => '',
+			'status'     => true,
+			'attributes' => array(),
+		);
+		$data[] = array(
+			'key'        => 'cky_optout_option_title',
+			'content'    => do_shortcode( '[cky_optout_option_title]' ),
+			'tag'        => '',
+			'status'     => true,
+			'attributes' => array(),
+		);
+		$data[] = array(
+			'key'        => 'cky_optout_close_label',
+			'content'    => do_shortcode( '[cky_optout_close_label]' ),
+			'tag'        => '',
+			'status'     => true,
+			'attributes' => array(),
+		);
 		return $data;
 	}
 
