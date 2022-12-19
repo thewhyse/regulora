@@ -131,27 +131,28 @@
     height: 2px;
     width: 250%;
     background: #EFCE1D;
+    transition: left 2s ease-in;
   }
   &:after {
     content: '';
     display: flex;
-    right: -90px;
+    right: -79px;
     bottom: 10%;
     position: absolute;
     height: 2px;
     width: 0;
     background: #EFCE1D;
+    transition: width 2s ease-in;
   }
 }
 
 #pain-txt-dt.go-do-it {
   &:before {
     left: -250%;
-    transition: left 1s ease-in;
+
   }
   &:after {
-    width: 90px;
-    transition: left 1s ease-in;
+    width: 40%;
   }
 }
 
