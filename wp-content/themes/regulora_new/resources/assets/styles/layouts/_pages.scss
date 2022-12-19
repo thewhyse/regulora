@@ -129,6 +129,8 @@
   position: relative;
 
   &:before {
+    content: '';
+    display: block;
     left: 0;
     top: 2%;
     position: absolute;
