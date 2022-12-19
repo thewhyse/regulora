@@ -135,12 +135,23 @@
   &:after {
     content: '';
     display: flex;
-    right: -161px;
+    right: -90px;
     bottom: 10%;
     position: absolute;
     height: 2px;
     width: 0;
     background: #EFCE1D;
+  }
+}
+
+#pain-txt-dt.go-do-it {
+  &:before {
+    left: -250%;
+    transition: left 1s ease-in;
+  }
+  &:after {
+    width: 90px;
+    transition: left 1s ease-in;
   }
 }
 
