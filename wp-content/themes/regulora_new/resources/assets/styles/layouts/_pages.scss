@@ -54,12 +54,14 @@
       font-weight: 600;
     }
   }
+  /*
   figure {
     &:before,
     &:after {
       background: #fff;
     }
   }
+  */
 
   #pain-symptom-section {
     .wp-block-column {
@@ -131,11 +133,21 @@
   &:before {
     content: '';
     display: block;
-    left: 0;
-    top: 2%;
+    left: -450%;
+    top: 10%;
     position: absolute;
     height: 2px;
-    width: 100%;
+    width: 250%;
+    background: #EFCE1D;
+  }
+  &:after {
+    content: '';
+    display: block;
+    right: 0;
+    bottom: 10%;
+    position: absolute;
+    height: 2px;
+    width: 0;
     background: #EFCE1D;
   }
 }
