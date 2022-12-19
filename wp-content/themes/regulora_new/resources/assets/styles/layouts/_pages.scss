@@ -135,13 +135,14 @@
   }
   &:after {
     content: '';
-    display: flex;
+    display: block;
     right: -79px;
     bottom: 10%;
     position: absolute;
     height: 2px;
     width: 0;
     background: #EFCE1D;
+    transform: rotateY(180deg);
     transition: width 2s ease-in;
   }
 }
