@@ -123,7 +123,6 @@
   position: relative;
 
   .bow {
-    content: '';
     display: block;
     left: -450%;
     top: 10%;
@@ -134,7 +133,6 @@
     transition: left 2s ease-in;
   }
   .aft {
-    content: '';
     display: block;
     right: -79px;
     bottom: 10%;
