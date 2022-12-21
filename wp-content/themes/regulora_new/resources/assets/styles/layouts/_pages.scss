@@ -146,15 +146,15 @@
   }
 }
 
-#dt-pain.go-do-it {
-  .bow {
-    left: -250%;
+
+  .bow.go-do-it {
+    left: -230%;
 
   }
-  .aft {
+  .aft.go-do-it {
     width: 40%;
   }
-}
+
 
 @include media-breakpoint-down(md) {
 
