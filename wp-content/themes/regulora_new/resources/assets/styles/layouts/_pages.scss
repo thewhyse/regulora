@@ -119,10 +119,10 @@
   }
 }
 
-#pain-txt-dt {
+#dt-pain {
   position: relative;
 
-  &:before {
+  .bow {
     content: '';
     display: block;
     left: -450%;
@@ -133,7 +133,7 @@
     background: #EFCE1D;
     transition: left 2s ease-in;
   }
-  &:after {
+  .aft {
     content: '';
     display: block;
     right: -79px;
@@ -142,17 +142,16 @@
     height: 2px;
     width: 0;
     background: #EFCE1D;
-    transform: rotateY(180deg);
     transition: width 2s ease-in;
   }
 }
 
-#pain-txt-dt.go-do-it {
-  &:before {
+#dt-pain.go-do-it {
+  .bow {
     left: -250%;
 
   }
-  &:after {
+  .aft {
     width: 40%;
   }
 }
