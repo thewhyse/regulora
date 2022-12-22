@@ -223,6 +223,9 @@ footer {
             height: 30px;
           }
         }
+        figure:nth-child(2) {
+          margin: 0 10px 10px 0;
+        }
       }
     }
   }
@@ -464,7 +467,7 @@ footer {
 
       .footer-social-links {
         position: absolute;
-        right: calc(50% - 39px);
+        right: calc(50% - 67px) !important;
         bottom: -40px;
       }
     }
