@@ -123,6 +123,7 @@
   position: relative;
 
   &:before {
+    content: '';
     display: block;
     left: -450%;
     top: 10%;
@@ -133,6 +134,7 @@
     transition: left 2s ease-in;
   }
   &:after {
+    content: '';
     display: block;
     right: -79px;
     bottom: 10%;
