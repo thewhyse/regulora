@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function(event){
     let ww = window.innerWidth;
 
     let stopPoint = ww - imageLeft;
-    console.log(stopPoint);
+    console.log(stopPoint + ' this is stop point = ww - imageLeft');
 
     const tl = gsap.timeline({
       scrollTrigger: {
