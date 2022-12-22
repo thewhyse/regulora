@@ -122,7 +122,7 @@
 #dt-pain {
   position: relative;
 
-  .bow {
+  &:before {
     display: block;
     left: -450%;
     top: 10%;
@@ -132,7 +132,7 @@
     background: #EFCE1D;
     transition: left 2s ease-in;
   }
-  .aft {
+  &:after {
     display: block;
     right: -79px;
     bottom: 10%;
@@ -144,12 +144,12 @@
   }
 }
 
-#dt-pain {
-  .bow.go-do-it {
+#dt-pain.go-do-it {
+  &:before {
     left: -230%;
   }
 
-  .aft.go-do-it {
+  &:after {
     width: 40%;
   }
 }
@@ -786,6 +786,10 @@ SUPPORT AND RESOURCES PAGE
       .hbsp-form-left-side,
       .hbsp-form-right-side {
         padding: 0;
+      }
+      .hbsp-form-right-side {
+        order: -1;
+        margin: 0 0 40px;
       }
     }
   }
