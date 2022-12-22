@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function(event){
         start: 'top 60%',
         //end: 'top 30%',
         //toggleClass: { targets: '#dt-pain', className: 'go-do-it' },
-        addClass: 'go-do-it',
+        toggleClass: 'go-do-it',
       },
 
     });
