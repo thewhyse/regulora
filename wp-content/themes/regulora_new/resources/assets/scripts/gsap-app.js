@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function(event){
 
     //custom GSAP code goes here
     // This tween will rotate an element with a class of .my-element
-    gsap.to('.my-element', {
+    gsap.to('#dt-pain', {
       rotation: 360,
       duration: 2,
       ease: 'bounce.out',
