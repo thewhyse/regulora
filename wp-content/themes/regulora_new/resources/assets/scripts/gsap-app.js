@@ -15,10 +15,18 @@ document.addEventListener('DOMContentLoaded', function(event){
       aft = document.querySelector('#dt-pain .aft'),
       downw = document.querySelector('#dt-pain .downw');
 
+/*
     let imageLeft = img.getBoundingClientRect().left;
     let imageRight = img.getBoundingClientRect().right;
+*/
 
-    console.log(imageLeft + ' = imageLeft' , imageRight + ' =imageRight');
+    window.addEventListener('resize', function(event) {
+      let imageLeft = img.getBoundingClientRect().left;
+      let imageRight = img.getBoundingClientRect().right;
+
+      console.log(imageLeft + ' = imageLeft' , imageRight + ' =imageRight');
+    }, true);
+
 
     let ww = window.innerWidth;
 
