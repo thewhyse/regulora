@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', function(event){
         //markers: true,
         start: 'top 60%',
         //end: 'top 30%',
-        toggleClass: { targets: '#dt-pain', className: 'go-do-it' },
+        //toggleClass: { targets: '#dt-pain', className: 'go-do-it' },
+        addClass: 'go-do-it',
       },
 
     });
