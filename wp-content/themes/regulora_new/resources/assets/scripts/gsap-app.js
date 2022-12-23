@@ -23,7 +23,8 @@ document.addEventListener('DOMContentLoaded', function(event){
     let stopPoint = ww - (ww - imageLeft);
 
     let pain_container = document.querySelector('#dt-pain');
-    console.log(pain_container.offsetWidth + 'dt-pain container');
+    let aft_width = (pain_container.offsetWidth - 197) / 2;
+    console.log(aft_width + ' = aft_width');
     console.log(stopPoint + ' this is x stopPoint', imageLeft + ' = imaageLeft  ');
 
     const tl = gsap.timeline({
