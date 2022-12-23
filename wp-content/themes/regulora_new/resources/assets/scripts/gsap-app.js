@@ -1,3 +1,4 @@
+/*
 // wait until DOM is ready
 document.addEventListener('DOMContentLoaded', function(event){
 
@@ -48,3 +49,4 @@ window.addEventListener('resize', function(event) {
 
   console.log(imageLeft + ' = imageLeft' , imageRight + ' =imageRight');
 }, true);
+*/
