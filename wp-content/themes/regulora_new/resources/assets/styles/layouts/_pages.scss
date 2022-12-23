@@ -125,24 +125,24 @@
   .bow {
     //content: '';
     display: block;
-    left: -450%;
+    left: -296%;
     top: 10%;
     position: absolute;
     height: 2px;
     width: 250%;
     background: #EFCE1D;
-    transition: left 2s ease-in;
+    //transition: left 2s ease-in;
   }
   .aft {
     //content: '';
     display: block;
-    right: -79px;
+    right: 381px;
     bottom: 10%;
     position: absolute;
     height: 2px;
     width: 0;
     background: #EFCE1D;
-    transition: width 2s ease-in;
+    //transition: width 2s ease-in;
   }
 }
 
