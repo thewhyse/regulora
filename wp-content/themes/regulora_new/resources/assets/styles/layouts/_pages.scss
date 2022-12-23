@@ -122,8 +122,8 @@
 #dt-pain {
   position: relative;
 
-  &:before {
-    content: '';
+  .bow {
+    //content: '';
     display: block;
     left: -450%;
     top: 10%;
@@ -133,8 +133,8 @@
     background: #EFCE1D;
     transition: left 2s ease-in;
   }
-  &:after {
-    content: '';
+  .aft {
+    //content: '';
     display: block;
     right: -79px;
     bottom: 10%;
@@ -146,6 +146,7 @@
   }
 }
 
+/*
 #dt-pain.go-do-it {
   &:before {
     left: -230%;
@@ -155,6 +156,7 @@
     width: 40%;
   }
 }
+*/
 
 @include media-breakpoint-down(md) {
 

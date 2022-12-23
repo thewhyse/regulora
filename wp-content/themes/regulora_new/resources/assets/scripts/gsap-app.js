@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function(event){
     });
 
     tl.to(bow, {x: imageLeft, duration: 2})
-    .to(aft, {x: imageRight, duration: 2});
+    .to(aft, {x: imageRight, width: 200, duration: 2});
     console.log('window loaded');
   }, false);
 
