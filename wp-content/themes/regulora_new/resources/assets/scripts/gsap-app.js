@@ -22,7 +22,8 @@ document.addEventListener('DOMContentLoaded', function(event){
 
     let stopPoint = ww - (ww - imageLeft);
 
-    console.log(document.querySelector('#dt-pain').width + 'dt-pain container');
+    let pain_container = document.querySelector('#dt-pain');
+    console.log(pain_container.width + 'dt-pain container');
     console.log(stopPoint + ' this is x stopPoint', imageLeft + ' = imaageLeft  ');
 
     const tl = gsap.timeline({
