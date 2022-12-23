@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function(event){
       downw = document.querySelector('#dt-pain .downw');
 
     let imageLeft = img.getBoundingClientRect().left;
-   // let imageRight = img.getBoundingClientRect().right;
+    let imageRight = img.getBoundingClientRect().right;
 
     let ww = window.innerWidth;
 
@@ -27,15 +27,16 @@ document.addEventListener('DOMContentLoaded', function(event){
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: '#dt-pain',
-        //markers: true,
+        markers: true,
         start: 'top 60%',
         //end: 'top 30%',
-        //toggleClass: { targets: '#dt-pain', className: 'go-do-it' },
-        toggleClass: 'go-do-it',
+        //toggleClass: { targets: '#dt-pain', className: 'go-do-it' }
       },
 
     });
 
+    tl.to(bow, {x: imageLeft, duration: 2})
+    .to(aft, {x: imageRight, duration: 2});
     console.log('window loaded');
   }, false);
 
