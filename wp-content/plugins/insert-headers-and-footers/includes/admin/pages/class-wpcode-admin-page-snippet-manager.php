@@ -215,6 +215,7 @@ class WPCode_Admin_Page_Snippet_Manager extends WPCode_Admin_Page {
 		$this->field_title();
 		$this->field_code_editor();
 		$this->field_insert_options();
+		$this->field_device_type();
 		$this->field_conditional_logic();
 		$this->field_code_revisions();
 		$this->field_basic_info();
@@ -269,6 +270,7 @@ class WPCode_Admin_Page_Snippet_Manager extends WPCode_Admin_Page {
 		<?php
 		$this->get_library_markup( $categories, $snippets );
 		$this->library_preview_modal_content();
+		$this->library_connect_banner_template();
 	}
 
 	/**
@@ -744,6 +746,11 @@ class WPCode_Admin_Page_Snippet_Manager extends WPCode_Admin_Page {
 			$snippet_code = preg_replace( '|^\s*<\?(php)?|', '', $snippet_code );
 		}
 
+		if ( 'js' === $code_type && apply_filters( 'wpcode_strip_script_tags_for_js', true ) ) {
+			$snippet_code = preg_replace( '|^\s*<script[^>]*>|', '', $snippet_code );
+			$snippet_code = preg_replace( '|</(script)>\s*$|', '', $snippet_code );
+		}
+
 		$snippet = new WPCode_Snippet(
 			array(
 				'id'            => empty( $_REQUEST['id'] ) ? 0 : absint( $_REQUEST['id'] ),
@@ -1069,6 +1076,9 @@ class WPCode_Admin_Page_Snippet_Manager extends WPCode_Admin_Page {
 		$data['shortcode_title']        = __( 'Custom Shortcode is a Pro Feature', 'insert-headers-and-footers' );
 		$data['shortcode_text']         = __( 'Upgrade today to use a custom shortcode and nerver worry about changing snippet ids again, even when importing your snippets to another site. You\'ll also get access to a private library that makes setting up new sites a lot easier.', 'insert-headers-and-footers' );
 		$data['shortcode_url']          = wpcode_utm_url( 'https://wpcode.com/lite/', 'snippet-editor', 'custom-shortcode', 'modal' );
+		$data['device_title']           = __( 'Device Type is a Pro Feature', 'insert-headers-and-footers' );
+		$data['device_text']            = __( 'Upgrade to PRO today and unlock one-click device targeting for your snippets.', 'insert-headers-and-footers' );
+		$data['device_url']             = wpcode_utm_url( 'https://wpcode.com/lite/', 'snippet-editor', 'device-type', 'modal' );
 
 		return $data;
 	}
@@ -1124,9 +1134,6 @@ class WPCode_Admin_Page_Snippet_Manager extends WPCode_Admin_Page {
 	 * @return void
 	 */
 	public function field_code_revisions() {
-		if ( ! isset( $this->snippet_id ) ) {
-			return;
-		}
 		$html = sprintf(
 			'<p>%s</p><hr />',
 			esc_html__( 'As you make changes to your snippet and save, you will get a list of previous versions with all the changes made in each revision. You can compare revisions to the current version or see changes as they have been saved by going through each revision. Any of the revisions can then be restored as needed.', 'wpcode-premium' )
@@ -1141,13 +1148,86 @@ class WPCode_Admin_Page_Snippet_Manager extends WPCode_Admin_Page {
 	}
 
 	/**
+	 * Markup for the device type metabox.
+	 *
+	 * @return void
+	 */
+	public function field_device_type() {
+		$html = sprintf(
+			'<p>%s</p>',
+			esc_html__( 'Limit where you want this snippet to be loaded by device type. By default, snippets are loaded on all devices.', 'wpcode-premium' )
+		);
+
+		$html .= '<div class="wpcode-separator"></div>';
+		$html .= $this->device_type_picker();
+		$this->metabox(
+			__( 'Device Type', 'insert-headers-and-footers' ),
+			$html
+		);
+	}
+
+	/**
+	 * This method returns the markup for the device type radio input picker, the
+	 * three options available are Any device type, Desktop only and Mobile only.
+	 * By default, any device type is selected.
+	 *
+	 * @return string
+	 */
+	public function device_type_picker() {
+		$html = '<div class="wpcode-device-type-picker wpcode-device-type-picker-lite">';
+		$html .= $this->get_radio_field_icon( 'devices', __( 'Any device type', 'insert-headers-and-footers' ), 'any', '', true );
+		$html .= $this->get_radio_field_icon( 'desktop', __( 'Desktop only', 'insert-headers-and-footers' ), 'desktop', '', false, '', true );
+		$html .= $this->get_radio_field_icon( 'mobile', __( 'Mobile only', 'insert-headers-and-footers' ), 'mobile', '', false, '', true );
+		$html .= '</div>';
+
+		return $html;
+	}
+
+	/**
+	 * Get a styled radio input with an icon.
+	 *
+	 * @param string $icon Icon to use for label, @see get_wpcode_icon
+	 * @param string $label The text of the label to display.
+	 * @param string $value The value of the radio input.
+	 * @param string $name The input name (for PHP).
+	 * @param bool   $checked Whether the input is checked or not.
+	 * @param string $id Unique id for the input, by default name + value will be used.
+	 * @param bool   $disabled Whether the input should be disabled.
+	 *
+	 * @return string
+	 */
+	public function get_radio_field_icon( $icon = '', $label = '', $value = '', $name = '', $checked = false, $id = '', $disabled = false ) {
+
+		$id   = empty( $id ) ? $name . '-' . $value : $id;
+		$html = '<div class="wpcode-input-radio">';
+		$html .= sprintf(
+			'<input type="radio" name="%1$s" id="%2$s" value="%3$s" %4$s %5$s />',
+			esc_attr( $name ),
+			esc_attr( $id ),
+			esc_attr( $value ),
+			checked( $checked, true, false ),
+			disabled( $disabled, true, false )
+		);
+		$html .= sprintf(
+			'<label for="%1$s" tabindex="0"><span class="wpcode-input-radio-icon">%2$s</span><span class="wpcode-input-radio-label">%3$s</span></label>',
+			esc_attr( $id ),
+			get_wpcode_icon( $icon, 48, 48 ),
+			wp_kses_post( $label )
+		);
+		$html .= '</div>';
+
+		return $html;
+	}
+
+	/**
 	 * Get a list of code revisions to use behind the notice.
 	 *
 	 * @return string
 	 */
 	public function get_code_revisions_empty_list() {
 		$list           = array();
-		$post_modified  = strtotime( $this->snippet->get_post_data()->post_modified );
+		$post_modified  = isset( $this->snippet ) ? strtotime( $this->snippet->get_post_data()->post_modified ) : time();
+		$snippet_author = isset( $this->snippet ) ? $this->snippet->get_snippet_author() : get_current_user_id();
 		$revisions_data = array(
 			$post_modified,
 			$post_modified - DAY_IN_SECONDS,
@@ -1174,7 +1254,7 @@ class WPCode_Admin_Page_Snippet_Manager extends WPCode_Admin_Page {
 			);
 
 			$list[] = $this->get_revision_item(
-				$this->snippet->get_snippet_author(),
+				$snippet_author,
 				$updated,
 				array(
 					$compare,

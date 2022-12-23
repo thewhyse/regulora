@@ -11,18 +11,23 @@
  * @param string $url The URL to add the params to.
  * @param string $medium The marketing medium.
  * @param string $campaign The campaign.
- * @param string $content The Ad content.
+ * @param string $ad_content The utm_content param.
  *
  * @return string
  */
 function wpcode_utm_url( $url, $medium = '', $campaign = '', $ad_content = '' ) {
+	$args = array(
+		'utm_source'   => class_exists( 'WPCode_License' ) ? 'proplugin' : 'liteplugin',
+		'utm_medium'   => sanitize_key( $medium ),
+		'utm_campaign' => sanitize_key( $campaign )
+	);
+
+	if ( ! empty( $ad_content ) ) {
+		$args['utm_content'] = sanitize_key( $ad_content );
+	}
+
 	return add_query_arg(
-		array(
-			'utm_source'   => class_exists( 'WPCode_License' ) ? 'proplugin' : 'liteplugin',
-			'utm_medium'   => sanitize_key( $medium ),
-			'utm_campaign' => sanitize_key( $campaign ),
-			'utm_content'  => sanitize_key( $ad_content ),
-		),
+		$args,
 		$url
 	);
 }

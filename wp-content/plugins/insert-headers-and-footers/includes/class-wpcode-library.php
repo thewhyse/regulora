@@ -74,6 +74,13 @@ class WPCode_Library {
 	protected $snippet_library_id_meta_key = '_wpcode_library_id';
 
 	/**
+	 * Total number of snippets in the library atm.
+	 *
+	 * @var int
+	 */
+	protected $snippets_count;
+
+	/**
 	 * Constructor.
 	 */
 	public function __construct() {
@@ -105,6 +112,22 @@ class WPCode_Library {
 		return $this->data;
 	}
 
+	/**
+	 * Get the number of snippets in the library.
+	 *
+	 * @return int
+	 */
+	public function get_snippets_count() {
+		if ( ! isset( $this->snippets_count ) ) {
+			$this->snippets_count = 0;
+			$data                 = $this->get_data();
+			if ( ! empty( $data['snippets'] ) ) {
+				$this->snippets_count = count( $data['snippets'] );
+			}
+		}
+
+		return $this->snippets_count;
+	}
 
 	/**
 	 * Grab data from the cache.

@@ -4,7 +4,7 @@ Tags: code, css, php, footer, functions, content, facebook pixel, footer code, f
 Requires at least: 4.6
 Tested up to: 6.1
 Requires PHP: 5.5
-Stable tag: 2.0.4.4
+Stable tag: 2.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -307,6 +307,11 @@ Thank you
 Syed Balkhi
 
 == Changelog ==
+
+= 2.0.5 =
+* New: 2 new bulk actions are available in the admin to allow enabling or disabling multiple snippets at once.
+* New: We added a new search field for snippets in the admin list which allows you to search using all snippet fields.
+* New: When adding a JavaScript snippet, WPCode will attempt to remove HTML script tags, if present.
 
 = 2.0.4.4 =
 * Fix: Added an extra check to prevent errors in setups where the closed metaboxes user option is not an array.
