@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function(event){
 
     tl.to(bow, {x: imageLeft, duration: 2})
       .to(aft, {rotateX: 180, duration: 0.2})
-      .to(aft, {width: aft_width, duration: 2});
+      .to(aft, {x: aft_width, width: aft_width, duration: 2});
 
 
   }, false);
