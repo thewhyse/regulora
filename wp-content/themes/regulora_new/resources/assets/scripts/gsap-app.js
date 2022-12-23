@@ -1,4 +1,3 @@
-/*
 // wait until DOM is ready
 document.addEventListener('DOMContentLoaded', function(event){
 
@@ -21,8 +20,9 @@ document.addEventListener('DOMContentLoaded', function(event){
 
     let ww = window.innerWidth;
 
-    let stopPoint = ww - imageLeft;
-    console.log(stopPoint + ' this is stop point = ww - imageLeft');
+    let stopPoint = ww - (ww - imageLeft);
+
+    console.log(stopPoint + ' this is x stopPoint', imageLeft + ' = imaageLeft  ');
 
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -49,4 +49,3 @@ window.addEventListener('resize', function(event) {
 
   console.log(imageLeft + ' = imageLeft' , imageRight + ' =imageRight');
 }, true);
-*/
