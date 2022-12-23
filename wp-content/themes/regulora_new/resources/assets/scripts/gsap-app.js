@@ -1,7 +1,7 @@
 // wait until DOM is ready
 document.addEventListener('DOMContentLoaded', function(event){
 
-  console.log('DOM loaded', event);
+  //console.log('DOM loaded', event);
 
   //wait until images, links, fonts, stylesheets, and js is loaded
   window.addEventListener('load', function(e){
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function(event){
     let stopPoint = ww - (ww - imageLeft);
 
     let pain_container = document.querySelector('#dt-pain');
-    let aft_width = (pain_container.offsetWidth - 197) / 2;
+    let aft_width = -(pain_container.offsetWidth - 197) / 2;
     console.log(aft_width + ' = aft_width');
     console.log(stopPoint + ' this is x stopPoint', imageLeft + ' = imaageLeft  ');
 
