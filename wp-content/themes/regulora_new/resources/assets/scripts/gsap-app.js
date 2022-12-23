@@ -36,7 +36,8 @@ document.addEventListener('DOMContentLoaded', function(event){
     });
 
     tl.to(bow, {x: imageLeft, duration: 2})
-    .to(aft, {rotateY: 180, width: 70, duration: 2});
+      .to(aft, {rotateY: 180, duration: 0.2})
+      .to(aft, {width: 70, duration: 2});
 
 
   }, false);
