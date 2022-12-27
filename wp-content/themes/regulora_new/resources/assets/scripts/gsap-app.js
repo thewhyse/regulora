@@ -22,8 +22,12 @@ document.addEventListener('DOMContentLoaded', function(event){
 
     let stopPoint = ww - (ww - imageLeft);
 
-    let pain_container = document.querySelector('#dt-pain');
+    const pain_container = document.querySelector('#dt-pain');
     let aft_width = (pain_container.offsetWidth - 197) / 2;
+
+    const pain_column = document.querySelector('#pain-column');
+    let half_column = pain_column.offsetHeight / 2;
+
     console.log(aft_width + ' = aft_width');
     console.log(stopPoint + ' this is x stopPoint', imageLeft + ' = imaageLeft  ');
 
@@ -38,8 +42,13 @@ document.addEventListener('DOMContentLoaded', function(event){
 
     });
 
-    tl.to(bow, {x: imageLeft, duration: 2})
-      .to(aft, {right: aft_width, x: aft_width, width: aft_width, duration: 2});
+    tl.to(bow, {x: imageLeft, duration: 1})
+      .to(aft, {right: aft_width + 10, x: aft_width, width: aft_width + 10, duration: 1})
+      .to(pain_column, {
+        right: aft_width + 10,
+        height: aft_width + 10,
+        duration: 2,
+      });
 
 
   }, false);
