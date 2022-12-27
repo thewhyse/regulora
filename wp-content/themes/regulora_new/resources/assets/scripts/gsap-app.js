@@ -45,8 +45,8 @@ document.addEventListener('DOMContentLoaded', function(event){
     tl.to(bow, {x: imageLeft, duration: 1})
       .to(aft, {right: aft_width, x: aft_width + 10, width: aft_width + 10, duration: 1})
       .to(downw, {
-        right: - (aft_width + 10),
-        bottom: - (half_column - 10),
+        right: - aft_width,
+        bottom: - (half_column - 5),
         height: (half_column - 10),
         duration: 2,
       });
