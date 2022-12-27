@@ -43,10 +43,10 @@ document.addEventListener('DOMContentLoaded', function(event){
     });
 
     tl.to(bow, {x: imageLeft, duration: 1})
-      .to(aft, {right: aft_width + 10, x: aft_width, width: aft_width + 10, duration: 1})
+      .to(aft, {right: aft_width + 10, x: aft_width + 10, width: aft_width + 10, duration: 1})
       .to(downw, {
-        right: aft_width + 10,
-        height: aft_width + 10,
+        //right: aft_width + 10,
+        height: half_column,
         duration: 2,
       });
 
