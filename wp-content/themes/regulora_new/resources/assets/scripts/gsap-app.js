@@ -10,10 +10,10 @@ document.addEventListener('DOMContentLoaded', function(event){
 
     gsap.registerPlugin(ScrollTrigger);
 
-    const img = document.querySelector('#dt-pain img'),
-      bow = document.querySelector('#dt-pain .bow'),
-      aft = document.querySelector('#dt-pain .aft'),
-      downw = document.querySelector('#dt-pain .downw');
+    const img = document.querySelector('.dt-pain img'),
+      bow = document.querySelector('.dt-pain .bow'),
+      aft = document.querySelector('.dt-pain .aft'),
+      downw = document.querySelector('.dt-pain .downw');
 
     let imageLeft = img.getBoundingClientRect().left;
     let imageRight = img.getBoundingClientRect().right;
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function(event){
 
     let stopPoint = ww - (ww - imageLeft);
 
-    const pain_container = document.querySelector('#dt-pain');
+    const pain_container = document.querySelector('.dt-pain');
     let aft_width = (pain_container.offsetWidth - 197) / 2;
 
     const pain_column = document.querySelector('#pain-column');
@@ -33,11 +33,11 @@ document.addEventListener('DOMContentLoaded', function(event){
 
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: '#dt-pain',
+        trigger: '.dt-pain',
         markers: true,
         start: 'top 60%',
         //end: 'top 30%',
-        //toggleClass: { targets: '#dt-pain', className: 'go-do-it' }
+        //toggleClass: { targets: '.dt-pain', className: 'go-do-it' }
       },
 
     });
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function(event){
       .to(downw, {
         //right: - aft_width,
         bottom: - (half_column - 5),
-        height: (half_column),
+        height: (half_column -5),
         duration: 2,
       });
 
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function(event){
 });
 
 
-const kartinka = document.querySelector('#dt-pain img');
+const kartinka = document.querySelector('.dt-pain img');
 window.addEventListener('resize', function(event) {
   let imageLeft = kartinka.getBoundingClientRect().left;
   let imageRight = kartinka.getBoundingClientRect().right;
