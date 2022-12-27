@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function(event){
       .to(aft, {right: aft_width, x: aft_width + 10, width: aft_width + 10, duration: 1})
       .to(downw, {
         //right: - aft_width,
-        bottom: - (half_column - 5),
+        bottom: - (half_column - 11),
         height: (half_column -5),
         duration: 2,
       });
