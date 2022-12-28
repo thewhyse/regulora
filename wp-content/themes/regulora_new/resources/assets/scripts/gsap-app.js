@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function(event){
         trigger: '.dt-pain-mobi',
         markers: true,
         start: 'top 70%',
+        end: 'top 45%',
         scroll: true,
       },
 
