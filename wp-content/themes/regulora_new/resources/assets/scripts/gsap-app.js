@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function(event){
         markers: true,
         start: 'top 70%',
         end: 'top 45%',
-        scroll: true,
+        scrub: true,
       },
 
     });
