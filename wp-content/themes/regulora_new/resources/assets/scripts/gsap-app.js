@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', function(event){
 
     gsap.registerPlugin(ScrollTrigger);
 
-    const img = document.querySelector('.dt-pain img') || document.querySelector('.dt-pain-mobi img'),
-      bow = document.querySelector('.dt-pain .bow') || document.querySelector('.dt-pain-mobi .bow'),
-      aft = document.querySelector('.dt-pain .aft') || document.querySelector('.dt-pain-mobi .aft'),
+    const img = document.querySelector('.dt-pain img'),
+      bow = document.querySelector('.dt-pain .bow'),
+      aft = document.querySelector('.dt-pain .aft'),
       downw = document.querySelector('.dt-pain .downw');
 
     let imageLeft = img.getBoundingClientRect().left;
@@ -51,11 +51,37 @@ document.addEventListener('DOMContentLoaded', function(event){
         duration: 2,
       });
 
+    const img_mobi = document.querySelector('.dt-pain-mobi img'),
+      bow_mobi = document.querySelector('.dt-pain-mobi .bow'),
+      aft_mobi = document.querySelector('.dt-pain-mobi .aft');
+
+    let imageLeft_mobi = img_mobi.getBoundingClientRect().left;
+
+//     let imageRight = img.getBoundingClientRect().right;
+//
+//     let ww = window.innerWidth;
+//
+//     let stopPoint = ww - (ww - imageLeft);
+
+    const pain_container_mobi = document.querySelector('.dt-pain-mobi');
+    let aft_width_mobi = (pain_container_mobi.offsetWidth - 197) / 2;
+
+    const tl_mobi = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.dt-pain-mobi',
+        markers: true,
+        start: 'top 60%',
+      },
+
+    });
+
+    tl_mobi.to(bow_mobi, {x: imageLeft_mobi, duration: 1})
+      .to(aft_mobi, {right: aft_width_mobi, x: aft_width_mobi + 10, width: aft_width_mobi + 10, duration: 1});
+
 
   }, false);
 
 });
-
 
 window.addEventListener('resize', function(event) {
 
