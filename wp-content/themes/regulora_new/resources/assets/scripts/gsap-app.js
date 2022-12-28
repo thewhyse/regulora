@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', function(event){
 
     gsap.registerPlugin(ScrollTrigger);
 
-    const img = document.querySelector('.dt-pain img'),
-      bow = document.querySelector('.dt-pain .bow'),
-      aft = document.querySelector('.dt-pain .aft'),
+    const img = document.querySelector('.dt-pain img') || document.querySelector('.dt-pain-mobi img'),
+      bow = document.querySelector('.dt-pain .bow') || document.querySelector('.dt-pain-mobi .bow'),
+      aft = document.querySelector('.dt-pain .aft') || document.querySelector('.dt-pain-mobi .aft'),
       downw = document.querySelector('.dt-pain .downw');
 
     let imageLeft = img.getBoundingClientRect().left;
@@ -61,7 +61,7 @@ window.addEventListener('resize', function(event) {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  const img = document.querySelector('.dt-pain img'),
+  const img = document.querySelector('.dt-pain img') ||  document.querySelector('.dt-pain-mobi img'),
     bow = document.querySelector('.dt-pain .bow'),
     aft = document.querySelector('.dt-pain .aft'),
     downw = document.querySelector('.dt-pain .downw');
