@@ -72,7 +72,6 @@ document.addEventListener('DOMContentLoaded', function(event){
         markers: true,
         start: 'top 60%',
         end: 'top 45%',
-        scrub: true,
       },
 
     });
