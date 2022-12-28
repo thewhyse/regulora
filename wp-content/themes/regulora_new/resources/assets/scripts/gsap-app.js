@@ -70,15 +70,15 @@ document.addEventListener('DOMContentLoaded', function(event){
       scrollTrigger: {
         trigger: '.dt-pain-mobi',
         markers: true,
-        start: 'top 70%',
+        start: 'top 60%',
         end: 'top 45%',
         scrub: true,
       },
 
     });
 
-    tl_mobi.to(bow_mobi, {x: imageLeft_mobi, duration: 1})
-      .to(aft_mobi, {right: aft_width_mobi, x: aft_width_mobi + 10, width: aft_width_mobi + 10, duration: 1});
+    tl_mobi.to(bow_mobi, {x: imageLeft_mobi, duration: 2})
+      .to(aft_mobi, {right: aft_width_mobi, x: aft_width_mobi + 10, width: aft_width_mobi + 10, duration: 2});
 
 
   }, false);
