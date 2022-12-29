@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function(event){
     });
 
     tl_mobi.to(bow_mobi, {x: imageLeft_mobi, duration: 1})
-      .to(aft_mobi, {right: aft_width_mobi, x: aft_width_mobi + 10, width: aft_width_mobi + 10, duration: 1});
+      .to(aft_mobi, {right: aft_width_mobi, x: aft_width_mobi + 10, width: aft_width_mobi + 10, duration: 0.5});
 
 
   }, false);
