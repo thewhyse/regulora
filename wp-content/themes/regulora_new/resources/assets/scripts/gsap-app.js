@@ -70,8 +70,7 @@ document.addEventListener('DOMContentLoaded', function(event){
       scrollTrigger: {
         trigger: '.dt-pain-mobi',
         markers: true,
-        start: 'top 60%',
-        end: 'top 45%',
+        start: 'top 80%',
       },
 
     });
