@@ -70,6 +70,26 @@ document.addEventListener('DOMContentLoaded', function(event){
     tl_mobi.to(bow_mobi, {x: imageLeft_mobi, duration: 1})
       .to(aft_mobi, {right: aft_width_mobi, x: aft_width_mobi + 10, width: aft_width_mobi + 10, duration: 0.5});
 
+    /*    BRAIN-GUT CONNECTION      */
+    const imgContainer = document.querySelector('#ten-15-years').getBoundingClientRect(),
+          left_line = document.querySelector('#ten-15-years .lft-line'),
+          right_line = document.querySelector('#ten-15-years .rt-line');
+
+    const tl_bgc_mobi = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.dt-pain-mobi',
+        markers: true,
+        start: 'top 85%',
+      },
+
+    });
+    tl_bgc_mobi.to(left_line, {
+      top: imgContainer.top - 10,
+      x: imgContainer.left,
+      duration: 1,
+    });
+
+
 
   }, false);
 

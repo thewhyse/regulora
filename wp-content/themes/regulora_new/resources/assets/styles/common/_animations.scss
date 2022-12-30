@@ -410,7 +410,7 @@
   }
 }
 
-    /*    BRAIN-GUT CONNECTION          */
+    /*    BRAIN-GUT CONNECTION      */
 #ten-15-years {
   position: relative;
 
@@ -421,4 +421,13 @@
     position: absolute;
     left: calc(100% - 200px);
   }
+  .rt-line {
+    width: 200px;
+    height: 2px;
+    background: #EFCE1D;
+    position: absolute;
+    right: calc(100% - 200px);
+  }
+
+
 }
