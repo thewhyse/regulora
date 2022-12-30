@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function(event){
       downw = document.querySelector('.dt-pain .downw');
 
     let imageLeft = img.getBoundingClientRect().left;
-    let imageRight = img.getBoundingClientRect().right;
+    //let imageRight = img.getBoundingClientRect().right;
 
     let ww = window.innerWidth;
 
