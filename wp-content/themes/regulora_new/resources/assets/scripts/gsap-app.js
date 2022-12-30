@@ -37,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function(event){
         markers: true,
         start: 'top 60%',
         //end: 'top 30%',
-        //toggleClass: { targets: '.dt-pain', className: 'go-do-it' }
       },
 
     });
@@ -45,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function(event){
     tl.to(bow, {x: imageLeft, duration: 1})
       .to(aft, {right: aft_width, x: aft_width + 10, width: aft_width + 10, duration: 1})
       .to(downw, {
-        //right: - aft_width,
         bottom: - (half_column - 11),
         height: (half_column -5),
         duration: 2,
@@ -56,12 +54,6 @@ document.addEventListener('DOMContentLoaded', function(event){
       aft_mobi = document.querySelector('.dt-pain-mobi .aft');
 
     let imageLeft_mobi = img_mobi.getBoundingClientRect().left;
-
-//     let imageRight = img.getBoundingClientRect().right;
-//
-//     let ww = window.innerWidth;
-//
-//     let stopPoint = ww - (ww - imageLeft);
 
     const pain_container_mobi = document.querySelector('.dt-pain-mobi');
     let aft_width_mobi = (pain_container_mobi.offsetWidth - 197) / 2;

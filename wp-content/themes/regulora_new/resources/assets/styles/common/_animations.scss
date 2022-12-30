@@ -338,3 +338,87 @@
     height: 3px;
   }
 }
+
+    /*    ANIMATION LINES         */
+
+//HOME PAGE
+.dt-pain {
+  position: relative;
+
+  .bow {
+    //content: '';
+    display: block;
+    left: -296%;
+    top: 10%;
+    position: absolute;
+    height: 2px;
+    width: 250%;
+    background: #EFCE1D;
+  }
+  .aft {
+    //content: '';
+    display: block;
+    transform: rotateX(180deg);
+    right: 0;
+    bottom: 10%;
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background: #EFCE1D;
+  }
+
+  .downw {
+    display: block;
+    position: absolute;
+    bottom: 10%;
+    right: -10px;
+    width: 2px;
+    background: #EFCE1D;
+  }
+}
+
+.dt-pain-mobi {
+  position: relative;
+
+  .bow {
+    display: block;
+    left: -250%;
+    top: 10%;
+    position: absolute;
+    height: 2px;
+    width: 250%;
+    background: #EFCE1D;
+  }
+  .aft {
+    display: block;
+    transform: rotateX(180deg);
+    right: 0;
+    bottom: 10%;
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background: #EFCE1D;
+  }
+
+  .downw {
+    display: block;
+    position: absolute;
+    bottom: 10%;
+    right: -10px;
+    width: 2px;
+    background: #EFCE1D;
+  }
+}
+
+    /*    BRAIN-GUT CONNECTION          */
+#ten-15-years {
+  position: relative;
+
+  .lft-line {
+    width: 200px;
+    height: 2px;
+    background: #EFCE1D;
+    position: absolute;
+    left: calc(100% - 200px);
+  }
+}
