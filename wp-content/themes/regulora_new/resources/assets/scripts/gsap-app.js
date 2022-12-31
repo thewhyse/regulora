@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function(event){
       downw = document.querySelector('.dt-pain .downw');
 
     let imageLeft;
-    if(img != undefined) {
+    if(typeof img !== 'undefined') {
       imageLeft = img.getBoundingClientRect().left;
     }
 
@@ -76,9 +76,19 @@ document.addEventListener('DOMContentLoaded', function(event){
       .to(aft_mobi, {right: aft_width_mobi, x: aft_width_mobi + 10, width: aft_width_mobi + 10, duration: 0.5});
 
     /*    BRAIN-GUT CONNECTION      */
-    const imgContainer = document.querySelector('#ten-15-years').getBoundingClientRect(),
+
+    let imgContainer = document.querySelector('#ten-15-years');
+    let  left_line;
+    let  right_line;
+    if(typeof imgContainer !== 'undefined') {
+     imgContainer = document.querySelector('#ten-15-years').getBoundingClientRect()
+      left_line = document.querySelector('#ten-15-years .lft-line')
+      right_line = document.querySelector('#ten-15-years .rt-line')
+    }
+
+    /*const imgContainer = document.querySelector('#ten-15-years').getBoundingClientRect(),
           left_line = document.querySelector('#ten-15-years .lft-line'),
-          right_line = document.querySelector('#ten-15-years .rt-line');
+          right_line = document.querySelector('#ten-15-years .rt-line');*/
 
     console.log(left_line.getBoundingClientRect());
 
