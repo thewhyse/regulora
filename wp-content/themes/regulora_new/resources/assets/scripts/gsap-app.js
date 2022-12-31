@@ -81,9 +81,9 @@ document.addEventListener('DOMContentLoaded', function(event){
     let  left_line;
     let  right_line;
     if(typeof imgContainer !== 'undefined') {
-     imgContainer = document.querySelector('#ten-15-years').getBoundingClientRect()
-      left_line = document.querySelector('#ten-15-years .lft-line')
-      right_line = document.querySelector('#ten-15-years .rt-line')
+     imgContainer = document.querySelector('#ten-15-years').getBoundingClientRect();
+      left_line = document.querySelector('#ten-15-years .lft-line');
+      right_line = document.querySelector('#ten-15-years .rt-line');
     }
 
     /*const imgContainer = document.querySelector('#ten-15-years').getBoundingClientRect(),
@@ -100,12 +100,17 @@ document.addEventListener('DOMContentLoaded', function(event){
       },
 
     });
-    tl_bgc_mobi.to(left_line, {
+    tl_bgc_mobi
+      .to(left_line, {
       top: imgContainer.top - 10,
       x: imgContainer.left,
       duration: 1,
-    });
-
+    })
+      .to(right_line, {
+        top: imgContainer.top - 90,
+        x: imgContainer.left,
+        duration: 1,
+      });
 
 
   }, false);
