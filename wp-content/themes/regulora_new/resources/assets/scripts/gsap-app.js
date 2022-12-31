@@ -75,6 +75,8 @@ document.addEventListener('DOMContentLoaded', function(event){
           left_line = document.querySelector('#ten-15-years .lft-line'),
           right_line = document.querySelector('#ten-15-years .rt-line');
 
+    console.log(left_line.getBoundingClientRect());
+
     const tl_bgc_mobi = gsap.timeline({
       scrollTrigger: {
         trigger: '.dt-pain-mobi',
