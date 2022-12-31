@@ -94,12 +94,13 @@ document.addEventListener('DOMContentLoaded', function(event){
 
     const tl_bgc_mobi = gsap.timeline({
       scrollTrigger: {
-        trigger: '.dt-pain-mobi',
+        trigger: imgContainer,
         markers: true,
         start: 'top 85%',
       },
 
     });
+
     tl_bgc_mobi
       .to(left_line, {
       top: imgContainer.top - 10,
