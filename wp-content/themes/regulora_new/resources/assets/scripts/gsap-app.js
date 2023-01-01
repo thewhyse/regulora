@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function(event){
       .to(right_line, {
        // top: - imgContainerBox.top,
         x: - (imgContainerBox.width - imgContainerBox.left) / 2,
-        width: (imgContainerBox.width - imgContainerBox.left) / 2,
+        width: (imgContainerBox.width - imgContainerBox.left),
         duration: 1,
       });
 
