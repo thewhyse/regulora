@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', function(event){
 
     gsap.registerPlugin(ScrollTrigger);
 
+    let deviceW = window.innerWidth;
+
 /*
     const img = document.querySelector('.dt-pain img'),
       bow = document.querySelector('.dt-pain .bow'),
@@ -112,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function(event){
       .to(right_line, {
        // top: - imgContainerBox.top,
         x: - (imgContainerBox.width - imgContainerBox.left) / 2,
-        width: (imgContainerBox.width - imgContainerBox.left),
+        width: deviceW - imgContainerBox.width,
         duration: 1,
       });
 
