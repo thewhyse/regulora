@@ -111,10 +111,9 @@ document.addEventListener('DOMContentLoaded', function(event){
     })
       .to(right_line, {
        // top: - imgContainerBox.top,
-        x: - imgContainerBox.left,
+        x: imgContainerBox.width,
         duration: 1,
       });
-
 
   }, false);
 
