@@ -110,8 +110,8 @@ document.addEventListener('DOMContentLoaded', function(event){
       duration: 1,
     })
       .to(right_line, {
-        top: imgContainerBox.top,
-        x: imgContainerBox.left,
+        top: - imgContainerBox.top,
+        x: - imgContainerBox.left,
         duration: 1,
       });
 
