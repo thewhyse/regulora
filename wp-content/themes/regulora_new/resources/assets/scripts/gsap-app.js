@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function(event){
 
     console.log(imgContainerBox);
 
-    console.log(left_line.getBoundingClientRect());
+    console.log(left_line.getBoundingClientRect() + '  this is left line left_line.getBoundingClientRect()');
 
     const tl_bgc_mobi = gsap.timeline({
       scrollTrigger: {
@@ -105,13 +105,13 @@ document.addEventListener('DOMContentLoaded', function(event){
 
     tl_bgc_mobi
       .to(left_line, {
-      top: imgContainer.top - 10,
-      x: imgContainer.left,
+      top: imgContainerBox.top - 10,
+      x: imgContainerBox.left,
       duration: 1,
     })
       .to(right_line, {
-        top: imgContainer.top - 90,
-        x: imgContainer.left,
+        top: imgContainerBox.top - 90,
+        x: imgContainerBox.left,
         duration: 1,
       });
 
