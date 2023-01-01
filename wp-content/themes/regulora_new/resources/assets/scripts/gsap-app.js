@@ -79,17 +79,18 @@ document.addEventListener('DOMContentLoaded', function(event){
 
     /*    BRAIN-GUT CONNECTION      */
 
-    let imgContainer = document.querySelector('#ten-15-years');
+    const imgContainer = document.querySelector('#ten-15-years');
     let  left_line;
     let  right_line;
-    if(typeof imgContainer !== 'undefined') {
+    let imgContainerBox;
+    if(typeof imgContainer === 'object' && imgContainer !== null && 'getBoundingClientRect' in imgContainer) {
 
-     imgContainer = imgContainer[0].getBoundingClientRect();
+      imgContainerBox = imgContainer.getBoundingClientRect();
       left_line = document.querySelector('#ten-15-years .lft-line');
       right_line = document.querySelector('#ten-15-years .rt-line');
     }
 
-    console.log(imgContainer);
+    console.log(imgContainerBox);
 
     console.log(left_line.getBoundingClientRect());
 
