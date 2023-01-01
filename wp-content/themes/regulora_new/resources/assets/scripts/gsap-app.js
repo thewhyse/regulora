@@ -83,10 +83,10 @@ document.addEventListener('DOMContentLoaded', function(event){
     let  left_line;
     let  right_line;
     if(typeof imgContainer !== 'undefined') {
-      
+
       console.log(typeof imgContainer);
 
-     imgContainer = document.querySelector('#ten-15-years').getBoundingClientRect();
+     imgContainer = imgContainer[0].getBoundingClientRect();
       left_line = document.querySelector('#ten-15-years .lft-line');
       right_line = document.querySelector('#ten-15-years .rt-line');
     }
