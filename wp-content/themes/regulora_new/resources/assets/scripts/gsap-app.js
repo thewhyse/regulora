@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function(event){
     })
       .to(right_line, {
        // top: - imgContainerBox.top,
-        x: imgContainerBox.width,
+        x: - imgContainerBox.width,
         duration: 1,
       });
 
