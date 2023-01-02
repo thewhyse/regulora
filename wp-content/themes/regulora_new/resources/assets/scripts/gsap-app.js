@@ -120,6 +120,9 @@ document.addEventListener('DOMContentLoaded', function(event){
         leftL = document.querySelector('#bgc-10-15 .lft-line');
         rightL = document.querySelector('#bgc-10-15 .rt-line');
         downL = document.querySelector('#bgc-10-15 .downL');
+
+        console.log(percentImg);
+
     }
 
     const tl_bgc_desktop = gsap.timeline({
