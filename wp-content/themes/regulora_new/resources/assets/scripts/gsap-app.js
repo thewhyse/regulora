@@ -109,16 +109,17 @@ document.addEventListener('DOMContentLoaded', function(event){
       });
 
     /*    BRAIN-GUT CONNECTION   DESKTOP   */
-/*
-    const percentImg = document.querySelector('#bgc-10-15'),
-          leftL = document.querySelector('#bgc-10-15 .lft-line'),
-          rightL = document.querySelector('#bgc-10-15 .rt-line'),
-          downL = document.querySelector('#bgc-10-15 .downL');
+    const percentImg = document.querySelector('#bgc-10-15');
+    let   leftL, rightL, downL;
     let percentImgContainer;
 
     if(typeof percentImg === 'object' && percentImg !== null && 'getBoundingClientRect' in percentImg) {
       percentImgContainer = percentImg.getBoundingClientRect();
+        leftL = document.querySelector('#bgc-10-15 .lft-line'),
+        rightL = document.querySelector('#bgc-10-15 .rt-line'),
+        downL = document.querySelector('#bgc-10-15 .downL');
     }
+
     const tl_bgc_desktop = gsap.timeline({
       scrollTrigger: {
         trigger: percentImgContainer,
@@ -137,7 +138,6 @@ document.addEventListener('DOMContentLoaded', function(event){
     .to(downL, {
 
     });
-*/
 
 
   }, false);
