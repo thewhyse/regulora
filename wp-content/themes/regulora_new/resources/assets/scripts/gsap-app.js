@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function(event){
       .to(aft_mobi, {right: aft_width_mobi, x: aft_width_mobi + 10, width: aft_width_mobi + 10, duration: 0.5});
 */
 
-    /*    BRAIN-GUT CONNECTION      */
+    /*    BRAIN-GUT CONNECTION   MOBILE   */
 
     const imgContainer = document.querySelector('#ten-15-years-mobi');
     let  left_line;
@@ -107,6 +107,28 @@ document.addEventListener('DOMContentLoaded', function(event){
         width: (deviceW - imgContainerBox.width) - imgContainerBox.left,
         duration: 1,
       });
+
+    /*    BRAIN-GUT CONNECTION   DESKTOP   */
+    let percentImg = document.querySelector('#bgc-10-15');
+
+    const leftL = document.querySelector('#bgc-10-15 .lft-line'),
+          rightL = document.querySelector('#bgc-10-15 .rt-line'),
+          donwL = document.querySelector('#bgc-10-15 .downL');
+    let percentImgContainer;
+
+    if(typeof percentImg === 'object' && percentImg !== null && 'getBoundingClientRect' in percentImg) {
+      percentImgContainer = percentImg.getBoundingClientRect();
+    }
+    const tl_bgc_desktop = gsap.timeline({
+      scrollTrigger: {
+        trigger: percentImgContainer,
+        markers: true,
+        start: 'top 60%',
+      },
+    });
+
+    tl_bgc_desktop.to();
+
 
   }, false);
 
