@@ -110,7 +110,9 @@ document.addEventListener('DOMContentLoaded', function(event){
 
     /*    BRAIN-GUT CONNECTION   DESKTOP   */
     const percentImg = document.querySelector('#bgc-10-15');
-    let   leftL, rightL, downL;
+    let   leftL;
+    let rightL;
+    let downL;
     let percentImgContainer;
 
     if(typeof percentImg === 'object' && percentImg !== null && 'getBoundingClientRect' in percentImg) {
