@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function(event){
 
     const leftL = document.querySelector('#bgc-10-15 .lft-line'),
           rightL = document.querySelector('#bgc-10-15 .rt-line'),
-          donwL = document.querySelector('#bgc-10-15 .downL');
+          downL = document.querySelector('#bgc-10-15 .downL');
     let percentImgContainer;
 
     if(typeof percentImg === 'object' && percentImg !== null && 'getBoundingClientRect' in percentImg) {
@@ -127,7 +127,16 @@ document.addEventListener('DOMContentLoaded', function(event){
       },
     });
 
-    tl_bgc_desktop.to();
+    tl_bgc_desktop
+      .to(leftL, {
+
+    })
+      .to(rightL, {
+
+      })
+    .to(downL, {
+
+    });
 
 
   }, false);
