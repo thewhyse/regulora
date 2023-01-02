@@ -18,7 +18,8 @@ document.addEventListener('DOMContentLoaded', function(event){
       downw = document.querySelector('.dt-pain .downw');
 
     let imageLeft;
-    if(typeof img !== 'undefined') {
+    
+    if(typeof img === 'object' && img !== null && 'getBoundingClientRect' in img){
       imageLeft = img.getBoundingClientRect().left;
     }
 
