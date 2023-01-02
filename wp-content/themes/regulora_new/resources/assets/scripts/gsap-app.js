@@ -156,12 +156,14 @@ window.addEventListener('resize', function(event) {
   gsap.registerPlugin(ScrollTrigger);
 
   // HOME PAGE
-  const img = document.querySelector('.dt-pain img') ||  document.querySelector('.dt-pain-mobi img'),
+  // const img = document.querySelector('.dt-pain img') ||  document.querySelector('.dt-pain-mobi img'),
+  const img = document.querySelector('.dt-pain img'),
     bow = document.querySelector('.dt-pain .bow'),
     aft = document.querySelector('.dt-pain .aft'),
     downw = document.querySelector('.dt-pain .downw');
 
   let imageLeft;
+
   if (typeof img === 'object' && img !== null && 'getBoundingClientRect' in img) {
     imageLeft = img.getBoundingClientRect();
   }
