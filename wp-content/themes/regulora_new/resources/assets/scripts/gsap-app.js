@@ -116,17 +116,16 @@ window.addEventListener('resize', function(event) {
 
   gsap.registerPlugin(ScrollTrigger);
 
+  // HOME PAGE
   const img = document.querySelector('.dt-pain img') ||  document.querySelector('.dt-pain-mobi img'),
     bow = document.querySelector('.dt-pain .bow'),
     aft = document.querySelector('.dt-pain .aft'),
     downw = document.querySelector('.dt-pain .downw');
 
-  let imageLeft = img.getBoundingClientRect().left;
-  let imageRight = img.getBoundingClientRect().right;
-
-  let ww = window.innerWidth;
-
-  let stopPoint = ww - (ww - imageLeft);
+  let imageLeft;
+  if (typeof img === 'object' && img !== null && 'getBoundingClientRect' in img) {
+    imageLeft = box.getBoundingClientRect();
+  }
 
   const pain_container = document.querySelector('.dt-pain');
   let aft_width = (pain_container.offsetWidth - 197) / 2;
@@ -146,10 +145,10 @@ window.addEventListener('resize', function(event) {
   tl.to(bow, {x: imageLeft, duration: 1})
     .to(aft, {right: aft_width, x: aft_width + 10, width: aft_width + 10, duration: 1})
     .to(downw, {
-      //right: - aft_width,
       bottom: - (half_column - 11),
       height: (half_column -5),
       duration: 2,
     });
+  // END HOME PAGE
 
 }, true);
