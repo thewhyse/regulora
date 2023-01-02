@@ -109,9 +109,8 @@ document.addEventListener('DOMContentLoaded', function(event){
       });
 
     /*    BRAIN-GUT CONNECTION   DESKTOP   */
-    let percentImg = document.querySelector('#bgc-10-15');
-
-    const leftL = document.querySelector('#bgc-10-15 .lft-line'),
+    const percentImg = document.querySelector('#bgc-10-15'),
+          leftL = document.querySelector('#bgc-10-15 .lft-line'),
           rightL = document.querySelector('#bgc-10-15 .rt-line'),
           downL = document.querySelector('#bgc-10-15 .downL');
     let percentImgContainer;
