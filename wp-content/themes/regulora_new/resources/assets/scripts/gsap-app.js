@@ -130,13 +130,16 @@ document.addEventListener('DOMContentLoaded', function(event){
 
     tl_bgc_desktop
       .to(leftL, {
-
+      x: percentImgContainer.left,
+        duration: 1,
     })
       .to(rightL, {
-
+        w: 200,
+        duration: 1,
       })
     .to(downL, {
-
+      height: 200,
+      duration: 1,
     });
 
 
