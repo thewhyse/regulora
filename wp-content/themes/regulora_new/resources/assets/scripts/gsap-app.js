@@ -124,7 +124,7 @@ window.addEventListener('resize', function(event) {
 
   let imageLeft;
   if (typeof img === 'object' && img !== null && 'getBoundingClientRect' in img) {
-    imageLeft = box.getBoundingClientRect();
+    imageLeft = img.getBoundingClientRect();
   }
 
   const pain_container = document.querySelector('.dt-pain');
