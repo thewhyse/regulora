@@ -86,35 +86,24 @@ document.addEventListener('DOMContentLoaded', function(event){
     let  right_line;
     let imgContainerBox;
     if(typeof imgContainer === 'object' && imgContainer !== null && 'getBoundingClientRect' in imgContainer) {
-
       imgContainerBox = imgContainer.getBoundingClientRect();
       left_line = document.querySelector('#ten-15-years .lft-line');
       right_line = document.querySelector('#ten-15-years .rt-line');
     }
-
-    console.log(imgContainerBox);
-
-    console.log(left_line.getBoundingClientRect() + '  this is left line left_line.getBoundingClientRect()');
-
     const tl_bgc_mobi = gsap.timeline({
       scrollTrigger: {
         trigger: imgContainer,
         markers: true,
         start: 'top 85%',
       },
-
     });
 
     tl_bgc_mobi
       .to(left_line, {
-      //top: imgContainerBox.top,
       x: imgContainerBox.width - imgContainerBox.left + 8,
       duration: 1,
     })
       .to(right_line, {
-       // top: - imgContainerBox.top,
-        // x: - (imgContainerBox.width - imgContainerBox.left) / 2,
-        // x: - ((deviceW - imgContainerBox.width) - imgContainerBox.left) / 2,
         width: (deviceW - imgContainerBox.width) - imgContainerBox.left,
         duration: 1,
       });
