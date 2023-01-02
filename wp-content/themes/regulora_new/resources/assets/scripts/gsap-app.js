@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function(event){
     tl_bgc_mobi
       .to(left_line, {
       //top: imgContainerBox.top,
-      x: imgContainerBox.width - imgContainerBox.left,
+      x: imgContainerBox.width - imgContainerBox.left + 8,
       duration: 1,
     })
       .to(right_line, {
