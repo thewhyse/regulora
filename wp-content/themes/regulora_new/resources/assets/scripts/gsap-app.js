@@ -81,14 +81,14 @@ document.addEventListener('DOMContentLoaded', function(event){
 
     /*    BRAIN-GUT CONNECTION      */
 
-    const imgContainer = document.querySelector('#ten-15-years');
+    const imgContainer = document.querySelector('#ten-15-years-mobi');
     let  left_line;
     let  right_line;
     let imgContainerBox;
     if(typeof imgContainer === 'object' && imgContainer !== null && 'getBoundingClientRect' in imgContainer) {
       imgContainerBox = imgContainer.getBoundingClientRect();
-      left_line = document.querySelector('#ten-15-years .lft-line');
-      right_line = document.querySelector('#ten-15-years .rt-line');
+      left_line = document.querySelector('#ten-15-years-mobi .lft-line');
+      right_line = document.querySelector('#ten-15-years-mobi .rt-line');
     }
     const tl_bgc_mobi = gsap.timeline({
       scrollTrigger: {
