@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function(event){
         rightL = document.querySelector('#bgc-10-15 .rt-line');
         downL = document.querySelector('#bgc-10-15 .downL');
 
-        console.log(percentImg);
+        console.log(percentImgContainer);
 
     }
 
