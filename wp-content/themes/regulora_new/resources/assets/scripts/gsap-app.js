@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function(event){
         duration: 1,
     })
       .to(rightL, {
-        w: 200,
+        width: 200,
         duration: 1,
       })
     .to(downL, {
