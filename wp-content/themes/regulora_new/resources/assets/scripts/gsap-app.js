@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function(event){
 
     let deviceW = window.innerWidth;
 
-/*
     const img = document.querySelector('.dt-pain img'),
       bow = document.querySelector('.dt-pain .bow'),
       aft = document.querySelector('.dt-pain .aft'),
@@ -77,7 +76,6 @@ document.addEventListener('DOMContentLoaded', function(event){
 
     tl_mobi.to(bow_mobi, {x: imageLeft_mobi, duration: 1})
       .to(aft_mobi, {right: aft_width_mobi, x: aft_width_mobi + 10, width: aft_width_mobi + 10, duration: 0.5});
-*/
 
     /*    BRAIN-GUT CONNECTION   MOBILE   */
 
