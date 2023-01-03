@@ -11,7 +11,7 @@
                         "reject": "Rechazar todo",
                         "settings": "Personalizar",
                         "readMore": "Política de cookies",
-                        "donotSell": "No venda mi información personal"
+                        "donotSell": "No vendan ni compartan mi información personal"
                     }
                 },
                 "closeButton": "Cerca"
@@ -52,10 +52,10 @@
         "optoutPopup": {
             "elements": {
                 "title": "Preferencias de exclusión voluntaria",
-                "description": "<p>Utilizamos cookies de terceros que nos ayudan a analizar el uso que usted hace de este sitio web, a almacenar sus preferencias y a ofrecerle el contenido y la publicidad que le resulten de interés. Sin embargo, usted puede excluirse de estas cookies marcando «No venda mi información personal» y haciendo clic en el botón «Guardar mis preferencias». Una vez que haya optado por la exclusión, podrá cancelarlo en cualquier momento desmarcando «No venda mi información personal» y haciendo clic en el botón «Guardar mis preferencias».</p>",
+                "description": "<p>Utilizamos cookies de terceros que nos ayudan a analizar el uso que usted hace de este sitio web, a almacenar sus preferencias y a ofrecerle el contenido y la publicidad que le resulten de interés. Sin embargo, usted puede excluirse de estas cookies marcando «No vendan ni compartan mi información personal» y haciendo clic en el botón «Guardar mis preferencias». Una vez que haya optado por la exclusión, podrá cancelarlo en cualquier momento desmarcando «No vendan ni compartan mi información personal» y haciendo clic en el botón «Guardar mis preferencias».</p>",
                 "optOption": {
                     "elements": {
-                        "title": "No venda mi información personal",
+                        "title": "No vendan ni compartan mi información personal",
                         "enable": "Permitir",
                         "disable": "Desactivar"
                     }
@@ -103,7 +103,7 @@
         "notice": {
             "elements": {
                 "title": "Valoramos tu privacidad",
-                "description": "Este sitio web o sus herramientas de terceros procesan datos personales. Puede optar por no participar en la venta de su información personal haciendo clic en el enlace \"No vender mi información personal\".",
+                "description": "Este sitio web o sus herramientas de terceros procesan datos personales. Puede optar por no participar en la venta de su información personal haciendo clic en el enlace \"No vendan ni compartan mi información personal\".",
                 "privacyLink": "",
                 "buttons": {
                     "elements": {
@@ -111,7 +111,7 @@
                         "reject": "Rechazar todo",
                         "settings": "Personalizar",
                         "readMore": "Política de cookies",
-                        "donotSell": "No venda mi información personal"
+                        "donotSell": "No vendan ni compartan mi información personal"
                     }
                 },
                 "closeButton": "Cerca"
@@ -152,10 +152,10 @@
         "optoutPopup": {
             "elements": {
                 "title": "Preferencias de exclusión voluntaria",
-                "description": "<p>Utilizamos cookies de terceros que nos ayudan a analizar el uso que usted hace de este sitio web, a almacenar sus preferencias y a ofrecerle el contenido y la publicidad que le resulten de interés. Sin embargo, usted puede excluirse de estas cookies marcando «No venda mi información personal» y haciendo clic en el botón «Guardar mis preferencias». Una vez que haya optado por la exclusión, podrá cancelarlo en cualquier momento desmarcando «No venda mi información personal» y haciendo clic en el botón «Guardar mis preferencias».</p>",
+                "description": "<p>Utilizamos cookies de terceros que nos ayudan a analizar el uso que usted hace de este sitio web, a almacenar sus preferencias y a ofrecerle el contenido y la publicidad que le resulten de interés. Sin embargo, usted puede excluirse de estas cookies marcando «No vendan ni compartan mi información personal» y haciendo clic en el botón «Guardar mis preferencias». Una vez que haya optado por la exclusión, podrá cancelarlo en cualquier momento desmarcando «No vendan ni compartan mi información personal» y haciendo clic en el botón «Guardar mis preferencias».</p>",
                 "optOption": {
                     "elements": {
-                        "title": "No venda mi información personal",
+                        "title": "No vendan ni compartan mi información personal",
                         "enable": "Permitir",
                         "disable": "Desactivar"
                     }

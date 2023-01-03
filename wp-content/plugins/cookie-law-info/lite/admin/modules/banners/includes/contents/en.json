@@ -11,7 +11,7 @@
                         "reject": "Reject All",
                         "settings": "Customize",
                         "readMore": "Cookie Policy",
-                        "donotSell": "Do Not Sell My Personal Information"
+                        "donotSell": "Do Not Sell or Share My Personal Information"
                     }
                 },
                 "closeButton": "Close"
@@ -52,10 +52,10 @@
         "optoutPopup": {
             "elements": {
                 "title": "Opt-out Preferences",
-                "description": "<p>We use third-party cookies that help us analyze how you use this website, store your preferences, and provide the content and advertisements that are relevant to you. However, you can opt out of these cookies by checking \"Do Not Sell My Personal Information\" and clicking the \"Save My Preferences\" button. Once you opt out, you can opt in again at any time by unchecking \"Do Not Sell My Personal Information\" and clicking the \"Save My Preferences\" button.</p>",
+                "description": "<p>We use third-party cookies that help us analyze how you use this website, store your preferences, and provide the content and advertisements that are relevant to you. However, you can opt out of these cookies by checking \"Do Not Sell or Share My Personal Information\" and clicking the \"Save My Preferences\" button. Once you opt out, you can opt in again at any time by unchecking \"Do Not Sell or Share My Personal Information\" and clicking the \"Save My Preferences\" button.</p>",
                 "optOption": {
                     "elements": {
-                        "title": "Do Not Sell My Personal Information",
+                        "title": "Do Not Sell or Share My Personal Information",
                         "enable": "Enable",
                         "disable": "Disable"
                     }
@@ -103,7 +103,7 @@
         "notice": {
             "elements": {
                 "title": "We value your privacy",
-                "description": "This website or its third-party tools process personal data. You can opt out of the sale of your personal information by clicking on the “Do Not Sell My Personal Information” link.",
+                "description": "This website or its third-party tools process personal data. You can opt out of the sale of your personal information by clicking on the \"Do Not Sell or Share My Personal Information\" link.",
                 "privacyLink": "",
                 "buttons": {
                     "elements": {
@@ -111,7 +111,7 @@
                         "reject": "Reject All",
                         "settings": "Customize",
                         "readMore": "Cookie Policy",
-                        "donotSell": "Do Not Sell My Personal Information"
+                        "donotSell": "Do Not Sell or Share My Personal Information"
                     }
                 },
                 "closeButton": "Close"
@@ -152,10 +152,10 @@
         "optoutPopup": {
             "elements": {
                 "title": "Opt-out Preferences",
-                "description": "<p>We use third-party cookies that help us analyze how you use this website, store your preferences, and provide the content and advertisements that are relevant to you. However, you can opt out of these cookies by checking \"Do Not Sell My Personal Information\" and clicking the \"Save My Preferences\" button. Once you opt out, you can opt in again at any time by unchecking \"Do Not Sell My Personal Information\" and clicking the \"Save My Preferences\" button.</p>",
+                "description": "<p>We use third-party cookies that help us analyze how you use this website, store your preferences, and provide the content and advertisements that are relevant to you. However, you can opt out of these cookies by checking \"Do Not Sell or Share My Personal Information\" and clicking the \"Save My Preferences\" button. Once you opt out, you can opt in again at any time by unchecking \"Do Not Sell or Share My Personal Information\" and clicking the \"Save My Preferences\" button.</p>",
                 "optOption": {
                     "elements": {
-                        "title": "Do Not Sell My Personal Information",
+                        "title": "Do Not Sell or Share My Personal Information",
                         "enable": "Enable",
                         "disable": "Disable"
                     }

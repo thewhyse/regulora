@@ -11,7 +11,7 @@
                         "reject": "Alles ablehnen",
                         "settings": "Anpassen",
                         "readMore": "Cookie-Richtlinie",
-                        "donotSell": "Verkaufe meine persönlichen Daten nicht"
+                        "donotSell": "Verkaufen oder teilen Sie meine persönlichen Daten nicht"
                     }
                 },
                 "closeButton": "Nah dran"
@@ -52,10 +52,10 @@
         "optoutPopup": {
             "elements": {
                 "title": "Opt-out-Präferenzen",
-                "description": "<p>Wir verwenden Cookies von Drittanbietern, mit deren Hilfe wir analysieren können, wie Sie diese Website nutzen, Ihre Präferenzen speichern und die für Sie relevanten Inhalte und Anzeigen bereitstellen. Sie können diese Cookies jedoch ablehnen, indem Sie „Verkaufe meine persönlichen Daten nicht“ aktivieren und auf die Schaltfläche „Speichern Sie meine Einstellungen“ klicken. Nachdem Sie sich abgemeldet haben, können Sie sich jederzeit wieder anmelden, indem Sie das Kontrollkästchen „Verkaufe meine persönlichen Daten nicht“ deaktivieren und auf die Schaltfläche „Speichern Sie meine Einstellungen“ klicken.</p>",
+                "description": "<p>Wir verwenden Cookies von Drittanbietern, mit deren Hilfe wir analysieren können, wie Sie diese Website nutzen, Ihre Präferenzen speichern und die für Sie relevanten Inhalte und Anzeigen bereitstellen. Sie können diese Cookies jedoch ablehnen, indem Sie „Verkaufen oder teilen Sie meine persönlichen Daten nicht“ aktivieren und auf die Schaltfläche „Speichern Sie meine Einstellungen“ klicken. Nachdem Sie sich abgemeldet haben, können Sie sich jederzeit wieder anmelden, indem Sie das Kontrollkästchen „Verkaufen oder teilen Sie meine persönlichen Daten nicht“ deaktivieren und auf die Schaltfläche „Speichern Sie meine Einstellungen“ klicken.</p>",
                 "optOption": {
                     "elements": {
-                        "title": "Verkaufe meine persönlichen Daten nicht",
+                        "title": "Verkaufen oder teilen Sie meine persönlichen Daten nicht",
                         "enable": "Ermöglichen",
                         "disable": "Deaktivieren"
                     }
@@ -103,7 +103,7 @@
         "notice": {
             "elements": {
                 "title": "Wir schätzen Ihre Privatsphäre",
-                "description": "Diese Website oder ihre Tools von Drittanbietern verarbeiten personenbezogene Daten. Sie können den Verkauf Ihrer persönlichen Daten abbestellen, indem Sie auf den Link \"Meine persönlichen Daten nicht verkaufen\" klicken.",
+                "description": "Diese Website oder ihre Tools von Drittanbietern verarbeiten personenbezogene Daten. Sie können den Verkauf Ihrer persönlichen Daten abbestellen, indem Sie auf den Link \"Verkaufen oder teilen Sie meine persönlichen Daten nicht\" klicken.",
                 "privacyLink": "",
                 "buttons": {
                     "elements": {
@@ -111,7 +111,7 @@
                         "reject": "Alles ablehnen",
                         "settings": "Anpassen",
                         "readMore": "Cookie-Richtlinie",
-                        "donotSell": "Verkaufe meine persönlichen Daten nicht"
+                        "donotSell": "Verkaufen oder teilen Sie meine persönlichen Daten nicht"
                     }
                 },
                 "closeButton": "Nah dran"
@@ -152,10 +152,10 @@
         "optoutPopup": {
             "elements": {
                 "title": "Opt-out-Präferenzen",
-                "description": "<p>Wir verwenden Cookies von Drittanbietern, mit deren Hilfe wir analysieren können, wie Sie diese Website nutzen, Ihre Präferenzen speichern und die für Sie relevanten Inhalte und Anzeigen bereitstellen. Sie können diese Cookies jedoch ablehnen, indem Sie „Verkaufe meine persönlichen Daten nicht“ aktivieren und auf die Schaltfläche „Speichern Sie meine Einstellungen“ klicken. Nachdem Sie sich abgemeldet haben, können Sie sich jederzeit wieder anmelden, indem Sie das Kontrollkästchen „Verkaufe meine persönlichen Daten nicht“ deaktivieren und auf die Schaltfläche „Speichern Sie meine Einstellungen“ klicken.</p>",
+                "description": "<p>Wir verwenden Cookies von Drittanbietern, mit deren Hilfe wir analysieren können, wie Sie diese Website nutzen, Ihre Präferenzen speichern und die für Sie relevanten Inhalte und Anzeigen bereitstellen. Sie können diese Cookies jedoch ablehnen, indem Sie „Verkaufen oder teilen Sie meine persönlichen Daten nicht“ aktivieren und auf die Schaltfläche „Speichern Sie meine Einstellungen“ klicken. Nachdem Sie sich abgemeldet haben, können Sie sich jederzeit wieder anmelden, indem Sie das Kontrollkästchen „Verkaufen oder teilen Sie meine persönlichen Daten nicht“ deaktivieren und auf die Schaltfläche „Speichern Sie meine Einstellungen“ klicken.</p>",
                 "optOption": {
                     "elements": {
-                        "title": "Verkaufe meine persönlichen Daten nicht",
+                        "title": "Verkaufen oder teilen Sie meine persönlichen Daten nicht",
                         "enable": "Ermöglichen",
                         "disable": "Deaktivieren"
                     }

@@ -11,7 +11,7 @@
                         "reject": "Hylätä",
                         "settings": "Mukauta",
                         "readMore": "Evästekäytäntö",
-                        "donotSell": "Älä myy henkilökohtaisia tietojani"
+                        "donotSell": "Henkilökohtaisia tietojani ei saa myydä tai jakaa eteenpäin"
                     }
                 },
                 "closeButton": "kiinni"
@@ -52,10 +52,10 @@
         "optoutPopup": {
             "elements": {
                 "title": "Pois jättäytymisen asetukset",
-                "description": "<p>Käytämme kolmansien osapuolien evästeitä, joita käytetään analysoimaan verkkosivun käyttöä, asetuksiesi muistamiseen ja tarjoamaan sinulle sopivia mainoksia. Voit kuitenkin jättää pois nämä evästeet valitsemalla “Älä myy henkilökohtaisia tietojani” ja klikkaamalla “Tallenna asetukset” -nappia. Kun jättäydyt pois, voit kuitenkin ottaa evästeet käyttöön poistamalla valinnan kohdasta “Älä myy henkilökohtaisia tietojani” ja klikkaamalla “Tallenna asetukset” -nappia.</p>",
+                "description": "<p>Käytämme kolmansien osapuolien evästeitä, joita käytetään analysoimaan verkkosivun käyttöä, asetuksiesi muistamiseen ja tarjoamaan sinulle sopivia mainoksia. Voit kuitenkin jättää pois nämä evästeet valitsemalla “Henkilökohtaisia tietojani ei saa myydä tai jakaa eteenpäin” ja klikkaamalla “Tallenna asetukset” -nappia. Kun jättäydyt pois, voit kuitenkin ottaa evästeet käyttöön poistamalla valinnan kohdasta “Henkilökohtaisia tietojani ei saa myydä tai jakaa eteenpäin” ja klikkaamalla “Tallenna asetukset” -nappia.</p>",
                 "optOption": {
                     "elements": {
-                        "title": "Älä myy henkilökohtaisia tietojani",
+                        "title": "Henkilökohtaisia tietojani ei saa myydä tai jakaa eteenpäin",
                         "enable": "Ota käyttöön",
                         "disable": "Poista käytöstä"
                     }
@@ -103,7 +103,7 @@
         "notice": {
             "elements": {
                 "title": "Arvostamme yksityisyyttäsi",
-                "description": "Tämä verkkosivusto tai sen kolmannen osapuolen työkalut käsittelevät henkilötietoja. Voit kieltäytyä henkilökohtaisten tietojesi myynnistä napsauttamalla Älä myy henkilökohtaisia tietoja -linkkiä.",
+                "description": "Tämä verkkosivusto tai sen kolmannen osapuolen työkalut käsittelevät henkilötietoja. Voit kieltäytyä henkilökohtaisten tietojesi myynnistä napsauttamalla “Henkilökohtaisia tietojani ei saa myydä tai jakaa eteenpäin” linkkiä.",
                 "privacyLink": "",
                 "buttons": {
                     "elements": {
@@ -111,7 +111,7 @@
                         "reject": "Hylätä",
                         "settings": "Mukauta",
                         "readMore": "Evästekäytäntö",
-                        "donotSell": "Älä myy henkilökohtaisia tietojani"
+                        "donotSell": "Henkilökohtaisia tietojani ei saa myydä tai jakaa eteenpäin"
                     }
                 },
                 "closeButton": "kiinni"
@@ -152,10 +152,10 @@
         "optoutPopup": {
             "elements": {
                 "title": "Pois jättäytymisen asetukset",
-                "description": "<p>Käytämme kolmansien osapuolien evästeitä, joita käytetään analysoimaan verkkosivun käyttöä, asetuksiesi muistamiseen ja tarjoamaan sinulle sopivia mainoksia. Voit kuitenkin jättää pois nämä evästeet valitsemalla “Älä myy henkilökohtaisia tietojani” ja klikkaamalla “Tallenna asetukset” -nappia. Kun jättäydyt pois, voit kuitenkin ottaa evästeet käyttöön poistamalla valinnan kohdasta “Älä myy henkilökohtaisia tietojani” ja klikkaamalla “Tallenna asetukset” -nappia.</p>",
+                "description": "<p>Käytämme kolmansien osapuolien evästeitä, joita käytetään analysoimaan verkkosivun käyttöä, asetuksiesi muistamiseen ja tarjoamaan sinulle sopivia mainoksia. Voit kuitenkin jättää pois nämä evästeet valitsemalla “Henkilökohtaisia tietojani ei saa myydä tai jakaa eteenpäin” ja klikkaamalla “Tallenna asetukset” -nappia. Kun jättäydyt pois, voit kuitenkin ottaa evästeet käyttöön poistamalla valinnan kohdasta “Henkilökohtaisia tietojani ei saa myydä tai jakaa eteenpäin” ja klikkaamalla “Tallenna asetukset” -nappia.</p>",
                 "optOption": {
                     "elements": {
-                        "title": "Älä myy henkilökohtaisia tietojani",
+                        "title": "Henkilökohtaisia tietojani ei saa myydä tai jakaa eteenpäin",
                         "enable": "Ota käyttöön",
                         "disable": "Poista käytöstä"
                     }

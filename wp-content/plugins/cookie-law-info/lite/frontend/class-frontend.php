@@ -107,6 +107,7 @@ class Frontend {
 		add_action( 'wp_footer', array( $this, 'banner_html' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ), 1 );
 		add_action( 'wp_head', array( $this, 'insert_script' ), 1 );
+		add_action( 'wp_head', array( $this, 'insert_styles' ) );
 	}
 
 	/**
@@ -170,6 +171,17 @@ class Frontend {
 	}
 
 	/**
+	 * Add inline styles to the head
+	 *
+	 * @return void
+	 */
+	public function insert_styles() {
+		if ( true === $this->settings->is_connected() || true === cky_disable_banner() || is_admin() ) {
+			return;
+		}
+		echo '<style id="cky-style-inline">[data-cky-tag]{visibility:hidden;}</style>';
+	}
+	/**
 	 * Add CookieYes web app script on the header.
 	 *
 	 * @return void
@@ -209,7 +221,6 @@ class Frontend {
 			return;
 		}
 		$html = isset( $this->template['html'] ) ? $this->template['html'] : '';
-		echo '<style id="cky-style-inline">[data-cky-tag]{visibility:hidden;}</style>';
 		echo '<script id="ckyBannerTemplate" type="text/template">';
 		echo wp_kses( $html, cky_allowed_html() );
 		echo '</script>';
@@ -519,4 +530,5 @@ class Frontend {
 
 		return in_array( $language, array( 'ar', 'az', 'dv', 'he', 'ku', 'fa', 'ur' ), true );
 	}
+
 }

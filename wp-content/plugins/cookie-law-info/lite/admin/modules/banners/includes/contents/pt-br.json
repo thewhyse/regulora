@@ -11,7 +11,7 @@
                         "reject": "Rejeitar",
                         "settings": "Personalizar",
                         "readMore": "Política de Cookies",
-                        "donotSell": "Não venda minhas informações pessoais"
+                        "donotSell": "Não venda ou compartilhe minhas informações pessoais"
                     }
                 },
                 "closeButton": "Fechar"
@@ -52,10 +52,10 @@
         "optoutPopup": {
             "elements": {
                 "title": "Preferências de desativação",
-                "description": "<p>Usamos cookies de terceiros que nos ajudam a analisar como você usa este site, armazena suas preferências e oferece conteúdo e anúncios que são relevantes para você. No entanto, você pode desativar esses cookies marcando \"Não venda minhas informações pessoais\" e clicando no botão \"Salve minhas preferências\". Uma vez desativado, você pode optar por ativar novamente a qualquer momento desmarcando \" Não venda minhas informações pessoais \" e clicando no botão \"Salve minhas preferências\".</p>",
+                "description": "<p>Usamos cookies de terceiros que nos ajudam a analisar como você usa este site, armazena suas preferências e oferece conteúdo e anúncios que são relevantes para você. No entanto, você pode desativar esses cookies marcando \"Não venda ou compartilhe minhas informações pessoais\" e clicando no botão \"Salve minhas preferências\". Uma vez desativado, você pode optar por ativar novamente a qualquer momento desmarcando \"Não venda ou compartilhe minhas informações pessoais\" e clicando no botão \"Salve minhas preferências\".</p>",
                 "optOption": {
                     "elements": {
-                        "title": "Não venda minhas informações pessoais",
+                        "title": "Não venda ou compartilhe minhas informações pessoais",
                         "enable": "Habilitar",
                         "disable": "Desabilitar"
                     }
@@ -103,7 +103,7 @@
         "notice": {
             "elements": {
                 "title": "Valorizamos sua privacidade",
-                "description": "Este site ou suas ferramentas de terceiros processam dados pessoais. Você pode optar por não vender suas informações pessoais clicando no link \"Não venda minhas informações pessoais\".",
+                "description": "Este site ou suas ferramentas de terceiros processam dados pessoais. Você pode optar por não vender suas informações pessoais clicando no link \"Não venda ou compartilhe minhas informações pessoais\".",
                 "privacyLink": "",
                 "buttons": {
                     "elements": {
@@ -111,7 +111,7 @@
                         "reject": "Rejeitar",
                         "settings": "Personalizar",
                         "readMore": "Política de Cookies",
-                        "donotSell": "Não venda minhas informações pessoais"
+                        "donotSell": "Não venda ou compartilhe minhas informações pessoais"
                     }
                 },
                 "closeButton": "Fechar"
@@ -152,10 +152,10 @@
         "optoutPopup": {
             "elements": {
                 "title": "Preferências de desativação",
-                "description": "<p>Usamos cookies de terceiros que nos ajudam a analisar como você usa este site, armazena suas preferências e oferece conteúdo e anúncios que são relevantes para você. No entanto, você pode desativar esses cookies marcando \"Não venda minhas informações pessoais\" e clicando no botão \"Salve minhas preferências\". Uma vez desativado, você pode optar por ativar novamente a qualquer momento desmarcando \" Não venda minhas informações pessoais \" e clicando no botão \"Salve minhas preferências\".</p>",
+                "description": "<p>Usamos cookies de terceiros que nos ajudam a analisar como você usa este site, armazena suas preferências e oferece conteúdo e anúncios que são relevantes para você. No entanto, você pode desativar esses cookies marcando \"Não venda ou compartilhe minhas informações pessoais\" e clicando no botão \"Salve minhas preferências\". Uma vez desativado, você pode optar por ativar novamente a qualquer momento desmarcando \"Não venda ou compartilhe minhas informações pessoais\" e clicando no botão \"Salve minhas preferências\".</p>",
                 "optOption": {
                     "elements": {
-                        "title": "Não venda minhas informações pessoais",
+                        "title": "Não venda ou compartilhe minhas informações pessoais",
                         "enable": "Habilitar",
                         "disable": "Desabilitar"
                     }

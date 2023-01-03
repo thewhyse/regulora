@@ -11,7 +11,7 @@
                         "reject": "Odrzucać",
                         "settings": "Dostosuj",
                         "readMore": "Polityka Cookie",
-                        "donotSell": "Nie sprzedawaj moich danych osobowych"
+                        "donotSell": "Nie sprzedawaj i nie udostępniaj moich danych osobowych"
                     }
                 },
                 "closeButton": "Blisko"
@@ -52,10 +52,10 @@
         "optoutPopup": {
             "elements": {
                 "title": "Preferencje rezygnacji",
-                "description": "<p>Korzystamy z plików typu „cookie” osób trzecich. Pomagają nam one w korzystaniu z tej witryny internetowej, przechowywaniu preferencji użytkownika i dostarczaniu mu odpowiednich treści oraz reklam. Z plików tych można jednak zrezygnować, zaznaczając opcję „Nie sprzedawaj moich danych osobowych” oraz naciskając przycisk „Zapisz moje preferencje”. Po rezygnacji można ponownie włączyć pliki typu „cookie”, odznaczając opcję „Nie sprzedawaj moich danych osobowych” oraz naciskając przycisk „Zapisz moje preferencje”.</p>",
+                "description": "<p>Korzystamy z plików typu „cookie” osób trzecich. Pomagają nam one w korzystaniu z tej witryny internetowej, przechowywaniu preferencji użytkownika i dostarczaniu mu odpowiednich treści oraz reklam. Z plików tych można jednak zrezygnować, zaznaczając opcję „Nie sprzedawaj i nie udostępniaj moich danych osobowych” oraz naciskając przycisk „Zapisz moje preferencje”. Po rezygnacji można ponownie włączyć pliki typu „cookie”, odznaczając opcję „Nie sprzedawaj i nie udostępniaj moich danych osobowych” oraz naciskając przycisk „Zapisz moje preferencje”.</p>",
                 "optOption": {
                     "elements": {
-                        "title": "Nie sprzedawaj moich danych osobowych",
+                        "title": "Nie sprzedawaj i nie udostępniaj moich danych osobowych",
                         "enable": "Włączyć",
                         "disable": "Wyłączyć"
                     }
@@ -103,7 +103,7 @@
         "notice": {
             "elements": {
                 "title": "Cenimy prywatność użytkowników",
-                "description": "Ta strona internetowa lub jej narzędzia stron trzecich przetwarzają dane osobowe. Możesz zrezygnować ze sprzedaży swoich danych osobowych, klikając łącze „Nie sprzedawaj moich danych osobowych”.",
+                "description": "Ta strona internetowa lub jej narzędzia stron trzecich przetwarzają dane osobowe. Możesz zrezygnować ze sprzedaży swoich danych osobowych, klikając łącze „Nie sprzedawaj i nie udostępniaj moich danych osobowych”.",
                 "privacyLink": "",
                 "buttons": {
                     "elements": {
@@ -111,7 +111,7 @@
                         "reject": "Odrzucać",
                         "settings": "Dostosuj",
                         "readMore": "Polityka Cookie",
-                        "donotSell": "Nie sprzedawaj moich danych osobowych"
+                        "donotSell": "Nie sprzedawaj i nie udostępniaj moich danych osobowych"
                     }
                 },
                 "closeButton": "Blisko"
@@ -152,10 +152,10 @@
         "optoutPopup": {
             "elements": {
                 "title": "Preferencje rezygnacji",
-                "description": "<p>Korzystamy z plików typu „cookie” osób trzecich. Pomagają nam one w korzystaniu z tej witryny internetowej, przechowywaniu preferencji użytkownika i dostarczaniu mu odpowiednich treści oraz reklam. Z plików tych można jednak zrezygnować, zaznaczając opcję „Nie sprzedawaj moich danych osobowych” oraz naciskając przycisk „Zapisz moje preferencje”. Po rezygnacji można ponownie włączyć pliki typu „cookie”, odznaczając opcję „Nie sprzedawaj moich danych osobowych” oraz naciskając przycisk „Zapisz moje preferencje”.</p>",
+                "description": "<p>Korzystamy z plików typu „cookie” osób trzecich. Pomagają nam one w korzystaniu z tej witryny internetowej, przechowywaniu preferencji użytkownika i dostarczaniu mu odpowiednich treści oraz reklam. Z plików tych można jednak zrezygnować, zaznaczając opcję „Nie sprzedawaj i nie udostępniaj moich danych osobowych” oraz naciskając przycisk „Zapisz moje preferencje”. Po rezygnacji można ponownie włączyć pliki typu „cookie”, odznaczając opcję „Nie sprzedawaj i nie udostępniaj moich danych osobowych” oraz naciskając przycisk „Zapisz moje preferencje”.</p>",
                 "optOption": {
                     "elements": {
-                        "title": "Nie sprzedawaj moich danych osobowych",
+                        "title": "Nie sprzedawaj i nie udostępniaj moich danych osobowych",
                         "enable": "Włączyć",
                         "disable": "Wyłączyć"
                     }

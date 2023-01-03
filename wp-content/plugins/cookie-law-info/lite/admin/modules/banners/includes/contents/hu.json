@@ -11,7 +11,7 @@
                         "reject": "Elutasít",
                         "settings": "Testreszabás",
                         "readMore": "Cookie-szabályzat",
-                        "donotSell": "Ne adja el a személyes adataimat"
+                        "donotSell": "Ne Értékesítse vagy Ossza Meg SZemélyes Adataimat"
                     }
                 },
                 "closeButton": "Bezárás"
@@ -52,10 +52,10 @@
         "optoutPopup": {
             "elements": {
                 "title": "Kikapcsolási preferenciák",
-                "description": "<p>Külső felektől származó cookie-kat használunk arra, hogy elemezzük, hogyan használja ezt a weboldalt, megjegyezzük preferenciáit, és releváns tartalmat és hirdetéseket biztosítsunk. Ezeket a cookie-kat kikapcsolhatja, ha megjelöli a „Ne adja el a személyes adataimat” opciót, majd rákattint a „Mentse el a beállításokat” gombra. A kikapcsolásuk után, bármikor újra engedélyezheti őket, ha visszavonja a „Ne adja el a személyes adataimat” kijelölését, és rákattint a \"Mentse el a beállításokat\" gombra.</p>",
+                "description": "<p>Külső felektől származó cookie-kat használunk arra, hogy elemezzük, hogyan használja ezt a weboldalt, megjegyezzük preferenciáit, és releváns tartalmat és hirdetéseket biztosítsunk. Ezeket a cookie-kat kikapcsolhatja, ha megjelöli a „Ne Értékesítse vagy Ossza Meg SZemélyes Adataimat” opciót, majd rákattint a „Mentse el a beállításokat” gombra. A kikapcsolásuk után, bármikor újra engedélyezheti őket, ha visszavonja a „Ne Értékesítse vagy Ossza Meg SZemélyes Adataimat” kijelölését, és rákattint a \"Mentse el a beállításokat\" gombra.</p>",
                 "optOption": {
                     "elements": {
-                        "title": "Ne adja el a személyes adataimat",
+                        "title": "Ne Értékesítse vagy Ossza Meg SZemélyes Adataimat",
                         "enable": "Engedélyezze",
                         "disable": "Letiltás"
                     }
@@ -103,7 +103,7 @@
         "notice": {
             "elements": {
                 "title": "Fontosnak tartjuk az adatok védelmét",
-                "description": "Ez a weboldal vagy harmadik féltől származó eszközei feldolgozzák a személyes adatokat. A „Ne adja el a személyes adataimat” linkre kattintva letilthatja személyes adatainak értékesítését.",
+                "description": "Ez a weboldal vagy harmadik féltől származó eszközei feldolgozzák a személyes adatokat. A „Ne Értékesítse vagy Ossza Meg SZemélyes Adataimat” linkre kattintva letilthatja személyes adatainak értékesítését.",
                 "privacyLink": "",
                 "buttons": {
                     "elements": {
@@ -111,7 +111,7 @@
                         "reject": "Elutasít",
                         "settings": "Testreszabás",
                         "readMore": "Cookie-szabályzat",
-                        "donotSell": "Ne adja el a személyes adataimat"
+                        "donotSell": "Ne Értékesítse vagy Ossza Meg SZemélyes Adataimat"
                     }
                 },
                 "closeButton": "Bezárás"
@@ -152,10 +152,10 @@
         "optoutPopup": {
             "elements": {
                 "title": "Kikapcsolási preferenciák",
-                "description": "<p>Külső felektől származó cookie-kat használunk arra, hogy elemezzük, hogyan használja ezt a weboldalt, megjegyezzük preferenciáit, és releváns tartalmat és hirdetéseket biztosítsunk. Ezeket a cookie-kat kikapcsolhatja, ha megjelöli a „Ne adja el a személyes adataimat” opciót, majd rákattint a „Mentse el a beállításokat” gombra. A kikapcsolásuk után, bármikor újra engedélyezheti őket, ha visszavonja a „Ne adja el a személyes adataimat” kijelölését, és rákattint a \"Mentse el a beállításokat\" gombra.</p>",
+                "description": "<p>Külső felektől származó cookie-kat használunk arra, hogy elemezzük, hogyan használja ezt a weboldalt, megjegyezzük preferenciáit, és releváns tartalmat és hirdetéseket biztosítsunk. Ezeket a cookie-kat kikapcsolhatja, ha megjelöli a „Ne Értékesítse vagy Ossza Meg SZemélyes Adataimat” opciót, majd rákattint a „Mentse el a beállításokat” gombra. A kikapcsolásuk után, bármikor újra engedélyezheti őket, ha visszavonja a „Ne Értékesítse vagy Ossza Meg SZemélyes Adataimat” kijelölését, és rákattint a \"Mentse el a beállításokat\" gombra.</p>",
                 "optOption": {
                     "elements": {
-                        "title": "Ne adja el a személyes adataimat",
+                        "title": "Ne Értékesítse vagy Ossza Meg SZemélyes Adataimat",
                         "enable": "Engedélyezze",
                         "disable": "Letiltás"
                     }

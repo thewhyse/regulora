@@ -508,7 +508,7 @@ class Shortcodes {
 	 * @return string
 	 */
 	public function cky_showmore_text() {
-		$key        = 'ccpa' === $this->law ? 'optoutPopup' : 'preferenceCenter';
+		$key = 'ccpa' === $this->law ? 'optoutPopup' : 'preferenceCenter';
 		return isset( $this->contents[ $key ]['elements']['showMore'] ) ? $this->contents[ $key ]['elements']['showMore'] : '';
 	}
 
@@ -518,7 +518,8 @@ class Shortcodes {
 	 * @return string
 	 */
 	public function cky_showless_text() {
-		return isset( $this->contents['preferenceCenter']['elements']['showLess'] ) ? $this->contents['preferenceCenter']['elements']['showLess'] : '';
+		$key = 'ccpa' === $this->law ? 'optoutPopup' : 'preferenceCenter';
+		return isset( $this->contents[ $key ]['elements']['showLess'] ) ? $this->contents[ $key ]['elements']['showLess'] : '';
 	}
 
 	/**
@@ -712,6 +713,6 @@ class Shortcodes {
 	public function cky_optout_close_label() {
 		return isset( $this->contents['optoutPopup']['elements']['closeButton'] ) ? $this->contents['optoutPopup']['elements']['closeButton'] : '';
 	}
-	
+
 }
 
