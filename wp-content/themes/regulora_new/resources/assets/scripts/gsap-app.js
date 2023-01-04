@@ -1,10 +1,10 @@
 // wait until DOM is ready
-document.addEventListener('DOMContentLoaded', function(event){
+document.addEventListener('DOMContentLoaded', function(){
 
   //console.log('DOM loaded', event);
 
   //wait until images, links, fonts, stylesheets, and js is loaded
-  window.addEventListener('load', function(e){
+  window.addEventListener('load', function(){
 
     //custom GSAP code goes here
 
@@ -162,17 +162,17 @@ window.addEventListener('resize', function(event) {
     aft = document.querySelector('.dt-pain .aft'),
     downw = document.querySelector('.dt-pain .downw');
 
-  let imageLeft;
+  const pain_container = document.querySelector('.dt-pain');
+  const pain_column = document.querySelector('#pain-column');
+
+  let imageLeft, aft_width, half_column;
 
   if (typeof img === 'object' && img !== null && 'getBoundingClientRect' in img) {
     imageLeft = img.getBoundingClientRect();
+    aft_width = (pain_container.offsetWidth - 197) / 2;
+    half_column = pain_column.offsetHeight / 2;
   }
 
-  const pain_container = document.querySelector('.dt-pain');
-  let aft_width = (pain_container.offsetWidth - 197) / 2;
-
-  const pain_column = document.querySelector('#pain-column');
-  let half_column = pain_column.offsetHeight / 2;
 
   const tl = gsap.timeline({
     scrollTrigger: {
