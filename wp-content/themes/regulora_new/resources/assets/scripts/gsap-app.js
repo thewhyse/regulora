@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function(){
         duration: 2,
       });
 
+    // HP MOBILE
     const img_mobi = document.querySelector('.dt-pain-mobi img'),
       bow_mobi = document.querySelector('.dt-pain-mobi .bow'),
       aft_mobi = document.querySelector('.dt-pain-mobi .aft');
@@ -173,13 +174,14 @@ window.addEventListener('resize', function(event) {
 
   });
 
-  tl.to(bow, {x: imageLeft, duration: 1})
+  tl.to(bow, {x: imageLeft.x + 2, duration: 1})
     .to(aft, {right: aft_width, x: aft_width + 10, width: aft_width + 10, duration: 1})
     .to(downw, {
       bottom: - (half_column - 11),
       height: (half_column -5),
       duration: 2,
     });
+
   // END HOME PAGE
 
 }, true);
