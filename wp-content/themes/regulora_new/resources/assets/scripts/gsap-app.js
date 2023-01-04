@@ -12,39 +12,29 @@ document.addEventListener('DOMContentLoaded', function(){
 
     let deviceW = window.innerWidth;
 
+    // HOME PAGE
     const img = document.querySelector('.dt-pain img'),
       bow = document.querySelector('.dt-pain .bow'),
       aft = document.querySelector('.dt-pain .aft'),
       downw = document.querySelector('.dt-pain .downw');
 
-    let imageLeft;
+    const pain_container = document.querySelector('.dt-pain');
+    const pain_column = document.querySelector('#pain-column');
 
-    if(typeof img === 'object' && img !== null && 'getBoundingClientRect' in img){
-      imageLeft = img.getBoundingClientRect().left;
+    let imageLeft, aft_width, half_column;
+
+    if (typeof img === 'object' && img !== null && 'getBoundingClientRect' in img) {
+      imageLeft = img.getBoundingClientRect();
+      aft_width = (pain_container.offsetWidth - 197) / 2;
+      half_column = pain_column.offsetHeight / 2;
     }
 
-    //let imageLeft = img.getBoundingClientRect().left;
-    //let imageRight = img.getBoundingClientRect().right;
-
-    let ww = window.innerWidth;
-
-    let stopPoint = ww - (ww - imageLeft);
-
-    const pain_container = document.querySelector('.dt-pain');
-    let aft_width = (pain_container.offsetWidth - 197) / 2;
-
-    const pain_column = document.querySelector('#pain-column');
-    let half_column = pain_column.offsetHeight / 2;
-
-    console.log(aft_width + ' = aft_width');
-    console.log(stopPoint + ' this is x stopPoint', imageLeft + ' = imaageLeft  ');
 
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: '.dt-pain',
         markers: true,
         start: 'top 60%',
-        //end: 'top 30%',
       },
 
     });
@@ -77,6 +67,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     tl_mobi.to(bow_mobi, {x: imageLeft_mobi, duration: 1})
       .to(aft_mobi, {right: aft_width_mobi, x: aft_width_mobi + 10, width: aft_width_mobi + 10, duration: 0.5});
+    // END HOME PAGE
 
     /*    BRAIN-GUT CONNECTION   MOBILE   */
 
@@ -156,7 +147,6 @@ window.addEventListener('resize', function(event) {
   gsap.registerPlugin(ScrollTrigger);
 
   // HOME PAGE
-  // const img = document.querySelector('.dt-pain img') ||  document.querySelector('.dt-pain-mobi img'),
   const img = document.querySelector('.dt-pain img'),
     bow = document.querySelector('.dt-pain .bow'),
     aft = document.querySelector('.dt-pain .aft'),
