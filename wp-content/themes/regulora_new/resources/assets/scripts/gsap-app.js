@@ -13,10 +13,18 @@ document.addEventListener('DOMContentLoaded', function(){
     let deviceW = window.innerWidth;
 
     // HOME PAGE
-    const img = document.querySelector('.dt-pain img'),
-      bow = document.querySelector('.dt-pain .bow'),
+    // const img = document.querySelector('.dt-pain img'),
+    const bow = document.querySelector('.dt-pain .bow'),
       aft = document.querySelector('.dt-pain .aft'),
       downw = document.querySelector('.dt-pain .downw');
+
+    let img;
+
+    if(img !== null || img != 'undefined') {
+      img = document.querySelector('.dt-pain img');
+    } else {
+      return;
+    }
 
     const pain_container = document.querySelector('.dt-pain');
     const pain_column = document.querySelector('#pain-column');
