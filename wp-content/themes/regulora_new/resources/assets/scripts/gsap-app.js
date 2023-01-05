@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     let img;
 
-    if(img !== null || img != 'undefined') {
+    if(img !== null || img !== 'undefined') {
       img = document.querySelector('.dt-pain img');
     } else {
       return;
