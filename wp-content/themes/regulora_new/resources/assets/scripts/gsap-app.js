@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: '.dt-pain',
-        markers: true,
+        // markers: true,
         start: 'top 60%',
       },
 
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const tl_mobi = gsap.timeline({
       scrollTrigger: {
         trigger: '.dt-pain-mobi',
-        markers: true,
+        // markers: true,
         start: 'top 85%',
       },
 
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const tl_bgc_mobi = gsap.timeline({
       scrollTrigger: {
         trigger: imgContainer,
-        markers: true,
+        // markers: true,
         start: 'top 85%',
       },
     });
@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const tl_bgc_desktop = gsap.timeline({
       scrollTrigger: {
         trigger: percentImgContainer,
-        markers: true,
+        // markers: true,
         start: 'top 60%',
       },
     });
@@ -176,7 +176,7 @@ window.addEventListener('resize', function(event) {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: '.dt-pain',
-      markers: true,
+      // markers: true,
       start: 'top 60%',
     },
 
