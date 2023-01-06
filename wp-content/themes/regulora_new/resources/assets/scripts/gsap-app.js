@@ -18,13 +18,15 @@ document.addEventListener('DOMContentLoaded', function(){
       aft = document.querySelector('.dt-pain .aft'),
       downw = document.querySelector('.dt-pain .downw');
 
-    let img;
+      let img = document.querySelector('.dt-pain img');
 
+/*
     if(img !== null || img !== 'undefined') {
-      img = document.querySelector('.dt-pain img');
+     // img = document.querySelector('.dt-pain img');
     } else {
       return;
     }
+*/
 
     const pain_container = document.querySelector('.dt-pain');
     const pain_column = document.querySelector('#pain-column');
