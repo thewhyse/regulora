@@ -5,7 +5,7 @@ Tags:              visibility, dynamic content, conditional content, conditional
 Requires at least: 6.0
 Tested up to:      6.1
 Requires PHP:      5.6
-Stable tag:        2.5.0
+Stable tag:        2.5.2
 License:           GPL-2.0
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -208,11 +208,31 @@ The **one exception** to this is the Screen Size block controls. Visibility by s
 
 == Changelog ==
 
+= 2.5.2 - 2023-01-03 =
+
+**Fixed**
+
+* Fixed bug in data fetching method used to return simplified variables in plugin settings.
+
+= 2.5.1 - 2023-01-03 =
+
+**Changed**
+
+* Consolidated controls filters into a single filter.
+* Renamed and consolidated contextual indicator filters.
+
+**Fixed**
+
+* Fixed conditional opacity CSS for text-only blocks. (#54)
+* Fixed data fetching method to only return simplified variables in plugin settings. 
+* Fixed incorrect translation strings.
+* Fixed styling on control reset button to match Core tools panels.
+
 = 2.5.0 - 2022-12-05 =
 
 **Upgrade Notice**
 
-Block Visibility now requires WordPress 6.0 or greater with version 2.5.0. Furthermore, users of the Pro add-on will need to upgrade to Pro 1.6.0 to take advantage of these latest enhancements. Check out the [release article](https://blockvisibilitywp.com/block-visibility-2-5-0-and-pro-1-6-0-release-notes/ for more information.
+Block Visibility now requires WordPress 6.0+ with version 2.5.0 and users of the Pro add-on will need to upgrade to Pro 1.6.0 to take advantage of these latest enhancements. There have also been updates to the way visibility defaults work. Check out the [release article](https://blockvisibilitywp.com/block-visibility-2-5-0-and-pro-1-6-0-release-notes/) for more information.
 
 **Added**
 
@@ -235,13 +255,13 @@ Block Visibility now requires WordPress 6.0 or greater with version 2.5.0. Furth
 **Removed**
 
 * Removed visibility panel and toolbar controls on Custom HTML blocks in the block-based Widget Area due to incompatibility. Visibility controls are still available for the Custom HTML block in the post/page Editor as well as the Site Editor.
-* Removed unnessessary custom icons. 
+* Removed unnecessary custom icons. 
 * Removed support url from variables endpoint.
 
 **Fixed**
 
 * [Advanced Custom Fields] Fixed bug where numeric ACF fields were not being evaluated correctly. (#50)
-* [Screen Size] Fixed bug where using the Screen Size control and the `meow-gallery/gallery` block. Added better error handling to avoid similar issue in other third-party blocks.
+* [Screen Size] Fixed bug where using the Screen Size control and the `meow-gallery/gallery` block. Added better error handling to avoid a similar issue in other third-party blocks.
 * Fixed bug where resetting settings on a specific tab would reset all plugin settings.
 
 = 2.4.6 - 2022-11-02 =
