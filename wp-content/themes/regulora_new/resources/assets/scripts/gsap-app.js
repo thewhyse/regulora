@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     });
 
-    tl.to(bow, {x: imageLeft + 2, duration: 1})
+    tl.to(bow, {x: imageLeft + 2, width: imageLeft - window.pageYOffset, duration: 1})
       .to(aft, {right: aft_width, x: aft_width + 10, width: aft_width + 10, duration: 1})
       .to(downw, {
         bottom: - (half_column - 11),
