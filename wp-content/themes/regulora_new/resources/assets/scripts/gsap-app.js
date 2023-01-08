@@ -153,10 +153,11 @@ window.addEventListener('resize', function(event) {
   gsap.registerPlugin(ScrollTrigger);
 
   // HOME PAGE
-  const img = document.querySelector('.dt-pain img'),
-    bow = document.querySelector('.dt-pain .bow'),
+  const bow = document.querySelector('.dt-pain .bow'),
     aft = document.querySelector('.dt-pain .aft'),
     downw = document.querySelector('.dt-pain .downw');
+
+  let img = document.querySelector('.dt-pain img');
 
   const pain_container = document.querySelector('.dt-pain');
   const pain_column = document.querySelector('#pain-column');
@@ -164,11 +165,10 @@ window.addEventListener('resize', function(event) {
   let imageLeft, aft_width, half_column;
 
   if (typeof img === 'object' && img !== null && 'getBoundingClientRect' in img) {
-    imageLeft = img.getBoundingClientRect();
+    imageLeft = img.getBoundingClientRect().left;
     aft_width = (pain_container.offsetWidth - 197) / 2;
     half_column = pain_column.offsetHeight / 2;
   }
-
 
   const tl = gsap.timeline({
     scrollTrigger: {
@@ -179,7 +179,7 @@ window.addEventListener('resize', function(event) {
 
   });
 
-  tl.to(bow, {x: imageLeft.x + 2, duration: 1})
+  tl.to(bow, {x: imageLeft + 2, width: imageLeft - window.pageYOffset, duration: 1})
     .to(aft, {right: aft_width, x: aft_width + 10, width: aft_width + 10, duration: 1})
     .to(downw, {
       bottom: - (half_column - 11),
