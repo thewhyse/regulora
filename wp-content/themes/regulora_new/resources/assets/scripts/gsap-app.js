@@ -57,6 +57,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
     if (typeof img_mobi === 'object' && img_mobi !== null && 'getBoundingClientRect' in img_mobi) {
       imageLeft_mobi = img_mobi.getBoundingClientRect().left;
+    } else {
+      return;
     }
 
     const pain_container_mobi = document.querySelector('.dt-pain-mobi');
