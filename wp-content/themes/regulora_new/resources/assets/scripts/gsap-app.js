@@ -53,7 +53,11 @@ document.addEventListener('DOMContentLoaded', function(){
       bow_mobi = document.querySelector('.dt-pain-mobi .bow'),
       aft_mobi = document.querySelector('.dt-pain-mobi .aft');
 
-    let imageLeft_mobi = img_mobi.getBoundingClientRect().left;
+    let imageLeft_mobi;
+
+    if (typeof img_mobi === 'object' && img_mobi !== null && 'getBoundingClientRect' in img_mobi) {
+      imageLeft_mobi = img_mobi.getBoundingClientRect().left;
+    }
 
     const pain_container_mobi = document.querySelector('.dt-pain-mobi');
     let aft_width_mobi = (pain_container_mobi.offsetWidth - 197) / 2;
