@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 
     const pain_container_mobi = document.querySelector('.dt-pain-mobi');
-    let aft_width_mobi = (pain_container_mobi.offsetWidth - 197) / 2;
+    const aft_width_mobi = (pain_container_mobi.offsetWidth - 197) / 2;
 
     const tl_mobi = gsap.timeline({
       scrollTrigger: {
