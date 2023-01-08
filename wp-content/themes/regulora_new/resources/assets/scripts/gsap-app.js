@@ -110,6 +110,8 @@ document.addEventListener('DOMContentLoaded', function(){
     let rightL;
     let downL;
     let percentImgContainer;
+    
+    console.log(percentImg.offsetLeft);
 
     if(typeof percentImg === 'object' && percentImg !== null && 'getBoundingClientRect' in percentImg) {
       percentImgContainer = percentImg.getBoundingClientRect();
