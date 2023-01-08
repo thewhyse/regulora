@@ -29,6 +29,8 @@ document.addEventListener('DOMContentLoaded', function(){
       imageLeft = img.getBoundingClientRect().left;
       aft_width = (pain_container.offsetWidth - 197) / 2;
       half_column = pain_column.offsetHeight / 2;
+    } else {
+      return;
     }
 
     const tl = gsap.timeline({
@@ -87,6 +89,8 @@ document.addEventListener('DOMContentLoaded', function(){
       imgContainerBox = imgContainer.getBoundingClientRect();
       left_line = document.querySelector('#ten-15-years-mobi .lft-line');
       right_line = document.querySelector('#ten-15-years-mobi .rt-line');
+    } else {
+      return;
     }
     const tl_bgc_mobi = gsap.timeline({
       scrollTrigger: {
@@ -123,6 +127,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
         console.log(percentImgContainer);
 
+    } else {
+      return;
     }
 
     const tl_bgc_desktop = gsap.timeline({
