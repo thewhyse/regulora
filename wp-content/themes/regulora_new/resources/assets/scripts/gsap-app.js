@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
     let deviceW = window.innerWidth;
 
+    console.log(percentImg, + ' this is window' + window);
+
     // HOME PAGE
     // const img = document.querySelector('.dt-pain img'),
     const bow = document.querySelector('.dt-pain .bow'),
@@ -135,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function(){
     let rightL;
     let downL;
     let percentImgContainer;
-    
+
     console.log(percentImg, + ' this is window' + window);
 
     if(typeof percentImg === 'object' && 'getBoundingClientRect' in percentImg) {
