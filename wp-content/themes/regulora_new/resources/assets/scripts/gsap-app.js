@@ -119,8 +119,7 @@ document.addEventListener('DOMContentLoaded', function(){
     let downL;
     let percentImgContainer;
 
-
-    if(typeof percentImg === 'object' && 'getBoundingClientRect' in percentImg) {
+      if(typeof percentImg === 'object' && percentImg !== null && 'getBoundingClientRect' in percentImg) {
       percentImgContainer = percentImg.getBoundingClientRect();
         leftL = document.querySelector('.bgc-10-15 .lft-line');
         rightL = document.querySelector('.bgc-10-15 .rt-line');
