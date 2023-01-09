@@ -29,26 +29,45 @@ document.addEventListener('DOMContentLoaded', function(){
       imageLeft = img.getBoundingClientRect().left;
       aft_width = (pain_container.offsetWidth - 197) / 2;
       half_column = pain_column.offsetHeight / 2;
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: '.dt-pain',
+          // markers: true,
+          start: 'top 80%',
+        },
+
+      });
+
+      tl.to(bow, {x: imageLeft + 2, duration: 0.5})
+        .to(aft, {right: aft_width, x: aft_width + 10, width: aft_width + 10, duration: 0.5})
+        .to(downw, {
+          bottom: - (half_column - 11),
+          height: (half_column -5),
+          duration: 1,
+        });
+
+
     } else {
       return;
     }
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: '.dt-pain',
-        // markers: true,
-        start: 'top 60%',
-      },
-
-    });
-
-    tl.to(bow, {x: imageLeft + 2, duration: 1})
-      .to(aft, {right: aft_width, x: aft_width + 10, width: aft_width + 10, duration: 1})
-      .to(downw, {
-        bottom: - (half_column - 11),
-        height: (half_column -5),
-        duration: 2,
-      });
+    // const tl = gsap.timeline({
+    //   scrollTrigger: {
+    //     trigger: '.dt-pain',
+    //     // markers: true,
+    //     start: 'top 80%',
+    //   },
+    //
+    // });
+    //
+    // tl.to(bow, {x: imageLeft + 2, duration: 0.5})
+    //   .to(aft, {right: aft_width, x: aft_width + 10, width: aft_width + 10, duration: 0.5})
+    //   .to(downw, {
+    //     bottom: - (half_column - 11),
+    //     height: (half_column -5),
+    //     duration: 1,
+    //   });
 
     // HP MOBILE
     const img_mobi = document.querySelector('.dt-pain-mobi img'),
@@ -117,15 +136,11 @@ document.addEventListener('DOMContentLoaded', function(){
     let downL;
     let percentImgContainer;
 
-    console.log(percentImg.offsetLeft);
-
     if(typeof percentImg === 'object' && 'getBoundingClientRect' in percentImg) {
       percentImgContainer = percentImg.getBoundingClientRect();
         leftL = document.querySelector('#bgc-10-15 .lft-line');
         rightL = document.querySelector('#bgc-10-15 .rt-line');
         downL = document.querySelector('#bgc-10-15 .downL');
-
-        console.log(percentImgContainer);
 
     } else {
       return;
