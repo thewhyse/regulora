@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function(){
     if (typeof img_mobi === 'object' && img_mobi !== null && 'getBoundingClientRect' in img_mobi) {
       imageLeft_mobi = img_mobi.getBoundingClientRect().left;
     } else {
-      
+      return;
     }
 
     const pain_container_mobi = document.querySelector('.dt-pain-mobi');
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function(){
       left_line = document.querySelector('.ten-15-years-mobi .lft-line');
       right_line = document.querySelector('.ten-15-years-mobi .rt-line');
     } else {
-      
+      return;
     }
     const tl_bgc_mobi = gsap.timeline({
       scrollTrigger: {
@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function(){
         downL = document.querySelector('.bgc-10-15 .downL');
 
     } else {
-      
+      return;
     }
 
     const tl_bgc_desktop = gsap.timeline({
