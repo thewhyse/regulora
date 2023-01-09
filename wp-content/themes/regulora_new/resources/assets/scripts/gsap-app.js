@@ -123,6 +123,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     console.log(percentImg);
 
+/*
       if(typeof percentImg === 'object' && percentImg !== null && 'getBoundingClientRect' in percentImg) {
       percentImgContainer = percentImg.getBoundingClientRect();
         leftL = document.querySelector('#bgc-percent .lft-line');
@@ -132,6 +133,12 @@ document.addEventListener('DOMContentLoaded', function(){
     } else {
       return;
     }
+*/
+
+    percentImgContainer = percentImg.getBoundingClientRect();
+    leftL = document.querySelector('#bgc-percent .lft-line');
+    rightL = document.querySelector('#bgc-percent .rt-line');
+    downL = document.querySelector('#bgc-percent .downL');
 
     const tl_bgc_desktop = gsap.timeline({
       scrollTrigger: {
