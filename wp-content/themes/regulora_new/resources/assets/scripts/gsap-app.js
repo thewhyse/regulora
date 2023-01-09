@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function(){
 */
 
     /*    BRAIN-GUT CONNECTION   DESKTOP   */
-    const percentImg = document.getElementById('#bgc-10-15');
+    const percentImg = document.getElementById('#bgc-percent');
     let leftL;
     let rightL;
     let downL;
@@ -125,9 +125,9 @@ document.addEventListener('DOMContentLoaded', function(){
 
       if(typeof percentImg === 'object' && percentImg !== null && 'getBoundingClientRect' in percentImg) {
       percentImgContainer = percentImg.getBoundingClientRect();
-        leftL = document.querySelector('#bgc-10-15 .lft-line');
-        rightL = document.querySelector('#bgc-10-15 .rt-line');
-        downL = document.querySelector('#bgc-10-15 .downL');
+        leftL = document.querySelector('#bgc-percent .lft-line');
+        rightL = document.querySelector('#bgc-percent .rt-line');
+        downL = document.querySelector('#bgc-percent .downL');
 
     } else {
       return;
