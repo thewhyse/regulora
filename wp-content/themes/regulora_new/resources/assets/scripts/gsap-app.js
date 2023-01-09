@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function(){
 */
 
     /*    BRAIN-GUT CONNECTION   DESKTOP   */
-    const percentImg = document.getElementById('bgc-percent');
+    const percentImg = document.getElementById('bgc-percent').getBoundingClientRect();
     let leftL;
     let rightL;
     let downL;
