@@ -116,13 +116,20 @@ document.addEventListener('DOMContentLoaded', function(){
 
     /*    BRAIN-GUT CONNECTION   DESKTOP   */
     const percentImg = document.getElementById('bgc-percent').getBoundingClientRect();
+/*
     let leftL;
     let rightL;
     let downL;
     let percentImgContainer = null;
+*/
+
+    const leftL = document.querySelector('#bgc-percent .lft-line');
+    const rightL = document.querySelector('#bgc-percent .rt-line');
+    const downL = document.querySelector('#bgc-percent .downL');
 
     console.log(typeof percentImg);
 
+/*
       if(typeof percentImg === 'object' && percentImg !== null && 'getBoundingClientRect' in percentImg) {
       percentImgContainer = percentImg.getBoundingClientRect();
         leftL = document.querySelector('#bgc-percent .lft-line');
@@ -134,10 +141,11 @@ document.addEventListener('DOMContentLoaded', function(){
     } else {
       return;
     }
+*/
 
     const tl_bgc_desktop = gsap.timeline({
       scrollTrigger: {
-        trigger: percentImgContainer,
+        trigger: percentImg,
         markers: true,
         start: 'top 60%',
       },
@@ -145,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     tl_bgc_desktop
       .to(leftL, {
-      x: percentImgContainer.left,
+      x: percentImg.left,
         duration: 1,
     })
       .to(rightL, {
