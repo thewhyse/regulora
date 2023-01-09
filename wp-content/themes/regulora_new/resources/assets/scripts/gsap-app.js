@@ -83,14 +83,14 @@ document.addEventListener('DOMContentLoaded', function(){
 
     /*    BRAIN-GUT CONNECTION   MOBILE   */
 
-    const imgContainer = document.querySelector('#ten-15-years-mobi');
+    const imgContainer = document.querySelector('.ten-15-years-mobi');
     let  left_line;
     let  right_line;
     let imgContainerBox;
     if(typeof imgContainer === 'object' && imgContainer !== null && 'getBoundingClientRect' in imgContainer) {
       imgContainerBox = imgContainer.getBoundingClientRect();
-      left_line = document.querySelector('#ten-15-years-mobi .lft-line');
-      right_line = document.querySelector('#ten-15-years-mobi .rt-line');
+      left_line = document.querySelector('.ten-15-years-mobi .lft-line');
+      right_line = document.querySelector('.ten-15-years-mobi .rt-line');
     } else {
       
     }
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function(){
       });
 
     /*    BRAIN-GUT CONNECTION   DESKTOP   */
-    const percentImg = document.querySelector('#bgc-10-15');
+    const percentImg = document.querySelector('.bgc-10-15');
     let leftL;
     let rightL;
     let downL;
@@ -122,9 +122,9 @@ document.addEventListener('DOMContentLoaded', function(){
 
     if(typeof percentImg === 'object' && 'getBoundingClientRect' in percentImg) {
       percentImgContainer = percentImg.getBoundingClientRect();
-        leftL = document.querySelector('#bgc-10-15 .lft-line');
-        rightL = document.querySelector('#bgc-10-15 .rt-line');
-        downL = document.querySelector('#bgc-10-15 .downL');
+        leftL = document.querySelector('.bgc-10-15 .lft-line');
+        rightL = document.querySelector('.bgc-10-15 .rt-line');
+        downL = document.querySelector('.bgc-10-15 .downL');
 
     } else {
       
