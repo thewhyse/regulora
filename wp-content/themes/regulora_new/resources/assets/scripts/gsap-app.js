@@ -142,6 +142,8 @@ document.addEventListener('DOMContentLoaded', function(){
         rightL = document.querySelector('#bgc-10-15 .rt-line');
         downL = document.querySelector('#bgc-10-15 .downL');
 
+        console.log(percentImgContainer);
+
     } else {
       return;
     }
@@ -149,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const tl_bgc_desktop = gsap.timeline({
       scrollTrigger: {
         trigger: percentImgContainer,
-        // markers: true,
+        markers: true,
         start: 'top 60%',
       },
     });
