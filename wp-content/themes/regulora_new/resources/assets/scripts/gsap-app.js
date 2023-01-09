@@ -83,6 +83,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     /*    BRAIN-GUT CONNECTION   MOBILE   */
 
+/*
     const imgContainer = document.querySelector('.ten-15-years-mobi');
     let  left_line;
     let  right_line;
@@ -111,6 +112,7 @@ document.addEventListener('DOMContentLoaded', function(){
         width: (deviceW - imgContainerBox.width) - imgContainerBox.left,
         duration: 1,
       });
+*/
 
     /*    BRAIN-GUT CONNECTION   DESKTOP   */
     const percentImg = document.querySelector('.bgc-10-15');
