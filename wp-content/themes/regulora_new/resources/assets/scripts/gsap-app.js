@@ -121,14 +121,14 @@ document.addEventListener('DOMContentLoaded', function(){
     let downL;
     let percentImgContainer = null;
 
-    console.log(percentImg);
+    console.log(typeof percentImg);
 
       if(typeof percentImg === 'object' && percentImg !== null && 'getBoundingClientRect' in percentImg) {
       percentImgContainer = percentImg.getBoundingClientRect();
         leftL = document.querySelector('#bgc-percent .lft-line');
         rightL = document.querySelector('#bgc-percent .rt-line');
         downL = document.querySelector('#bgc-percent .downL');
-        
+
         console.log(percentImgContainer);
 
     } else {
