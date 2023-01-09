@@ -128,6 +128,8 @@ document.addEventListener('DOMContentLoaded', function(){
         leftL = document.querySelector('#bgc-percent .lft-line');
         rightL = document.querySelector('#bgc-percent .rt-line');
         downL = document.querySelector('#bgc-percent .downL');
+        
+        console.log(percentImgContainer);
 
     } else {
       return;
