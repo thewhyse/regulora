@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const downL = document.querySelector('#bgc-percent .downL');
 
     const percentColumn = document.querySelector('.restoring-left-side');
-    let rightLineW = percentColumn.offsetWidth / 2;
+    //let rightLineW = percentColumn.offsetWidth / 2;
 
     console.log(leftSide);
 
@@ -143,15 +143,12 @@ document.addEventListener('DOMContentLoaded', function(){
 
     tl_bgc_desktop
       .to(leftL, {
-        x: - deviceW,
-      })
-      .to(leftL, {
         width: leftSide,
         x: leftSide,
         duration: 1,
       })
       .to(rightL, {
-        width: rightLineW,
+        width: 100,
         duration: 1,
       })
       .to(downL, {
