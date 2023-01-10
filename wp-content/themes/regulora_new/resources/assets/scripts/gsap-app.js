@@ -123,11 +123,13 @@ document.addEventListener('DOMContentLoaded', function(){
       percentImgLeft = percentImgLeft.offsetParent;
     }
   
+/*
     const leftL = document.querySelector('#bgc-percent .lft-line');
     const rightL = document.querySelector('#bgc-percent .rt-line');
     const downL = document.querySelector('#bgc-percent .downL');
+*/
 
-    console.log(percentImgLeft);
+    console.log(leftSide);
 
 /*
       if(typeof percentImgLeft === 'object' && percentImgLeft !== null && 'getBoundingClientRect' in percentImgLeft) {
@@ -163,10 +165,9 @@ document.addEventListener('DOMContentLoaded', function(){
       height: 200,
       duration: 1,
     });
-
+*/
 
   }, false);
-*/
 
 });
 
