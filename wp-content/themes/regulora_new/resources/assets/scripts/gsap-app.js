@@ -140,8 +140,8 @@ console.log(leftSide);
     const rightL = document.querySelector('#bgc-percent .rt-line');
     const downL = document.querySelector('#bgc-percent .downL');
 
-    //const percentColumn = document.querySelector('.restoring-left-side');
-    //let rightLineW = percentColumn.offsetWidth / 2;
+    const percentColumn = document.querySelector('.restoring-left-side');
+    let rightLineW = percentColumn.offsetWidth / 2;
 
     const tl_bgc_desktop = gsap.timeline({
       scrollTrigger: {
@@ -158,7 +158,7 @@ console.log(leftSide);
         duration: 1,
       })
       .to(rightL, {
-        width: 100,
+        width: rightLineW,
         duration: 1,
       })
       .to(downL, {
