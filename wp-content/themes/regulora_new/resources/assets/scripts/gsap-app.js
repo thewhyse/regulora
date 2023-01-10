@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     tl_bgc_desktop
       .to(leftL, {
-        x: percentImgLeft.left,
+        x: leftSide,
         duration: 1,
       })
       .to(rightL, {
