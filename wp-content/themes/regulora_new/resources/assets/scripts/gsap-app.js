@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const rightL = document.querySelector('#bgc-percent .rt-line');
     const downL = document.querySelector('#bgc-percent .downL');
 
-    const percentColumn = document.querySelector('.restoring-left-side');
+    //const percentColumn = document.querySelector('.restoring-left-side');
     //let rightLineW = percentColumn.offsetWidth / 2;
 
     console.log(leftSide);
