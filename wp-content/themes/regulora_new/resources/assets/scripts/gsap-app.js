@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const rightL = document.querySelector('#bgc-percent .rt-line');
     const downL = document.querySelector('#bgc-percent .downL');
 
-    console.log(typeof percentImg);
+    console.log(percentImg);
 
 /*
       if(typeof percentImg === 'object' && percentImg !== null && 'getBoundingClientRect' in percentImg) {
