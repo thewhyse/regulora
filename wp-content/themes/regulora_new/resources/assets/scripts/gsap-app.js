@@ -139,6 +139,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     tl_bgc_desktop
       .to(leftL, {
+        width: leftSide,
         x: leftSide,
         duration: 1,
       })
