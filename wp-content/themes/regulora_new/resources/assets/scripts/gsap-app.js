@@ -116,7 +116,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
     /*    BRAIN-GUT CONNECTION   DESKTOP   */
 
-/*
 let percentImgLeft = document.getElementById('bgc-percent');
 let leftSide = 0;
 
@@ -157,7 +156,6 @@ console.log(leftSide);
         height: 200,
         duration: 1,
       });
-*/
 
 /*
       if(typeof percentImgLeft === 'object' && percentImgLeft !== null && 'getBoundingClientRect' in percentImgLeft) {
@@ -199,6 +197,7 @@ console.log(leftSide);
 
 });
 
+/*
 window.addEventListener('resize', function(event) {
 
   gsap.registerPlugin(ScrollTrigger);
@@ -241,3 +240,4 @@ window.addEventListener('resize', function(event) {
   // END HOME PAGE
 
 }, true);
+*/
