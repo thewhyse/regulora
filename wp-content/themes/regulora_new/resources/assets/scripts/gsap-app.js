@@ -123,13 +123,33 @@ document.addEventListener('DOMContentLoaded', function(){
       percentImgLeft = percentImgLeft.offsetParent;
     }
   
-/*
     const leftL = document.querySelector('#bgc-percent .lft-line');
     const rightL = document.querySelector('#bgc-percent .rt-line');
     const downL = document.querySelector('#bgc-percent .downL');
-*/
 
     console.log(leftSide);
+
+    const tl_bgc_desktop = gsap.timeline({
+      scrollTrigger: {
+        trigger: percentImgLeft,
+        markers: true,
+        start: 'top 60%',
+      },
+    });
+
+    tl_bgc_desktop
+      .to(leftL, {
+        x: percentImgLeft.left,
+        duration: 1,
+      })
+      .to(rightL, {
+        width: 200,
+        duration: 1,
+      })
+      .to(downL, {
+        height: 200,
+        duration: 1,
+      });
 
 /*
       if(typeof percentImgLeft === 'object' && percentImgLeft !== null && 'getBoundingClientRect' in percentImgLeft) {
