@@ -115,37 +115,36 @@ document.addEventListener('DOMContentLoaded', function(){
 */
 
     /*    BRAIN-GUT CONNECTION   DESKTOP   */
-    const percentImg = document.getElementById('bgc-percent').getBoundingClientRect();
-/*
-    let leftL;
-    let rightL;
-    let downL;
-    let percentImgContainer = null;
-*/
-
+    let percentImgLeft = document.getElementById('bgc-percent');
+    let leftSide = 0;
+    
+    while (percentImgLeft && !isNaN(percentImgLeft.offsetLeft)) {
+      leftSide += percentImgLeft.offsetLeft - percentImgLeft.scrollLeft;
+      percentImgLeft = percentImgLeft.offsetParent;
+    }
+  
     const leftL = document.querySelector('#bgc-percent .lft-line');
     const rightL = document.querySelector('#bgc-percent .rt-line');
     const downL = document.querySelector('#bgc-percent .downL');
 
-    console.log(percentImg);
+    console.log(percentImgLeft);
 
 /*
-      if(typeof percentImg === 'object' && percentImg !== null && 'getBoundingClientRect' in percentImg) {
-      percentImgContainer = percentImg.getBoundingClientRect();
+      if(typeof percentImgLeft === 'object' && percentImgLeft !== null && 'getBoundingClientRect' in percentImgLeft) {
+      percentImgLeftContainer = percentImgLeft.getBoundingClientRect();
         leftL = document.querySelector('#bgc-percent .lft-line');
         rightL = document.querySelector('#bgc-percent .rt-line');
         downL = document.querySelector('#bgc-percent .downL');
 
-        console.log(percentImgContainer);
+        console.log(percentImgLeftContainer);
 
     } else {
       return;
     }
-*/
 
     const tl_bgc_desktop = gsap.timeline({
       scrollTrigger: {
-        trigger: percentImg,
+        trigger: percentImgLeft,
         markers: true,
         start: 'top 60%',
       },
@@ -153,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     tl_bgc_desktop
       .to(leftL, {
-      x: percentImg.left,
+      x: percentImgLeft.left,
         duration: 1,
     })
       .to(rightL, {
@@ -167,6 +166,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
   }, false);
+*/
 
 });
 
