@@ -115,48 +115,49 @@ document.addEventListener('DOMContentLoaded', function(){
 */
 
     /*    BRAIN-GUT CONNECTION   DESKTOP   */
-    let percentImgLeft = document.getElementById('bgc-percent');
-    let leftSide = 0;
 
-    
-    while (percentImgLeft && !isNaN(percentImgLeft.offsetLeft)) {
-      leftSide += percentImgLeft.offsetLeft - percentImgLeft.scrollLeft;
-      //percentImgLeft = percentImgLeft.offsetParent;
-    }
+/*
+let percentImgLeft = document.getElementById('bgc-percent');
+let leftSide = 0;
 
-    console.log(leftSide);
-    
-    /*
-        const leftL = document.querySelector('#bgc-percent .lft-line');
-        const rightL = document.querySelector('#bgc-percent .rt-line');
-        const downL = document.querySelector('#bgc-percent .downL');
 
-        //const percentColumn = document.querySelector('.restoring-left-side');
-        //let rightLineW = percentColumn.offsetWidth / 2;
+while (percentImgLeft && !isNaN(percentImgLeft.offsetLeft)) {
+  leftSide += percentImgLeft.offsetLeft - percentImgLeft.scrollLeft;
+  //percentImgLeft = percentImgLeft.offsetParent;
+}
 
-        const tl_bgc_desktop = gsap.timeline({
-          scrollTrigger: {
-            trigger: percentImgLeft,
-            markers: true,
-            start: 'top 60%',
-          },
-        });
+console.log(leftSide);
 
-        tl_bgc_desktop
-          .to(leftL, {
-            width: leftSide,
-            x: leftSide,
-            duration: 1,
-          })
-          .to(rightL, {
-            width: 100,
-            duration: 1,
-          })
-          .to(downL, {
-            height: 200,
-            duration: 1,
-          });
-    */
+    const leftL = document.querySelector('#bgc-percent .lft-line');
+    const rightL = document.querySelector('#bgc-percent .rt-line');
+    const downL = document.querySelector('#bgc-percent .downL');
+
+    //const percentColumn = document.querySelector('.restoring-left-side');
+    //let rightLineW = percentColumn.offsetWidth / 2;
+
+    const tl_bgc_desktop = gsap.timeline({
+      scrollTrigger: {
+        trigger: percentImgLeft,
+        markers: true,
+        start: 'top 60%',
+      },
+    });
+
+    tl_bgc_desktop
+      .to(leftL, {
+        width: leftSide,
+        x: leftSide,
+        duration: 1,
+      })
+      .to(rightL, {
+        width: 100,
+        duration: 1,
+      })
+      .to(downL, {
+        height: 200,
+        duration: 1,
+      });
+*/
 
 /*
       if(typeof percentImgLeft === 'object' && percentImgLeft !== null && 'getBoundingClientRect' in percentImgLeft) {
