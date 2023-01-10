@@ -117,15 +117,19 @@ document.addEventListener('DOMContentLoaded', function(){
     /*    BRAIN-GUT CONNECTION   DESKTOP   */
     let percentImgLeft = document.getElementById('bgc-percent');
     let leftSide = 0;
+
     
     while (percentImgLeft && !isNaN(percentImgLeft.offsetLeft)) {
       leftSide += percentImgLeft.offsetLeft - percentImgLeft.scrollLeft;
-      percentImgLeft = percentImgLeft.offsetParent;
+      //percentImgLeft = percentImgLeft.offsetParent;
     }
   
     const leftL = document.querySelector('#bgc-percent .lft-line');
     const rightL = document.querySelector('#bgc-percent .rt-line');
     const downL = document.querySelector('#bgc-percent .downL');
+
+    const percentColumn = document.querySelector('.restoring-left-side');
+    let rightLineW = (percentColumn.offsetLeft - percentColumn.scrollLeft) / 2;
 
     console.log(leftSide);
 
@@ -147,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function(){
         duration: 1,
       })
       .to(rightL, {
-        width: 200,
+        width: rightLineW,
         duration: 1,
       })
       .to(downL, {
