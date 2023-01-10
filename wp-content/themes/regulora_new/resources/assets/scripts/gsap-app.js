@@ -121,7 +121,7 @@ let leftSide = 0;
 
 
 while (percentImgLeft && !isNaN(percentImgLeft.offsetLeft)) {
-  leftSide += percentImgLeft.offsetLeft - percentImgLeft.scrollLeft;
+  leftSide = percentImgLeft.offsetLeft - percentImgLeft.scrollLeft;
   //percentImgLeft = percentImgLeft.offsetParent;
 }
 
