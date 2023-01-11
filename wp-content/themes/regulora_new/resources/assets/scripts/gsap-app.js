@@ -153,7 +153,7 @@ console.log(leftSide);
 
     tl_bgc_desktop
       .to(leftL, {
-        x: - leftSide * 2,
+        x: - leftSide,
       })
       .to(leftL, {
         width: leftSide + 150,
