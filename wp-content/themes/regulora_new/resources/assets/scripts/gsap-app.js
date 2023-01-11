@@ -156,7 +156,7 @@ console.log(leftSide);
         x: - leftSide * 2,
       })
       .to(leftL, {
-        width: (leftSide + 150) * 2,
+        width: leftSide + 150,
         x: - (leftSide + 150) * 2,
         duration: 1,
       })
