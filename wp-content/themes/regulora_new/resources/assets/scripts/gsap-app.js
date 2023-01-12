@@ -143,7 +143,7 @@ console.log(leftSide);
     const percentColumn = document.querySelector('.restoring-left-side');
     let rightLineW = percentColumn.offsetWidth / 4;
 
-    leftL.style.left = leftSide + 'px';
+    leftL.style.left = '-' + leftSide + 'px';
 
     const tl_bgc_desktop = gsap.timeline({
       scrollTrigger: {
@@ -154,9 +154,11 @@ console.log(leftSide);
     });
 
     tl_bgc_desktop
+/*
       .to(leftL, {
         x: - leftSide *3,
       })
+*/
       .to(leftL, {
         width: leftSide + 150,
         x: leftSide + 150,
