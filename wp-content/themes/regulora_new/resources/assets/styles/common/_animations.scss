@@ -439,7 +439,7 @@
     position: absolute;
     height: 2px;
     top: 18%;
-    //left: - 265%;
+    left: calc((100vw - var(--main-width)) / 2);
     background: #EFCE1D;
   }
 
