@@ -144,7 +144,7 @@ console.log(leftSide);
     let rightLineW = percentColumn.offsetWidth / 4;
 
     let windowWOffSet = window.innerWidth - (window.innerWidth - leftSide);
-    leftL.style.left -= + windowWOffSet + 'px';
+    leftL.style.left -= windowWOffSet;
 
     const tl_bgc_desktop = gsap.timeline({
       scrollTrigger: {
