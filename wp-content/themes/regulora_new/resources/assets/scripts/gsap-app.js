@@ -163,7 +163,7 @@ console.log(leftSide);
 */
       .to(leftL, {
         width: leftSide + 150,
-        x: leftSide + 100,
+        x: leftSide + 1,
         duration: 1,
       })
       .to(rightL, {
