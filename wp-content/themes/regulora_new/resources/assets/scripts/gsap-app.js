@@ -150,7 +150,7 @@ console.log(leftSide);
       scrollTrigger: {
         trigger: percentImgLeft,
         markers: true,
-        start: 'top 60%',
+        start: 'top 70%',
       },
     });
 
@@ -163,7 +163,7 @@ console.log(leftSide);
 */
       .to(leftL, {
         width: leftSide + 150,
-        x: - (leftSide + 150) * 2,
+        x: leftSide * 2 + 150,
         duration: 1,
       })
       .to(rightL, {
