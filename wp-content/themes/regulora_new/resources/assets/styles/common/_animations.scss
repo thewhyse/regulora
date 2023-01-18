@@ -440,7 +440,7 @@
     height: 2px;
     top: 18%;
     //left: - calc((100vw - var(--main-width)) / 2);
-    //left: calc(187% - var(--main-width));
+    left: - calc(var(--main-width) - (var(--main-width) - 290px));
     background: #EFCE1D;
   }
 

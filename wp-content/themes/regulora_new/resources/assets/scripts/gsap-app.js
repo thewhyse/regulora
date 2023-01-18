@@ -143,7 +143,7 @@ console.log(leftSide);
     const percentColumn = document.querySelector('.restoring-left-side');
     let rightLineW = percentColumn.offsetWidth / 4;
 
-    let windowWOffSet = window.innerWidth - (window.innerWidth - leftSide);
+    //let windowWOffSet = window.innerWidth - (window.innerWidth - leftSide);
     //leftL.style.left -= windowWOffSet + 'px';
 
     const tl_bgc_desktop = gsap.timeline({
@@ -155,10 +155,12 @@ console.log(leftSide);
     });
 
     tl_bgc_desktop
+/*
       .to(leftL, {
         x: - windowWOffSet,
         duration: 0.1,
       })
+*/
       .to(leftL, {
         width: leftSide + 150,
         x: - (leftSide + 150) * 2,
